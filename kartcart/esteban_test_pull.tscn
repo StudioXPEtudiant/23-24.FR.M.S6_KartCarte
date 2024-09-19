@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbydibtnn6mxk"]
+
+[ext_resource type="Texture2D" uid="uid://03x8e4iuseje" path="res://icon.svg" id="1_vmagt"]
+
+[sub_resource type="Animation" id="Animation_2jdau"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_l61l7"]
+resource_name = "Test anime pull"
+length = 50.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 6.83333, 8.06667, 8.93333, 9.8, 10.5667, 11.4333, 12.0667, 13.15, 13.9667, 14.7667, 15.4, 16.0333, 16.9167, 17.8, 18.5667, 19.2333, 19.95, 20.5821, 20.6167, 21.25, 22.2333, 22.5988, 23.25, 23.3821, 23.8833, 24.4167, 25.15, 25.7, 26.4667, 27.1167, 27.7167, 28.3333, 29.0167, 29.6, 30.05, 30.7167, 31.25, 31.9, 32.65, 33.2667, 34.0167, 34.65, 35.5333, 36.3167, 37.0167, 37.95, 38.7167, 39.6333, 40.4667, 42.0667, 43, 43.5667, 44.05, 44.25, 44.45, 44.6333, 44.8167, 45.0167, 45.2167, 45.4167, 45.6167, 45.8333, 46.0333, 46.25, 46.45, 46.65, 46.8667, 47.0833, 47.3, 47.4833, 47.6833, 47.9, 48.1167, 48.3333, 48.5, 48.6833, 48.8667, 49.05, 49.2167, 49.4, 49.5833, 49.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 142), Vector2(188, -6), Vector2(206, 128), Vector2(404, 159), Vector2(498, 253), Vector2(755, 217), Vector2(580, 208), Vector2(431, 132), Vector2(291, 237), Vector2(629, 254), Vector2(496, 123), Vector2(177, 200), Vector2(138, 39), Vector2(313, 191), Vector2(609, 108), Vector2(735, 267), Vector2(301, 322), Vector2(240, 111), Vector2(0, 0), Vector2(586, 200), Vector2(602, 86), Vector2(205, 274), Vector2(0, 0), Vector2(88, 301), Vector2(0, 46), Vector2(399, 334), Vector2(529, 159), Vector2(299, 194), Vector2(265, 78), Vector2(611, 216), Vector2(707, 110), Vector2(631, 274), Vector2(461, 229), Vector2(520, 345), Vector2(720, 353), Vector2(613, 223), Vector2(445, 286), Vector2(681, 260), Vector2(403, 119), Vector2(248, 232), Vector2(380, 106), Vector2(454, 222), Vector2(259, 209), Vector2(591, 420), Vector2(695, 217), Vector2(244, 222), Vector2(404, 74), Vector2(47, 213), Vector2(571, 193), Vector2(313, 94), Vector2(248, 173), Vector2(325, 97), Vector2(456, 238), Vector2(387, 185), Vector2(380, 181), Vector2(353, 166), Vector2(338, 158), Vector2(328, 153), Vector2(312, 141), Vector2(324, 141), Vector2(383, 163), Vector2(432, 174), Vector2(443, 175), Vector2(506, 164), Vector2(536, 149), Vector2(538, 135), Vector2(531, 125), Vector2(402, 125), Vector2(339, 138), Vector2(307, 152), Vector2(301, 155), Vector2(286, 163), Vector2(257, 178), Vector2(246, 184), Vector2(248, 190), Vector2(278, 199), Vector2(337, 191), Vector2(397, 143), Vector2(105, 64), Vector2(49, 60), Vector2(95, 94), Vector2(162, 83), Vector2(162, 83)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r08vf"]
+_data = {
+"RESET": SubResource("Animation_2jdau"),
+"Test anime pull": SubResource("Animation_l61l7")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psmug"]
+size = Vector2(133, 135)
+
+[node name="Esteban test pull" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r08vf")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer"]
+texture = ExtResource("1_vmagt")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="AnimationPlayer/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimationPlayer/Sprite2D/RigidBody2D"]
+position = Vector2(-5, 4)
+shape = SubResource("RectangleShape2D_psmug")
