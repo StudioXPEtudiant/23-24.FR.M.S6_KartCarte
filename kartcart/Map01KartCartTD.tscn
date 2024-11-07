@@ -1,0 +1,819 @@
+[gd_scene load_steps=24 format=3 uid="uid://7eh5w82uvurn"]
+
+[ext_resource type="Texture2D" uid="uid://b88r883pip06d" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass04.png" id="2_1yfjm"]
+[ext_resource type="Texture2D" uid="uid://bksi4lbm3yd4r" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt42.png" id="2_04nto"]
+[ext_resource type="Texture2D" uid="uid://bkug5sdnlk37f" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt03.png" id="2_fcymp"]
+[ext_resource type="Texture2D" uid="uid://oa5eijfjmsnr" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt01.png" id="2_sruw1"]
+[ext_resource type="Texture2D" uid="uid://b5jol0ydm15e5" path="res://kenney_racing-pack/PNG/Objects/barrel_blue.png" id="4_eph21"]
+[ext_resource type="Texture2D" uid="uid://bpewhgehv6q61" path="res://kenney_racing-pack/PNG/Cars/car_red_5.png" id="6_c8cvx"]
+[ext_resource type="Texture2D" uid="uid://ctqqpha4578i2" path="res://kenney_racing-pack/PNG/Objects/barrier_red_race.png" id="7_2i22v"]
+[ext_resource type="Texture2D" uid="uid://c4255coei6yy4" path="res://kenney_racing-pack/PNG/Objects/tribune_full.png" id="8_ivwht"]
+[ext_resource type="Texture2D" uid="uid://dq21jomu6vbt8" path="res://kenney_racing-pack/PNG/Objects/tribune_empty.png" id="9_i6l7w"]
+[ext_resource type="Texture2D" uid="uid://bs78ioi7s3wjf" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_1.png" id="10_dhgxn"]
+[ext_resource type="Texture2D" uid="uid://cny7el0gy0e4r" path="res://kenney_racing-pack/PNG/Objects/tent_blue.png" id="11_h620e"]
+[ext_resource type="Texture2D" uid="uid://cm12pnnmypowl" path="res://kenney_racing-pack/PNG/Objects/tent_red.png" id="12_7bf0f"]
+[ext_resource type="Texture2D" uid="uid://dppbilsbqw6ke" path="res://kenney_racing-pack/PNG/Objects/rock1.png" id="13_khajj"]
+[ext_resource type="Texture2D" uid="uid://bfhtdef6k3fyu" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="14_4fh6b"]
+[ext_resource type="Texture2D" uid="uid://bhhi2436ovb54" path="res://kenney_racing-pack/PNG/Objects/tires_white_alt.png" id="15_6e0ia"]
+[ext_resource type="Texture2D" uid="uid://bsn6h32mx7vxa" path="res://kenney_racing-pack/PNG/Objects/tires_red_alt.png" id="16_8h6g1"]
+[ext_resource type="Texture2D" uid="uid://c1stt66p6obem" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass03.png" id="16_lq6qv"]
+[ext_resource type="Texture2D" uid="uid://c113amys227bb" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass01.png" id="17_4gb1s"]
+[ext_resource type="Texture2D" uid="uid://ck7hf4hrrk6c7" path="res://kenney_racing-pack/PNG/Objects/rock3.png" id="17_bpexf"]
+[ext_resource type="Texture2D" uid="uid://eucuetan5i7v" path="res://kenney_racing-pack/PNG/Objects/rock2.png" id="18_h04v6"]
+[ext_resource type="Script" path="res://voitur.gd" id="21_nrimf"]
+[ext_resource type="Texture2D" uid="uid://cff6e0163nokv" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_rttx7"]
+[ext_resource type="Texture2D" uid="uid://cbpcngfb68lby" path="res://kenney_racing-pack/PNG/Cars/car_blue_1.png" id="22_r7exb"]
+
+[node name="Map 01" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+
+[node name="LandGrass04" type="Sprite2D" parent="."]
+position = Vector2(2262, 1456)
+scale = Vector2(50.2188, 30.5)
+texture = ExtResource("2_1yfjm")
+
+[node name="Road" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="RoadStart" type="Sprite2D" parent="Road"]
+position = Vector2(320, 576)
+texture = ExtResource("2_04nto")
+
+[node name="RoadTurn" type="Node2D" parent="Road"]
+
+[node name="Road0Turn" type="Node2D" parent="Road/RoadTurn"]
+
+[node name="Road0Turn01" type="Sprite2D" parent="Road/RoadTurn/Road0Turn"]
+position = Vector2(320, 192)
+texture = ExtResource("2_fcymp")
+
+[node name="Road0Turn02" type="Sprite2D" parent="Road/RoadTurn/Road0Turn"]
+position = Vector2(1216, 192)
+texture = ExtResource("2_fcymp")
+
+[node name="Road0Turn03" type="Sprite2D" parent="Road/RoadTurn/Road0Turn"]
+position = Vector2(704, 960)
+texture = ExtResource("2_fcymp")
+
+[node name="Road-90Turn" type="Node2D" parent="Road/RoadTurn"]
+
+[node name="Road-90Turn01" type="Sprite2D" parent="Road/RoadTurn/Road-90Turn"]
+position = Vector2(960, 576)
+rotation = -1.5708
+texture = ExtResource("2_fcymp")
+
+[node name="Road-90Turn02" type="Sprite2D" parent="Road/RoadTurn/Road-90Turn"]
+position = Vector2(320, 1088)
+rotation = -1.5708
+texture = ExtResource("2_fcymp")
+
+[node name="Road180Turn" type="Node2D" parent="Road/RoadTurn"]
+
+[node name="Road180Turn01" type="Sprite2D" parent="Road/RoadTurn/Road180Turn"]
+position = Vector2(1216, 576)
+rotation = -3.14159
+texture = ExtResource("2_fcymp")
+
+[node name="Road180Turn02" type="Sprite2D" parent="Road/RoadTurn/Road180Turn"]
+position = Vector2(1856, 960)
+rotation = -3.14159
+texture = ExtResource("2_fcymp")
+
+[node name="Road180Turn03" type="Sprite2D" parent="Road/RoadTurn/Road180Turn"]
+position = Vector2(704, 1088)
+rotation = -3.14159
+texture = ExtResource("2_fcymp")
+
+[node name="Road90Turn" type="Node2D" parent="Road/RoadTurn"]
+
+[node name="Road90Turn01" type="Sprite2D" parent="Road/RoadTurn/Road90Turn"]
+position = Vector2(960, 192)
+rotation = 1.5708
+texture = ExtResource("2_fcymp")
+
+[node name="Road90Turn02" type="Sprite2D" parent="Road/RoadTurn/Road90Turn"]
+position = Vector2(1856, 192)
+rotation = 1.5708
+texture = ExtResource("2_fcymp")
+
+[node name="RoadToutDroit" type="Node2D" parent="Road"]
+
+[node name="RoadToutDroit03" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(960, 448)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit01" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(320, 320)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit02" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(960, 320)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit05" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(1216, 320)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit08" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(320, 704)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit09" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(320, 832)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit11" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(1856, 832)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit12" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(1856, 704)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit13" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(1856, 576)
+rotation = 3.14159
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit14" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(1856, 448)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit15" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(1856, 320)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit17" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(320, 960)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit04" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(320, 448)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit06" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(960, 448)
+texture = ExtResource("2_sruw1")
+
+[node name="RoadToutDroit07" type="Sprite2D" parent="Road/RoadToutDroit"]
+position = Vector2(1216, 448)
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit" type="Node2D" parent="Road"]
+
+[node name="Road90ToutDroit01" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(576, 192)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit02" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(704, 192)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit03" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(448, 192)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit04" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(832, 192)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit05" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1088, 576)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit06" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1088, 960)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit07" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1344, 960)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit08" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1472, 960)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit09" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1600, 960)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit10" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1728, 960)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit11" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1728, 192)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit12" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1600, 192)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit13" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1472, 192)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit14" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1344, 192)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit15" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(832, 960)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit16" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(960, 960)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit17" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(1216, 960)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit21" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(576, 1088)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Road90ToutDroit22" type="Sprite2D" parent="Road/Road90ToutDroit"]
+position = Vector2(448, 1088)
+rotation = 1.5708
+texture = ExtResource("2_sruw1")
+
+[node name="Déco" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="SkidmarkLong1" type="Sprite2D" parent="Déco"]
+position = Vector2(1080, 124)
+rotation = -1.79594
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_dhgxn")
+
+[node name="CarBreak" type="Sprite2D" parent="Déco"]
+position = Vector2(1102, 106)
+rotation = 0.897099
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_c8cvx")
+
+[node name="pneu" type="Node2D" parent="Déco"]
+rotation = 0.111701
+
+[node name="ConeStraight" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1006.49, 19.9314)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_4fh6b")
+
+[node name="ConeStraight2" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1034.34, 34.921)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_4fh6b")
+
+[node name="ConeStraight3" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1049.16, 59.4213)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_4fh6b")
+
+[node name="ConeStraight4" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1065.97, 83.6987)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_4fh6b")
+
+[node name="ConeStraight5" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(981.306, 10.6814)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_4fh6b")
+
+[node name="TiresWhiteAlt" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(331.194, 961.072)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_6e0ia")
+
+[node name="TiresWhiteAlt2" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(334.761, 992.872)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_6e0ia")
+
+[node name="TiresWhiteAlt3" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(342.303, 1024.23)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_6e0ia")
+
+[node name="TiresWhiteAlt4" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(353.597, 1053.15)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_6e0ia")
+
+[node name="TiresWhiteAlt5" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(374.383, 1076.98)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_6e0ia")
+
+[node name="TiresWhiteAlt6" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(400.909, 1098.16)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_6e0ia")
+
+[node name="TiresRedAlt" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(281.954, 127.365)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8h6g1")
+
+[node name="TiresRedAlt2" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(298.263, 93.3346)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8h6g1")
+
+[node name="TiresRedAlt3" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(331.809, 69.4464)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8h6g1")
+
+[node name="TiresRedAlt4" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(367.139, 61.4584)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8h6g1")
+
+[node name="TiresRedAlt5" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(406.889, 56.9997)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_8h6g1")
+
+[node name="BarrierRedRace" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(725.988, 856.412)
+rotation = -1.12225
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_2i22v")
+
+[node name="BarrierRedRace2" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(822.527, 1089.1)
+rotation = 2.58134
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_2i22v")
+
+[node name="Rock1" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1155.74, -31.023)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_khajj")
+
+[node name="Rock3" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1888.25, -121.237)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17_bpexf")
+
+[node name="Rock2" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1943.68, -129.467)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_h04v6")
+
+[node name="Rock4" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1916.75, -118.396)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_khajj")
+
+[node name="Rock5" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1908.33, -139.59)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17_bpexf")
+
+[node name="Rock6" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1960.16, -110.435)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_h04v6")
+
+[node name="Rock7" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1933.22, -99.3634)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_khajj")
+
+[node name="Rock8" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1935.95, -126.588)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17_bpexf")
+
+[node name="Rock9" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1976.52, -90.1324)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_h04v6")
+
+[node name="Rock10" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1949.59, -79.0611)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_khajj")
+
+[node name="Rock11" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1960.49, -105.19)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17_bpexf")
+
+[node name="Rock12" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1986.81, -67.8912)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_h04v6")
+
+[node name="Rock13" type="Sprite2D" parent="Déco/pneu"]
+position = Vector2(1959.66, -58.8074)
+rotation = -0.111701
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_khajj")
+
+[node name="Barrel" type="Node2D" parent="Déco"]
+
+[node name="BarrelBlue" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 498)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue2" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 470)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue3" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 442)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue4" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 414)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue5" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 386)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue6" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 358)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue7" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 330)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue8" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 302)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue9" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 274)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue10" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 246)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue11" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 218)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="BarrelBlue12" type="Sprite2D" parent="Déco/Barrel"]
+position = Vector2(1088, 190)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eph21")
+
+[node name="Tribune" type="Node2D" parent="Déco"]
+
+[node name="TribuneFull" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(72, 624)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ivwht")
+
+[node name="TribuneEmpty" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(72, 852)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_i6l7w")
+
+[node name="TribuneEmpty2" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(72, 398)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_i6l7w")
+
+[node name="TentBlue" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(440, 532)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_h620e")
+
+[node name="TentRed" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(440, 618)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_7bf0f")
+
+[node name="TribuneFull2" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(648, 62)
+scale = Vector2(0.249718, 0.5)
+texture = ExtResource("8_ivwht")
+
+[node name="TribuneFull3" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(72, 624)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ivwht")
+
+[node name="TribuneFull4" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(646, 338)
+rotation = -3.14159
+scale = Vector2(0.249718, 0.5)
+texture = ExtResource("8_ivwht")
+
+[node name="TribuneFull5" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(1520, 322)
+rotation = 3.14159
+scale = Vector2(0.249718, 0.5)
+texture = ExtResource("8_ivwht")
+
+[node name="TribuneFull6" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(2004, 542)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ivwht")
+
+[node name="TribuneFull7" type="Sprite2D" parent="Déco/Tribune"]
+position = Vector2(1342, 800)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ivwht")
+
+[node name="LandGrasse" type="Node2D" parent="Déco"]
+
+[node name="LandGrass03" type="Sprite2D" parent="Déco/LandGrasse"]
+position = Vector2(1830, 1226)
+rotation = 1.5708
+texture = ExtResource("16_lq6qv")
+
+[node name="LandGrass02" type="Sprite2D" parent="Déco/LandGrasse"]
+position = Vector2(1958, 1098)
+rotation = 1.5708
+texture = ExtResource("17_4gb1s")
+
+[node name="LandGrass01" type="Sprite2D" parent="Déco/LandGrasse"]
+position = Vector2(1702, 1098)
+texture = ExtResource("17_4gb1s")
+
+[node name="LandGrass05" type="Sprite2D" parent="Déco/LandGrasse"]
+position = Vector2(1702, 1226)
+rotation = -1.5708
+texture = ExtResource("17_4gb1s")
+
+[node name="LandGrass06" type="Sprite2D" parent="Déco/LandGrasse"]
+position = Vector2(1958, 1226)
+rotation = 3.14159
+texture = ExtResource("17_4gb1s")
+
+[node name="LandGrass07" type="Sprite2D" parent="Déco/LandGrasse"]
+position = Vector2(1830, 1098)
+rotation = -1.5708
+texture = ExtResource("16_lq6qv")
+
+[node name="Position" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Position01" type="Node2D" parent="Position"]
+position = Vector2(320, 576)
+
+[node name="Position02" type="Node2D" parent="Position"]
+position = Vector2(320, 448)
+
+[node name="Position03" type="Node2D" parent="Position"]
+position = Vector2(320, 320)
+
+[node name="Position04" type="Node2D" parent="Position"]
+position = Vector2(320, 192)
+rotation = 0.785398
+
+[node name="Position05" type="Node2D" parent="Position"]
+position = Vector2(448, 192)
+rotation = 1.5708
+
+[node name="Position06" type="Node2D" parent="Position"]
+position = Vector2(576, 192)
+rotation = 1.5708
+
+[node name="Position07" type="Node2D" parent="Position"]
+position = Vector2(704, 192)
+rotation = 1.5708
+
+[node name="Position08" type="Node2D" parent="Position"]
+position = Vector2(832, 192)
+rotation = 1.5708
+
+[node name="Position09" type="Node2D" parent="Position"]
+position = Vector2(960, 192)
+rotation = 2.35619
+
+[node name="Position10" type="Node2D" parent="Position"]
+position = Vector2(960, 320)
+
+[node name="Position11" type="Node2D" parent="Position"]
+position = Vector2(960, 448)
+
+[node name="Position12" type="Node2D" parent="Position"]
+position = Vector2(960, 576)
+rotation = 2.35619
+
+[node name="Position13" type="Node2D" parent="Position"]
+position = Vector2(1088, 576)
+rotation = 1.5708
+
+[node name="Position14" type="Node2D" parent="Position"]
+position = Vector2(1216, 576)
+rotation = 0.785398
+
+[node name="Position15" type="Node2D" parent="Position"]
+position = Vector2(1216, 448)
+
+[node name="Position16" type="Node2D" parent="Position"]
+position = Vector2(1216, 320)
+
+[node name="Position17" type="Node2D" parent="Position"]
+position = Vector2(1216, 192)
+rotation = 0.785398
+
+[node name="Position18" type="Node2D" parent="Position"]
+position = Vector2(1344, 192)
+rotation = 1.5708
+
+[node name="Position19" type="Node2D" parent="Position"]
+position = Vector2(1472, 192)
+rotation = 1.5708
+
+[node name="Position20" type="Node2D" parent="Position"]
+position = Vector2(1600, 192)
+rotation = 1.5708
+
+[node name="Position21" type="Node2D" parent="Position"]
+position = Vector2(1728, 192)
+rotation = 1.5708
+
+[node name="Position22" type="Node2D" parent="Position"]
+position = Vector2(1856, 192)
+rotation = 2.35619
+
+[node name="Position23" type="Node2D" parent="Position"]
+position = Vector2(1856, 320)
+rotation = 3.14159
+
+[node name="Position24" type="Node2D" parent="Position"]
+position = Vector2(1856, 448)
+rotation = 3.14159
+
+[node name="Position25" type="Node2D" parent="Position"]
+position = Vector2(1856, 576)
+
+[node name="Position26" type="Node2D" parent="Position"]
+position = Vector2(1856, 704)
+rotation = 3.14159
+
+[node name="Position27" type="Node2D" parent="Position"]
+position = Vector2(1856, 832)
+rotation = 3.14159
+
+[node name="Position28" type="Node2D" parent="Position"]
+position = Vector2(1856, 960)
+rotation = -2.35619
+
+[node name="Position29" type="Node2D" parent="Position"]
+position = Vector2(1728, 960)
+rotation = -1.5708
+
+[node name="Position30" type="Node2D" parent="Position"]
+position = Vector2(1600, 960)
+rotation = -1.5708
+
+[node name="Position31" type="Node2D" parent="Position"]
+position = Vector2(1472, 960)
+rotation = -1.5708
+
+[node name="Position32" type="Node2D" parent="Position"]
+position = Vector2(1344, 960)
+rotation = -1.5708
+
+[node name="Position33" type="Node2D" parent="Position"]
+position = Vector2(1216, 960)
+rotation = -1.5708
+
+[node name="Position34" type="Node2D" parent="Position"]
+position = Vector2(1088, 960)
+rotation = -1.5708
+
+[node name="Position35" type="Node2D" parent="Position"]
+position = Vector2(960, 960)
+rotation = -1.5708
+
+[node name="Position36" type="Node2D" parent="Position"]
+position = Vector2(832, 960)
+rotation = -1.5708
+
+[node name="Position37" type="Node2D" parent="Position"]
+position = Vector2(704, 960)
+rotation = -2.35619
+
+[node name="Position38" type="Node2D" parent="Position"]
+position = Vector2(704, 1088)
+rotation = -2.35619
+
+[node name="Position39" type="Node2D" parent="Position"]
+position = Vector2(576, 1088)
+rotation = -1.5708
+
+[node name="Position40" type="Node2D" parent="Position"]
+position = Vector2(448, 1088)
+rotation = -1.5708
+
+[node name="Position41" type="Node2D" parent="Position"]
+position = Vector2(320, 1088)
+rotation = -0.785398
+
+[node name="Position42" type="Node2D" parent="Position"]
+position = Vector2(320, 960)
+
+[node name="Position43" type="Node2D" parent="Position"]
+position = Vector2(320, 832)
+
+[node name="Position44" type="Node2D" parent="Position"]
+position = Vector2(320, 704)
+
+[node name="Voitur" type="Node2D" parent="." node_paths=PackedStringArray("parentListPoint")]
+position = Vector2(0, -0.00012207)
+script = ExtResource("21_nrimf")
+parentListPoint = NodePath("../Position")
+
+[node name="CarBlue1" type="Sprite2D" parent="Voitur"]
+texture = ExtResource("22_r7exb")
+
+[node name="Bouton" type="Node2D" parent="."]
+
+[node name="ArrowWhite" type="Sprite2D" parent="Bouton"]
+position = Vector2(4300, 2000)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("21_rttx7")
+
+[node name="Button" type="Button" parent="Bouton/ArrowWhite"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.5
+offset_top = 20.5
+offset_right = 37.5
+offset_bottom = 60.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+text = "AVENCER DE 1"
+
+[connection signal="pressed" from="Bouton/ArrowWhite/Button" to="Voitur" method="mouve"]
