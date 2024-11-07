@@ -781,3 +781,5 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5708
 text = "AVENCER DE 1"
+
+[connection signal="pressed" from="Bouton/ArrowWhite/Button" to="Voitur" method="mouve"]
