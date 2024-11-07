@@ -1,6 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbydibtnn6mxk"]
+[gd_scene load_steps=38 format=3 uid="uid://cbydibtnn6mxk"]
 
-[ext_resource type="Texture2D" uid="uid://03x8e4iuseje" path="res://icon.svg" id="1_vmagt"]
+[ext_resource type="Texture2D" uid="uid://dcnv61grpdrh2" path="res://kenney_racing-pack/Spritesheets/spritesheet_objects.png" id="1_vrg0k"]
+[ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="1_x6otq"]
+[ext_resource type="Texture2D" uid="uid://b0qksfyj0lwag" path="res://kenney_racing-pack/Sample.png" id="2_uhn6e"]
+[ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="2_yrprb"]
+[ext_resource type="Texture2D" uid="uid://b7dooro2qhtta" path="res://kenney_racing-pack/PNG/Objects/tent_red.png" id="3_3ga67"]
+[ext_resource type="Texture2D" uid="uid://cbawxryihspsc" path="res://kenney_racing-pack/Preview.png" id="3_4dmwx"]
+[ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="4_l5mlo"]
+[ext_resource type="Texture2D" uid="uid://b7l4ey6phf0fc" path="res://kenney_racing-pack/PNG/Objects/tree_large.png" id="5_uyr3e"]
+[ext_resource type="Texture2D" uid="uid://d1xxwxyqsge3f" path="res://kenney_racing-pack/PNG/Objects/tent_blue_large.png" id="6_sbenj"]
+[ext_resource type="Texture2D" uid="uid://bjn7djiki4tjg" path="res://kenney_racing-pack/PNG/Objects/light_yellow.png" id="7_432p4"]
+[ext_resource type="Texture2D" uid="uid://c6xskhqlmqjvk" path="res://kenney_racing-pack/PNG/Objects/light_white.png" id="8_31kju"]
+[ext_resource type="Texture2D" uid="uid://bk0vfjh7sv824" path="res://kenney_racing-pack/PNG/Objects/lights.png" id="9_twg2v"]
+[ext_resource type="Texture2D" uid="uid://dpnje60jygt2q" path="res://kenney_racing-pack/PNG/Objects/oil.png" id="12_4sa0n"]
+[ext_resource type="Texture2D" uid="uid://by6d52s7a6jn7" path="res://kenney_racing-pack/PNG/Objects/tires_white_alt.png" id="13_ophlw"]
+[ext_resource type="Texture2D" uid="uid://bd1v3mxn5w2hh" path="res://kenney_racing-pack/PNG/Objects/tires_white.png" id="14_v4m0q"]
+[ext_resource type="Texture2D" uid="uid://bo16giu6sxjf5" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_1.png" id="15_b3vgx"]
+[ext_resource type="Texture2D" uid="uid://mhmegkbd6nal" path="res://kenney_racing-pack/PNG/Objects/skidmark_short_3.png" id="16_2jxxd"]
+[ext_resource type="Texture2D" uid="uid://cw5rtbg5b3ul0" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_2.png" id="17_x2q4u"]
+[ext_resource type="Texture2D" uid="uid://d0vouu233fp00" path="res://kenney_racing-pack/PNG/Objects/barrier_white.png" id="18_msp1u"]
+[ext_resource type="Texture2D" uid="uid://fpkrqt6cruhp" path="res://kenney_racing-pack/PNG/Objects/cone_down.png" id="19_j3gge"]
+[ext_resource type="Texture2D" uid="uid://b1ekkxymigoe8" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="20_ixf51"]
+[ext_resource type="Texture2D" uid="uid://dt1j25ilkrue0" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_striped.png" id="21_cgapv"]
+[ext_resource type="Texture2D" uid="uid://boi07ax4ue4r8" path="res://kenney_racing-pack/PNG/Objects/tribune_full.png" id="22_dnkq4"]
+[ext_resource type="Texture2D" uid="uid://rglkmye3dsnh" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt01.png" id="24_k8pfj"]
+[ext_resource type="Texture2D" uid="uid://if011qdre2ik" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_blue.png" id="25_uxqta"]
+[ext_resource type="Texture2D" uid="uid://d3fqqbxe0s3fu" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_green.png" id="26_4q1ut"]
+[ext_resource type="Texture2D" uid="uid://c0glv5uj2dkl1" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_red.png" id="27_tfdrg"]
+[ext_resource type="Texture2D" uid="uid://vvjs3p6uul2p" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_yellow.png" id="28_cmpci"]
+[ext_resource type="Texture2D" uid="uid://choiak6r7jm5t" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_black.png" id="29_30v0x"]
+[ext_resource type="Texture2D" uid="uid://b7mqx51yrf1dy" path="res://kenney_racing-pack/PNG/Objects/rock2.png" id="30_1r02r"]
 
 [sub_resource type="Animation" id="Animation_2jdau"]
 length = 0.001
@@ -14,7 +43,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(-59, -52)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -26,7 +55,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [2.09439]
 }
 
 [sub_resource type="Animation" id="Animation_l61l7"]
@@ -64,9 +93,75 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_psmug"]
-size = Vector2(133, 135)
+size = Vector2(162, 112.5)
+
+[sub_resource type="Animation" id="Animation_rggbf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1490, 1981)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.23517e-06]
+}
+
+[sub_resource type="Animation" id="Animation_egtsh"]
+resource_name = "new_animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.42301, 5.37301),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1490, 1981), Vector2(1490, 824), Vector2(1490, -387)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.23517e-06]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uy0cu"]
+_data = {
+"RESET": SubResource("Animation_rggbf"),
+"new_animation": SubResource("Animation_egtsh")
+}
 
 [node name="Esteban test pull" type="Node2D"]
+
+[node name="TribuneOverhangRed" type="Sprite2D" parent="."]
+position = Vector2(966.32, 661.159)
+scale = Vector2(4.09986, 9.13225)
+texture = ExtResource("4_l5mlo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -74,10 +169,363 @@ libraries = {
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer"]
-texture = ExtResource("1_vmagt")
+position = Vector2(-59, -52)
+rotation = 2.09439
+scale = Vector2(1.00874, 1.01039)
+texture = ExtResource("1_x6otq")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="AnimationPlayer/Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimationPlayer/Sprite2D/RigidBody2D"]
-position = Vector2(-5, 4)
+position = Vector2(6.2679, 14.8564)
 shape = SubResource("RectangleShape2D_psmug")
+
+[node name="ArrowYellow3" type="Sprite2D" parent="AnimationPlayer/Sprite2D/RigidBody2D"]
+position = Vector2(313.832, -608.429)
+rotation = -0.523598
+texture = ExtResource("1_x6otq")
+
+[node name="TentRed" type="Sprite2D" parent="AnimationPlayer/Sprite2D/RigidBody2D"]
+position = Vector2(23.7819, -2500.5)
+rotation = -3.66519
+texture = ExtResource("3_3ga67")
+
+[node name="TentRed2" type="Sprite2D" parent="AnimationPlayer/Sprite2D/RigidBody2D"]
+position = Vector2(612.999, -212.766)
+rotation = -0.523598
+texture = ExtResource("3_3ga67")
+
+[node name="SpritesheetObjects" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1651, 501)
+texture = ExtResource("1_vrg0k")
+
+[node name="TreeLarge" type="Sprite2D" parent="."]
+position = Vector2(-370, 179)
+texture = ExtResource("5_uyr3e")
+
+[node name="TentBlueLarge" type="Sprite2D" parent="."]
+position = Vector2(989, 423)
+scale = Vector2(1.96, 0.639999)
+texture = ExtResource("6_sbenj")
+
+[node name="LightYellow" type="Sprite2D" parent="."]
+position = Vector2(564, 114)
+rotation = -3.14159
+texture = ExtResource("7_432p4")
+
+[node name="LightWhite" type="Sprite2D" parent="."]
+position = Vector2(524, 111)
+rotation = -3.14159
+texture = ExtResource("8_31kju")
+
+[node name="Lights" type="Sprite2D" parent="."]
+position = Vector2(541, 4)
+texture = ExtResource("9_twg2v")
+
+[node name="LightYellow2" type="Sprite2D" parent="."]
+position = Vector2(485, 131)
+rotation = 3.14159
+texture = ExtResource("7_432p4")
+
+[node name="LightWhite2" type="Sprite2D" parent="."]
+position = Vector2(598, 121)
+rotation = 3.14159
+texture = ExtResource("8_31kju")
+
+[node name="ArrowYellow" type="Sprite2D" parent="."]
+position = Vector2(109, 525)
+rotation = 1.57079
+texture = ExtResource("1_x6otq")
+
+[node name="ArrowYellow2" type="Sprite2D" parent="."]
+position = Vector2(212, 525)
+rotation = 1.57079
+texture = ExtResource("1_x6otq")
+
+[node name="Oil" type="Sprite2D" parent="."]
+position = Vector2(81, 76)
+texture = ExtResource("12_4sa0n")
+
+[node name="TiresWhiteAlt" type="Sprite2D" parent="."]
+position = Vector2(190, 37)
+texture = ExtResource("13_ophlw")
+
+[node name="TiresWhiteAlt2" type="Sprite2D" parent="."]
+position = Vector2(189, 124)
+texture = ExtResource("13_ophlw")
+
+[node name="TiresWhite" type="Sprite2D" parent="."]
+position = Vector2(278, 39)
+texture = ExtResource("14_v4m0q")
+
+[node name="TiresWhite2" type="Sprite2D" parent="."]
+position = Vector2(283, 124)
+texture = ExtResource("14_v4m0q")
+
+[node name="SkidmarkLong1" type="Sprite2D" parent="."]
+position = Vector2(279, 104)
+texture = ExtResource("15_b3vgx")
+
+[node name="SkidmarkLong2" type="Sprite2D" parent="."]
+position = Vector2(189, 106)
+texture = ExtResource("15_b3vgx")
+
+[node name="SkidmarkLong3" type="Sprite2D" parent="."]
+position = Vector2(249, 37)
+rotation = -1.57079
+texture = ExtResource("15_b3vgx")
+
+[node name="SkidmarkLong4" type="Sprite2D" parent="."]
+position = Vector2(250, 124)
+rotation = -1.57079
+texture = ExtResource("15_b3vgx")
+
+[node name="SkidmarkShort3" type="Sprite2D" parent="."]
+position = Vector2(-391, 583)
+texture = ExtResource("16_2jxxd")
+
+[node name="SkidmarkLong5" type="Sprite2D" parent="."]
+position = Vector2(514, 591)
+rotation = 0.261799
+texture = ExtResource("17_x2q4u")
+
+[node name="SkidmarkLong6" type="Sprite2D" parent="."]
+position = Vector2(562, 410)
+rotation = -2.87979
+scale = Vector2(1, 0.937882)
+texture = ExtResource("17_x2q4u")
+
+[node name="SkidmarkLong7" type="Sprite2D" parent="."]
+position = Vector2(609, 232)
+rotation = 0.261799
+texture = ExtResource("17_x2q4u")
+
+[node name="SkidmarkLong8" type="Sprite2D" parent="."]
+position = Vector2(657, 57)
+rotation = 0.261799
+texture = ExtResource("17_x2q4u")
+
+[node name="BarrierWhite" type="Sprite2D" parent="."]
+position = Vector2(986, 599)
+texture = ExtResource("18_msp1u")
+
+[node name="ConeDown" type="Sprite2D" parent="."]
+position = Vector2(579, 628)
+texture = ExtResource("19_j3gge")
+
+[node name="ConeDown2" type="Sprite2D" parent="."]
+position = Vector2(473, 438)
+rotation = -2.35619
+texture = ExtResource("19_j3gge")
+
+[node name="ConeStraight" type="Sprite2D" parent="."]
+position = Vector2(432, 612)
+rotation = 0.261799
+texture = ExtResource("20_ixf51")
+
+[node name="ConeStraight2" type="Sprite2D" parent="."]
+position = Vector2(604, 548)
+rotation = 0.261799
+texture = ExtResource("20_ixf51")
+
+[node name="ConeStraight3" type="Sprite2D" parent="."]
+position = Vector2(461, 515)
+rotation = 0.261799
+texture = ExtResource("20_ixf51")
+
+[node name="SkidmarkLong9" type="Sprite2D" parent="."]
+position = Vector2(461, 779)
+rotation = 0.261799
+texture = ExtResource("17_x2q4u")
+
+[node name="SkidmarkLong10" type="Sprite2D" parent="."]
+position = Vector2(411, 966)
+rotation = 0.261799
+texture = ExtResource("17_x2q4u")
+
+[node name="SkidmarkLong11" type="Sprite2D" parent="."]
+position = Vector2(362, 1151)
+rotation = 0.261799
+texture = ExtResource("17_x2q4u")
+
+[node name="SkidmarkLong12" type="Sprite2D" parent="."]
+position = Vector2(311, 1336)
+rotation = 0.261799
+texture = ExtResource("17_x2q4u")
+
+[node name="ConeDown3" type="Sprite2D" parent="."]
+position = Vector2(499, 976)
+texture = ExtResource("19_j3gge")
+
+[node name="ConeStraight4" type="Sprite2D" parent="."]
+position = Vector2(448, 1073)
+texture = ExtResource("20_ixf51")
+
+[node name="ConeDown4" type="Sprite2D" parent="."]
+position = Vector2(346, 885)
+rotation = 1.0472
+texture = ExtResource("19_j3gge")
+
+[node name="ConeDown5" type="Sprite2D" parent="."]
+position = Vector2(311, 1051)
+rotation = 2.61799
+texture = ExtResource("19_j3gge")
+
+[node name="Sample" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2576, 314)
+texture = ExtResource("2_uhn6e")
+
+[node name="Preview" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2564, 871)
+texture = ExtResource("3_4dmwx")
+
+[node name="ArrowWhite2" type="Sprite2D" parent="."]
+position = Vector2(1030, 232)
+rotation = -1.57079
+texture = ExtResource("2_yrprb")
+
+[node name="TribuneOverhangStriped" type="Sprite2D" parent="."]
+position = Vector2(2411, 828)
+texture = ExtResource("21_cgapv")
+
+[node name="TribuneOverhangStriped2" type="Sprite2D" parent="."]
+position = Vector2(2551, 448)
+texture = ExtResource("21_cgapv")
+
+[node name="TribuneOverhangStriped3" type="Sprite2D" parent="."]
+position = Vector2(2452, 1160)
+texture = ExtResource("21_cgapv")
+
+[node name="TribuneFull" type="Sprite2D" parent="."]
+position = Vector2(2228, 200)
+texture = ExtResource("22_dnkq4")
+
+[node name="ConeStraight5" type="Sprite2D" parent="."]
+position = Vector2(2405, 534)
+texture = ExtResource("20_ixf51")
+
+[node name="MotorcycleBlue" type="Sprite2D" parent="."]
+position = Vector2(1490, 1981)
+texture = ExtResource("25_uxqta")
+
+[node name="MotorcycleGreen" type="Sprite2D" parent="MotorcycleBlue"]
+position = Vector2(-100, 89)
+texture = ExtResource("26_4q1ut")
+
+[node name="MotorcycleRed" type="Sprite2D" parent="MotorcycleBlue/MotorcycleGreen"]
+position = Vector2(-76, 96)
+texture = ExtResource("27_tfdrg")
+
+[node name="MotorcycleYellow" type="Sprite2D" parent="MotorcycleBlue/MotorcycleGreen/MotorcycleRed"]
+position = Vector2(-113.999, 57.0006)
+texture = ExtResource("28_cmpci")
+
+[node name="MotorcycleBlack" type="Sprite2D" parent="MotorcycleBlue/MotorcycleGreen/MotorcycleRed/MotorcycleYellow"]
+position = Vector2(347.998, -718.001)
+rotation = 3.14159
+scale = Vector2(1.00874, 1.01039)
+texture = ExtResource("29_30v0x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MotorcycleBlue"]
+libraries = {
+"": SubResource("AnimationLibrary_uy0cu")
+}
+autoplay = "new_animation"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ConeStraight11" type="Sprite2D" parent="Node2D"]
+position = Vector2(2428, 630)
+texture = ExtResource("20_ixf51")
+
+[node name="ConeStraight10" type="Sprite2D" parent="Node2D"]
+position = Vector2(386, 445)
+texture = ExtResource("20_ixf51")
+
+[node name="ConeStraight9" type="Sprite2D" parent="Node2D"]
+position = Vector2(-72, 356)
+texture = ExtResource("20_ixf51")
+
+[node name="ConeStraight8" type="Sprite2D" parent="Node2D"]
+position = Vector2(2252, 384)
+texture = ExtResource("20_ixf51")
+
+[node name="ConeDown7" type="Sprite2D" parent="Node2D"]
+position = Vector2(2187, 423)
+texture = ExtResource("19_j3gge")
+
+[node name="ConeStraight7" type="Sprite2D" parent="Node2D"]
+position = Vector2(2228, 520)
+texture = ExtResource("20_ixf51")
+
+[node name="ConeStraight6" type="Sprite2D" parent="Node2D"]
+position = Vector2(2327, 578)
+texture = ExtResource("20_ixf51")
+
+[node name="ConeDown6" type="Sprite2D" parent="Node2D"]
+position = Vector2(2251, 630)
+texture = ExtResource("19_j3gge")
+
+[node name="RoadAsphalt02" type="Sprite2D" parent="Node2D"]
+position = Vector2(2004, 312)
+rotation = 2.87979
+scale = Vector2(1, 10.56)
+texture = ExtResource("24_k8pfj")
+
+[node name="RoadAsphalt01" type="Sprite2D" parent="Node2D"]
+position = Vector2(1885, 285)
+rotation = -0.261804
+scale = Vector2(1.13116, -10.2513)
+texture = ExtResource("24_k8pfj")
+
+[node name="ArrowWhite" type="Sprite2D" parent="Node2D"]
+position = Vector2(924, 229)
+rotation = -1.57079
+texture = ExtResource("2_yrprb")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchors_preset = -1
+anchor_left = -0.796
+anchor_top = -2.934
+anchor_right = -0.796
+anchor_bottom = -2.934
+offset_left = 881.0
+offset_top = 556.0
+offset_right = 985.0
+offset_bottom = 591.0
+rotation = 3.14159
+scale = Vector2(-2.02034, -2.19898)
+text = "paramètre"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+modulate = Color(1, 0.905882, 1, 1)
+offset_left = 1512.0
+offset_top = 57.0
+offset_right = 1636.0
+offset_bottom = 92.0
+scale = Vector2(1.96, 2.44)
+text = "custome kart"
+
+[node name="Rock2" type="Sprite2D" parent="TextEdit2"]
+position = Vector2(222.25, 101)
+scale = Vector2(6.37671, 3.58824)
+texture = ExtResource("30_1r02r")
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+offset_left = 735.0
+offset_top = 334.0
+offset_right = 816.0
+offset_bottom = 373.0
+scale = Vector2(6.54179, 4.70204)
+text = "KartCart"
+
+[node name="TextEdit4" type="TextEdit" parent="."]
+offset_left = 98.0
+offset_top = 269.0
+offset_right = 153.0
+offset_bottom = 305.0
+scale = Vector2(3.89591, 4.22302)
+text = "Index"
