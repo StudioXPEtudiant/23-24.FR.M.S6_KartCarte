@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5nhoi1rq65ef"]
+
+[ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_068nw"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-34, 22)
+scale = Vector2(1, 0.699882)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(7.9897e-06, 0.846313, 0.725105, 1)
+position = Vector2(186, 111.447)
+rotation = -1.5708
+scale = Vector2(0.92783, 1.27949)
+texture = ExtResource("1_068nw")
