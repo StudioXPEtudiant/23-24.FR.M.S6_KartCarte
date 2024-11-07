@@ -205,7 +205,7 @@ position = Vector2(-370, 179)
 texture = ExtResource("5_uyr3e")
 
 [node name="TentBlueLarge" type="Sprite2D" parent="."]
-position = Vector2(989, 423)
+position = Vector2(2676, -85)
 scale = Vector2(1.96, 0.639999)
 texture = ExtResource("6_sbenj")
 
@@ -515,9 +515,9 @@ scale = Vector2(6.37671, 3.58824)
 texture = ExtResource("30_1r02r")
 
 [node name="TextEdit3" type="TextEdit" parent="."]
-offset_left = 735.0
+offset_left = 724.0
 offset_top = 334.0
-offset_right = 816.0
+offset_right = 805.0
 offset_bottom = 373.0
 scale = Vector2(6.54179, 4.70204)
 text = "KartCart"
