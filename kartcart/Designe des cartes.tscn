@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5nhoi1rq65ef"]
+[gd_scene load_steps=18 format=3 uid="uid://c5nhoi1rq65ef"]
 
 [ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_068nw"]
+[ext_resource type="Texture2D" uid="uid://cp63eh0fyunun" path="res://kenney_racing-pack/PNG/Characters/character_black_white.png" id="2_67deh"]
+[ext_resource type="Texture2D" uid="uid://b5hvot7jfuvgc" path="res://kenney_racing-pack/PNG/Characters/racer_yellow.png" id="3_306nw"]
+[ext_resource type="Texture2D" uid="uid://saioehnqvjnq" path="res://kenney_racing-pack/PNG/Characters/racer_black.png" id="4_xiki0"]
+[ext_resource type="Texture2D" uid="uid://bn704v1b0xbb2" path="res://kenney_racing-pack/PNG/Characters/racer_blue.png" id="5_fbop7"]
+[ext_resource type="Texture2D" uid="uid://dfdj4vaab83kd" path="res://kenney_racing-pack/PNG/Characters/racer_green.png" id="6_pqab1"]
+[ext_resource type="Texture2D" uid="uid://djkxy5xfxramw" path="res://kenney_racing-pack/PNG/Characters/racer_red.png" id="7_chuh3"]
+[ext_resource type="Texture2D" uid="uid://cx43xl2cjfkuj" path="res://kenney_racing-pack/PNG/Characters/character_black_red.png" id="8_b32hm"]
+[ext_resource type="Texture2D" uid="uid://3p5c7ej5or5v" path="res://kenney_racing-pack/PNG/Characters/character_black_green.png" id="9_34tqo"]
+[ext_resource type="Texture2D" uid="uid://c5yvh6u4hi12h" path="res://kenney_racing-pack/PNG/Characters/character_blonde_blue.png" id="10_4b4vf"]
+[ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="11_368tx"]
+[ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="12_vleup"]
+[ext_resource type="Texture2D" uid="uid://c6xskhqlmqjvk" path="res://kenney_racing-pack/PNG/Objects/light_white.png" id="13_56oet"]
+[ext_resource type="Texture2D" uid="uid://bjn7djiki4tjg" path="res://kenney_racing-pack/PNG/Objects/light_yellow.png" id="14_s3moo"]
+[ext_resource type="Texture2D" uid="uid://mhmegkbd6nal" path="res://kenney_racing-pack/PNG/Objects/skidmark_short_3.png" id="15_2muuo"]
+[ext_resource type="Texture2D" uid="uid://cfeso348ja4c" path="res://kenney_racing-pack/PNG/Objects/skidmark_short_2.png" id="16_3ydvn"]
+[ext_resource type="Texture2D" uid="uid://bo16giu6sxjf5" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_1.png" id="17_l4hxm"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-34, 22)
@@ -12,3 +28,88 @@ position = Vector2(186, 111.447)
 rotation = -1.5708
 scale = Vector2(0.92783, 1.27949)
 texture = ExtResource("1_068nw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(188, 105.732)
+scale = Vector2(2.02052, 2.75951)
+texture = ExtResource("2_67deh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.655002, 4.90934e-06, 0.426424, 1)
+position = Vector2(461, 105.732)
+scale = Vector2(0.369056, 2.77173)
+texture = ExtResource("1_068nw")
+
+[node name="RacerYellow" type="Sprite2D" parent="."]
+position = Vector2(458, 85.7287)
+texture = ExtResource("3_306nw")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(722, 124.307)
+scale = Vector2(0.400585, 2.77291)
+texture = ExtResource("1_068nw")
+
+[node name="RacerBlack" type="Sprite2D" parent="."]
+position = Vector2(722, 214.322)
+texture = ExtResource("4_xiki0")
+
+[node name="RacerBlue" type="Sprite2D" parent="."]
+position = Vector2(780, 104.303)
+texture = ExtResource("5_fbop7")
+
+[node name="RacerGreen" type="Sprite2D" parent="."]
+position = Vector2(662, 111.447)
+texture = ExtResource("6_pqab1")
+
+[node name="RacerRed" type="Sprite2D" parent="."]
+position = Vector2(783, 5.71526)
+texture = ExtResource("7_chuh3")
+
+[node name="RacerYellow2" type="Sprite2D" parent="."]
+position = Vector2(662, 5.71525)
+texture = ExtResource("3_306nw")
+
+[node name="CharacterBlackRed" type="Sprite2D" parent="."]
+position = Vector2(223, -238.612)
+texture = ExtResource("8_b32hm")
+
+[node name="CharacterBlackGreen" type="Sprite2D" parent="."]
+position = Vector2(406, -234.325)
+texture = ExtResource("9_34tqo")
+
+[node name="CharacterBlondeBlue" type="Sprite2D" parent="."]
+position = Vector2(339, -301.479)
+scale = Vector2(2.46518, 2.49864)
+texture = ExtResource("10_4b4vf")
+
+[node name="ArrowWhite" type="Sprite2D" parent="."]
+position = Vector2(459, 225.752)
+texture = ExtResource("11_368tx")
+
+[node name="ArrowYellow" type="Sprite2D" parent="."]
+position = Vector2(460, -20.0034)
+texture = ExtResource("12_vleup")
+
+[node name="LightWhite" type="Sprite2D" parent="."]
+position = Vector2(720, 78.5847)
+texture = ExtResource("13_56oet")
+
+[node name="LightYellow" type="Sprite2D" parent="."]
+position = Vector2(984, -285.762)
+texture = ExtResource("14_s3moo")
+
+[node name="SkidmarkShort3" type="Sprite2D" parent="."]
+position = Vector2(839, -227.181)
+texture = ExtResource("15_2muuo")
+
+[node name="SkidmarkShort2" type="Sprite2D" parent="."]
+position = Vector2(537, -268.617)
+texture = ExtResource("16_3ydvn")
+
+[node name="SkidmarkLong1" type="Sprite2D" parent="."]
+position = Vector2(886, 130.022)
+texture = ExtResource("17_l4hxm")
+
+[node name="RacerBlack2" type="Sprite2D" parent="."]
+position = Vector2(584, 188.603)
+texture = ExtResource("4_xiki0")

@@ -1,28 +1,27 @@
-[gd_scene load_steps=24 format=3 uid="uid://7eh5w82uvurn"]
+[gd_scene load_steps=23 format=3 uid="uid://7eh5w82uvurn"]
 
-[ext_resource type="Texture2D" uid="uid://b88r883pip06d" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass04.png" id="2_1yfjm"]
-[ext_resource type="Texture2D" uid="uid://bksi4lbm3yd4r" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt42.png" id="2_04nto"]
-[ext_resource type="Texture2D" uid="uid://bkug5sdnlk37f" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt03.png" id="2_fcymp"]
-[ext_resource type="Texture2D" uid="uid://oa5eijfjmsnr" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt01.png" id="2_sruw1"]
-[ext_resource type="Texture2D" uid="uid://b5jol0ydm15e5" path="res://kenney_racing-pack/PNG/Objects/barrel_blue.png" id="4_eph21"]
-[ext_resource type="Texture2D" uid="uid://bpewhgehv6q61" path="res://kenney_racing-pack/PNG/Cars/car_red_5.png" id="6_c8cvx"]
-[ext_resource type="Texture2D" uid="uid://ctqqpha4578i2" path="res://kenney_racing-pack/PNG/Objects/barrier_red_race.png" id="7_2i22v"]
-[ext_resource type="Texture2D" uid="uid://c4255coei6yy4" path="res://kenney_racing-pack/PNG/Objects/tribune_full.png" id="8_ivwht"]
-[ext_resource type="Texture2D" uid="uid://dq21jomu6vbt8" path="res://kenney_racing-pack/PNG/Objects/tribune_empty.png" id="9_i6l7w"]
-[ext_resource type="Texture2D" uid="uid://bs78ioi7s3wjf" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_1.png" id="10_dhgxn"]
-[ext_resource type="Texture2D" uid="uid://cny7el0gy0e4r" path="res://kenney_racing-pack/PNG/Objects/tent_blue.png" id="11_h620e"]
-[ext_resource type="Texture2D" uid="uid://cm12pnnmypowl" path="res://kenney_racing-pack/PNG/Objects/tent_red.png" id="12_7bf0f"]
-[ext_resource type="Texture2D" uid="uid://dppbilsbqw6ke" path="res://kenney_racing-pack/PNG/Objects/rock1.png" id="13_khajj"]
-[ext_resource type="Texture2D" uid="uid://bfhtdef6k3fyu" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="14_4fh6b"]
-[ext_resource type="Texture2D" uid="uid://bhhi2436ovb54" path="res://kenney_racing-pack/PNG/Objects/tires_white_alt.png" id="15_6e0ia"]
-[ext_resource type="Texture2D" uid="uid://bsn6h32mx7vxa" path="res://kenney_racing-pack/PNG/Objects/tires_red_alt.png" id="16_8h6g1"]
-[ext_resource type="Texture2D" uid="uid://c1stt66p6obem" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass03.png" id="16_lq6qv"]
-[ext_resource type="Texture2D" uid="uid://c113amys227bb" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass01.png" id="17_4gb1s"]
-[ext_resource type="Texture2D" uid="uid://ck7hf4hrrk6c7" path="res://kenney_racing-pack/PNG/Objects/rock3.png" id="17_bpexf"]
-[ext_resource type="Texture2D" uid="uid://eucuetan5i7v" path="res://kenney_racing-pack/PNG/Objects/rock2.png" id="18_h04v6"]
-[ext_resource type="Script" path="res://voitur.gd" id="21_nrimf"]
-[ext_resource type="Texture2D" uid="uid://cff6e0163nokv" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_rttx7"]
-[ext_resource type="Texture2D" uid="uid://cbpcngfb68lby" path="res://kenney_racing-pack/PNG/Cars/car_blue_1.png" id="22_r7exb"]
+[ext_resource type="Texture2D" uid="uid://begp2nu0rwvdn" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass04.png" id="2_1yfjm"]
+[ext_resource type="Texture2D" uid="uid://3gik375slgcc" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt42.png" id="2_04nto"]
+[ext_resource type="Texture2D" uid="uid://ddkw7a8rscdjn" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt03.png" id="2_fcymp"]
+[ext_resource type="Texture2D" uid="uid://rglkmye3dsnh" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt01.png" id="2_sruw1"]
+[ext_resource type="Texture2D" uid="uid://dv1ct22yprc3x" path="res://kenney_racing-pack/PNG/Objects/barrel_blue.png" id="4_eph21"]
+[ext_resource type="Texture2D" uid="uid://cekea3xvimehl" path="res://kenney_racing-pack/PNG/Cars/car_red_5.png" id="6_c8cvx"]
+[ext_resource type="Texture2D" uid="uid://o8q5awtcbypn" path="res://kenney_racing-pack/PNG/Objects/barrier_red_race.png" id="7_2i22v"]
+[ext_resource type="Texture2D" uid="uid://boi07ax4ue4r8" path="res://kenney_racing-pack/PNG/Objects/tribune_full.png" id="8_ivwht"]
+[ext_resource type="Texture2D" uid="uid://bvrfs40v3v64" path="res://kenney_racing-pack/PNG/Objects/tribune_empty.png" id="9_i6l7w"]
+[ext_resource type="Texture2D" uid="uid://bo16giu6sxjf5" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_1.png" id="10_dhgxn"]
+[ext_resource type="Texture2D" uid="uid://jufgkgovu62l" path="res://kenney_racing-pack/PNG/Objects/tent_blue.png" id="11_h620e"]
+[ext_resource type="Texture2D" uid="uid://b7dooro2qhtta" path="res://kenney_racing-pack/PNG/Objects/tent_red.png" id="12_7bf0f"]
+[ext_resource type="Texture2D" uid="uid://clf3jfims0j04" path="res://kenney_racing-pack/PNG/Objects/rock1.png" id="13_khajj"]
+[ext_resource type="Texture2D" uid="uid://b1ekkxymigoe8" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="14_4fh6b"]
+[ext_resource type="Texture2D" uid="uid://by6d52s7a6jn7" path="res://kenney_racing-pack/PNG/Objects/tires_white_alt.png" id="15_6e0ia"]
+[ext_resource type="Texture2D" uid="uid://dtwljprowu3mx" path="res://kenney_racing-pack/PNG/Objects/tires_red_alt.png" id="16_8h6g1"]
+[ext_resource type="Texture2D" uid="uid://5whiqiffvmae" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass03.png" id="16_lq6qv"]
+[ext_resource type="Texture2D" uid="uid://cpg5wp5xho4it" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass01.png" id="17_4gb1s"]
+[ext_resource type="Texture2D" uid="uid://crqh026tij13s" path="res://kenney_racing-pack/PNG/Objects/rock3.png" id="17_bpexf"]
+[ext_resource type="Texture2D" uid="uid://b7mqx51yrf1dy" path="res://kenney_racing-pack/PNG/Objects/rock2.png" id="18_h04v6"]
+[ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_rttx7"]
+[ext_resource type="Texture2D" uid="uid://bb0numvki8a2n" path="res://kenney_racing-pack/PNG/Cars/car_blue_1.png" id="22_r7exb"]
 
 [node name="Map 01" type="Node2D"]
 scale = Vector2(0.25, 0.25)
@@ -785,15 +784,14 @@ position = Vector2(320, 832)
 [node name="Position44" type="Node2D" parent="Position"]
 position = Vector2(320, 704)
 
-[node name="Voitur" type="Node2D" parent="." node_paths=PackedStringArray("parentListPoint")]
+[node name="Voitur" type="Node2D" parent="."]
 position = Vector2(0, -0.00012207)
-script = ExtResource("21_nrimf")
-parentListPoint = NodePath("../Position")
 
 [node name="CarBlue1" type="Sprite2D" parent="Voitur"]
 texture = ExtResource("22_r7exb")
 
 [node name="Bouton" type="Node2D" parent="."]
+position = Vector2(36, 12)
 
 [node name="ArrowWhite" type="Sprite2D" parent="Bouton"]
 position = Vector2(4300, 2000)
