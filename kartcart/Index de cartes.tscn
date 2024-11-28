@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://uf52eeqmwftn"]
+
+[ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_3yw5k"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TribuneOverhangRed" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+self_modulate = Color(0, 0, 0, 1)
+light_mask = 2
+position = Vector2(1462, 342)
+scale = Vector2(-6.59603, 14.21)
+texture = ExtResource("1_3yw5k")
+
+[node name="TribuneOverhangRed2" type="Sprite2D" parent="."]
+position = Vector2(545, -299)
+scale = Vector2(1, 4.68)
+texture = ExtResource("1_3yw5k")
+
+[node name="TribuneOverhangRed3" type="Sprite2D" parent="TribuneOverhangRed2"]
+position = Vector2(648, 2.35043)
+scale = Vector2(-0.866139, -0.980425)
+texture = ExtResource("1_3yw5k")
+
+[node name="TribuneOverhangRed3" type="Sprite2D" parent="TribuneOverhangRed2/TribuneOverhangRed3"]
+position = Vector2(-771.239, 0.435883)
+rotation = 3.14159
+scale = Vector2(1.15455, 0.993813)
+texture = ExtResource("1_3yw5k")
+
+[node name="TribuneOverhangRed" type="Sprite2D" parent="TribuneOverhangRed2/TribuneOverhangRed3"]
+position = Vector2(-1512.46, 5.2306)
+texture = ExtResource("1_3yw5k")
+
+[node name="TribuneOverhangRed2" type="Sprite2D" parent="TribuneOverhangRed2/TribuneOverhangRed3"]
+position = Vector2(764.312, -173.481)
+scale = Vector2(1.14081, 1)
+texture = ExtResource("1_3yw5k")
+
+[node name="TribuneOverhangRed4" type="Sprite2D" parent="TribuneOverhangRed2/TribuneOverhangRed3"]
+position = Vector2(9.23645, -170.866)
+scale = Vector2(1.09, 0.973847)
+texture = ExtResource("1_3yw5k")
+
+[node name="TribuneOverhangRed5" type="Sprite2D" parent="TribuneOverhangRed2/TribuneOverhangRed3"]
+position = Vector2(-796.639, -165.2)
+scale = Vector2(1.25997, 1.02615)
+texture = ExtResource("1_3yw5k")
+
+[node name="TribuneOverhangRed6" type="Sprite2D" parent="TribuneOverhangRed2/TribuneOverhangRed3"]
+position = Vector2(-1529.78, -166.725)
+texture = ExtResource("1_3yw5k")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cbydibtnn6mxk"]
+[gd_scene load_steps=38 format=3 uid="uid://cbydibtnn6mxk"]
 
 [ext_resource type="Texture2D" uid="uid://dcnv61grpdrh2" path="res://kenney_racing-pack/Spritesheets/spritesheet_objects.png" id="1_vrg0k"]
 [ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="1_x6otq"]
@@ -30,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://vvjs3p6uul2p" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_yellow.png" id="28_cmpci"]
 [ext_resource type="Texture2D" uid="uid://choiak6r7jm5t" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_black.png" id="29_30v0x"]
 [ext_resource type="Texture2D" uid="uid://b7mqx51yrf1dy" path="res://kenney_racing-pack/PNG/Objects/rock2.png" id="30_1r02r"]
-[ext_resource type="Script" path="res://sceneManager.gd" id="30_kbnn8"]
 
 [sub_resource type="Animation" id="Animation_2jdau"]
 length = 0.001
@@ -541,7 +540,6 @@ offset_left = 110.945
 offset_top = 113.554
 offset_right = -30.94
 offset_bottom = -58.5
-script = ExtResource("30_kbnn8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -559,5 +557,3 @@ offset_bottom = 452.0
 scale = Vector2(2.4172, 2.13973)
 text = "Index"
 editable = false
-
-[connection signal="button_down" from="StartButton/TextEdit3/Button" to="StartButton/TextEdit3/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
