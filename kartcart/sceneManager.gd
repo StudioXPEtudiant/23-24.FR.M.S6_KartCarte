@@ -9,3 +9,14 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func switchScene(Scene:String):
+	get_tree().change_scene_to_file(Scene)
+
+func _on_button_down() -> void:
+	pass # Replace with function body.
+
+
+func _on_pressed() -> void:
+	pass # Replace with function body.

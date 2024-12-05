@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://5f42gfc6es2y"]
+
+[node name="CarteFaceVisible" type="Node2D"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

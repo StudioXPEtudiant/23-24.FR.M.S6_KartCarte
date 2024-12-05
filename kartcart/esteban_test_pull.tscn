@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cbydibtnn6mxk"]
+[gd_scene load_steps=39 format=3 uid="uid://cbydibtnn6mxk"]
 
 [ext_resource type="Texture2D" uid="uid://dcnv61grpdrh2" path="res://kenney_racing-pack/Spritesheets/spritesheet_objects.png" id="1_vrg0k"]
 [ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="1_x6otq"]
@@ -30,13 +30,14 @@
 [ext_resource type="Texture2D" uid="uid://vvjs3p6uul2p" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_yellow.png" id="28_cmpci"]
 [ext_resource type="Texture2D" uid="uid://choiak6r7jm5t" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_black.png" id="29_30v0x"]
 [ext_resource type="Texture2D" uid="uid://b7mqx51yrf1dy" path="res://kenney_racing-pack/PNG/Objects/rock2.png" id="30_1r02r"]
+[ext_resource type="Script" path="res://sceneManager.gd" id="31_314xl"]
 
 [sub_resource type="Animation" id="Animation_2jdau"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/Sprite2D:position")
+tracks/0/path = NodePath("Node2D2/AnimationPlayer/Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -48,7 +49,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/Sprite2D:rotation")
+tracks/1/path = NodePath("Node2D2/AnimationPlayer/Sprite2D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -64,7 +65,7 @@ length = 50.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/Sprite2D:position")
+tracks/0/path = NodePath("Node2D2/AnimationPlayer/Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -76,7 +77,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/Sprite2D:rotation")
+tracks/1/path = NodePath("Node2D2/AnimationPlayer/Sprite2D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -159,278 +160,281 @@ _data = {
 [node name="Esteban test pull" type="Node2D"]
 scale = Vector2(0.55, 0.55)
 
-[node name="TribuneOverhangRed" type="Sprite2D" parent="."]
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="TribuneOverhangRed" type="Sprite2D" parent="Node2D2"]
 position = Vector2(913, 650)
 scale = Vector2(6.772, 10.9235)
 texture = ExtResource("4_l5mlo")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_r08vf")
 }
 
-[node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer"]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2/AnimationPlayer"]
 position = Vector2(-59, -52)
 rotation = 2.09439
 scale = Vector2(1.00874, 1.01039)
 texture = ExtResource("1_x6otq")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="AnimationPlayer/Sprite2D"]
+[node name="RigidBody2D" type="RigidBody2D" parent="Node2D2/AnimationPlayer/Sprite2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimationPlayer/Sprite2D/RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/AnimationPlayer/Sprite2D/RigidBody2D"]
 position = Vector2(6.2679, 14.8564)
 shape = SubResource("RectangleShape2D_psmug")
 
-[node name="ArrowYellow3" type="Sprite2D" parent="AnimationPlayer/Sprite2D/RigidBody2D"]
+[node name="ArrowYellow3" type="Sprite2D" parent="Node2D2/AnimationPlayer/Sprite2D/RigidBody2D"]
 position = Vector2(176.179, -364.399)
 rotation = -0.523598
 texture = ExtResource("1_x6otq")
 
-[node name="TentRed" type="Sprite2D" parent="AnimationPlayer/Sprite2D/RigidBody2D"]
+[node name="TentRed" type="Sprite2D" parent="Node2D2/AnimationPlayer/Sprite2D/RigidBody2D"]
 position = Vector2(23.7819, -2500.5)
 rotation = -3.66519
 texture = ExtResource("3_3ga67")
 
-[node name="TentRed2" type="Sprite2D" parent="AnimationPlayer/Sprite2D/RigidBody2D"]
+[node name="TentRed2" type="Sprite2D" parent="Node2D2/AnimationPlayer/Sprite2D/RigidBody2D"]
 position = Vector2(612.999, -212.766)
 rotation = -0.523598
 texture = ExtResource("3_3ga67")
 
-[node name="SpritesheetObjects" type="Sprite2D" parent="."]
+[node name="SpritesheetObjects" type="Sprite2D" parent="Node2D2"]
 visible = false
 position = Vector2(1651, 501)
 texture = ExtResource("1_vrg0k")
 
-[node name="TreeLarge" type="Sprite2D" parent="."]
+[node name="TreeLarge" type="Sprite2D" parent="Node2D2"]
 position = Vector2(-370, 179)
 texture = ExtResource("5_uyr3e")
 
-[node name="TentBlueLarge" type="Sprite2D" parent="."]
+[node name="TentBlueLarge" type="Sprite2D" parent="Node2D2"]
 position = Vector2(2676, -85)
 scale = Vector2(1.96, 0.639999)
 texture = ExtResource("6_sbenj")
 
-[node name="LightYellow" type="Sprite2D" parent="."]
+[node name="LightYellow" type="Sprite2D" parent="Node2D2"]
 position = Vector2(564, 114)
 rotation = -3.14159
 texture = ExtResource("7_432p4")
 
-[node name="LightWhite" type="Sprite2D" parent="."]
+[node name="LightWhite" type="Sprite2D" parent="Node2D2"]
 position = Vector2(524, 111)
 rotation = -3.14159
 texture = ExtResource("8_31kju")
 
-[node name="Lights" type="Sprite2D" parent="."]
+[node name="Lights" type="Sprite2D" parent="Node2D2"]
 position = Vector2(541, 4)
 texture = ExtResource("9_twg2v")
 
-[node name="LightYellow2" type="Sprite2D" parent="."]
+[node name="LightYellow2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(485, 131)
 rotation = 3.14159
 texture = ExtResource("7_432p4")
 
-[node name="LightWhite2" type="Sprite2D" parent="."]
+[node name="LightWhite2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(598, 121)
 rotation = 3.14159
 texture = ExtResource("8_31kju")
 
-[node name="ArrowYellow" type="Sprite2D" parent="."]
+[node name="ArrowYellow" type="Sprite2D" parent="Node2D2"]
 position = Vector2(109, 525)
 rotation = 1.57079
 texture = ExtResource("1_x6otq")
 
-[node name="ArrowYellow2" type="Sprite2D" parent="."]
+[node name="ArrowYellow2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(212, 525)
 rotation = 1.57079
 texture = ExtResource("1_x6otq")
 
-[node name="Oil" type="Sprite2D" parent="."]
+[node name="Oil" type="Sprite2D" parent="Node2D2"]
 position = Vector2(81, 76)
 texture = ExtResource("12_4sa0n")
 
-[node name="TiresWhiteAlt" type="Sprite2D" parent="."]
+[node name="TiresWhiteAlt" type="Sprite2D" parent="Node2D2"]
 position = Vector2(190, 37)
 texture = ExtResource("13_ophlw")
 
-[node name="TiresWhiteAlt2" type="Sprite2D" parent="."]
+[node name="TiresWhiteAlt2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(189, 124)
 texture = ExtResource("13_ophlw")
 
-[node name="TiresWhite" type="Sprite2D" parent="."]
+[node name="TiresWhite" type="Sprite2D" parent="Node2D2"]
 position = Vector2(278, 39)
 texture = ExtResource("14_v4m0q")
 
-[node name="TiresWhite2" type="Sprite2D" parent="."]
+[node name="TiresWhite2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(283, 124)
 texture = ExtResource("14_v4m0q")
 
-[node name="SkidmarkLong1" type="Sprite2D" parent="."]
+[node name="SkidmarkLong1" type="Sprite2D" parent="Node2D2"]
 position = Vector2(279, 104)
 texture = ExtResource("15_b3vgx")
 
-[node name="SkidmarkLong2" type="Sprite2D" parent="."]
+[node name="SkidmarkLong2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(189, 106)
 texture = ExtResource("15_b3vgx")
 
-[node name="SkidmarkLong3" type="Sprite2D" parent="."]
+[node name="SkidmarkLong3" type="Sprite2D" parent="Node2D2"]
 position = Vector2(249, 37)
 rotation = -1.57079
 texture = ExtResource("15_b3vgx")
 
-[node name="SkidmarkLong4" type="Sprite2D" parent="."]
+[node name="SkidmarkLong4" type="Sprite2D" parent="Node2D2"]
 position = Vector2(250, 124)
 rotation = -1.57079
 texture = ExtResource("15_b3vgx")
 
-[node name="SkidmarkShort3" type="Sprite2D" parent="."]
+[node name="SkidmarkShort3" type="Sprite2D" parent="Node2D2"]
 position = Vector2(-391, 583)
 texture = ExtResource("16_2jxxd")
 
-[node name="SkidmarkLong5" type="Sprite2D" parent="."]
+[node name="SkidmarkLong5" type="Sprite2D" parent="Node2D2"]
 position = Vector2(514, 591)
 rotation = 0.261799
 texture = ExtResource("17_x2q4u")
 
-[node name="SkidmarkLong6" type="Sprite2D" parent="."]
+[node name="SkidmarkLong6" type="Sprite2D" parent="Node2D2"]
 position = Vector2(562, 410)
 rotation = -2.87979
 scale = Vector2(1, 0.937882)
 texture = ExtResource("17_x2q4u")
 
-[node name="SkidmarkLong7" type="Sprite2D" parent="."]
+[node name="SkidmarkLong7" type="Sprite2D" parent="Node2D2"]
 position = Vector2(609, 232)
 rotation = 0.261799
 texture = ExtResource("17_x2q4u")
 
-[node name="SkidmarkLong8" type="Sprite2D" parent="."]
+[node name="SkidmarkLong8" type="Sprite2D" parent="Node2D2"]
 position = Vector2(657, 57)
 rotation = 0.261799
 texture = ExtResource("17_x2q4u")
 
-[node name="BarrierWhite" type="Sprite2D" parent="."]
+[node name="BarrierWhite" type="Sprite2D" parent="Node2D2"]
 position = Vector2(986, 599)
 texture = ExtResource("18_msp1u")
 
-[node name="ConeDown" type="Sprite2D" parent="."]
+[node name="ConeDown" type="Sprite2D" parent="Node2D2"]
 position = Vector2(579, 628)
 texture = ExtResource("19_j3gge")
 
-[node name="ConeDown2" type="Sprite2D" parent="."]
+[node name="ConeDown2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(473, 438)
 rotation = -2.35619
 texture = ExtResource("19_j3gge")
 
-[node name="ConeStraight" type="Sprite2D" parent="."]
+[node name="ConeStraight" type="Sprite2D" parent="Node2D2"]
 position = Vector2(432, 612)
 rotation = 0.261799
 texture = ExtResource("20_ixf51")
 
-[node name="ConeStraight2" type="Sprite2D" parent="."]
+[node name="ConeStraight2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(604, 548)
 rotation = 0.261799
 texture = ExtResource("20_ixf51")
 
-[node name="ConeStraight3" type="Sprite2D" parent="."]
+[node name="ConeStraight3" type="Sprite2D" parent="Node2D2"]
 position = Vector2(461, 515)
 rotation = 0.261799
 texture = ExtResource("20_ixf51")
 
-[node name="SkidmarkLong9" type="Sprite2D" parent="."]
+[node name="SkidmarkLong9" type="Sprite2D" parent="Node2D2"]
 position = Vector2(461, 779)
 rotation = 0.261799
 texture = ExtResource("17_x2q4u")
 
-[node name="SkidmarkLong10" type="Sprite2D" parent="."]
+[node name="SkidmarkLong10" type="Sprite2D" parent="Node2D2"]
 position = Vector2(411, 966)
 rotation = 0.261799
 texture = ExtResource("17_x2q4u")
 
-[node name="SkidmarkLong11" type="Sprite2D" parent="."]
+[node name="SkidmarkLong11" type="Sprite2D" parent="Node2D2"]
 position = Vector2(362, 1151)
 rotation = 0.261799
 texture = ExtResource("17_x2q4u")
 
-[node name="SkidmarkLong12" type="Sprite2D" parent="."]
+[node name="SkidmarkLong12" type="Sprite2D" parent="Node2D2"]
 position = Vector2(311, 1336)
 rotation = 0.261799
 texture = ExtResource("17_x2q4u")
 
-[node name="ConeDown3" type="Sprite2D" parent="."]
+[node name="ConeDown3" type="Sprite2D" parent="Node2D2"]
 position = Vector2(499, 976)
 texture = ExtResource("19_j3gge")
 
-[node name="ConeStraight4" type="Sprite2D" parent="."]
+[node name="ConeStraight4" type="Sprite2D" parent="Node2D2"]
 position = Vector2(448, 1073)
 texture = ExtResource("20_ixf51")
 
-[node name="ConeDown4" type="Sprite2D" parent="."]
+[node name="ConeDown4" type="Sprite2D" parent="Node2D2"]
 position = Vector2(346, 885)
 rotation = 1.0472
 texture = ExtResource("19_j3gge")
 
-[node name="ConeDown5" type="Sprite2D" parent="."]
+[node name="ConeDown5" type="Sprite2D" parent="Node2D2"]
 position = Vector2(311, 1051)
 rotation = 2.61799
 texture = ExtResource("19_j3gge")
 
-[node name="Sample" type="Sprite2D" parent="."]
+[node name="Sample" type="Sprite2D" parent="Node2D2"]
 visible = false
 position = Vector2(2576, 314)
 texture = ExtResource("2_uhn6e")
 
-[node name="Preview" type="Sprite2D" parent="."]
+[node name="Preview" type="Sprite2D" parent="Node2D2"]
 visible = false
 position = Vector2(2564, 871)
 texture = ExtResource("3_4dmwx")
 
-[node name="ArrowWhite2" type="Sprite2D" parent="."]
+[node name="ArrowWhite2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(1030, 232)
 rotation = -1.57079
 texture = ExtResource("2_yrprb")
 
-[node name="TribuneOverhangStriped" type="Sprite2D" parent="."]
+[node name="TribuneOverhangStriped" type="Sprite2D" parent="Node2D2"]
 position = Vector2(2411, 828)
 texture = ExtResource("21_cgapv")
 
-[node name="TribuneOverhangStriped2" type="Sprite2D" parent="."]
+[node name="TribuneOverhangStriped2" type="Sprite2D" parent="Node2D2"]
 position = Vector2(2551, 448)
 texture = ExtResource("21_cgapv")
 
-[node name="TribuneOverhangStriped3" type="Sprite2D" parent="."]
+[node name="TribuneOverhangStriped3" type="Sprite2D" parent="Node2D2"]
 position = Vector2(2452, 1160)
 texture = ExtResource("21_cgapv")
 
-[node name="TribuneFull" type="Sprite2D" parent="."]
+[node name="TribuneFull" type="Sprite2D" parent="Node2D2"]
 position = Vector2(2814.55, 520)
 texture = ExtResource("22_dnkq4")
 
-[node name="ConeStraight5" type="Sprite2D" parent="."]
+[node name="ConeStraight5" type="Sprite2D" parent="Node2D2"]
 position = Vector2(2405, 534)
 texture = ExtResource("20_ixf51")
 
-[node name="MotorcycleBlue" type="Sprite2D" parent="."]
+[node name="MotorcycleBlue" type="Sprite2D" parent="Node2D2"]
 position = Vector2(1490, 1981)
 texture = ExtResource("25_uxqta")
 
-[node name="MotorcycleGreen" type="Sprite2D" parent="MotorcycleBlue"]
+[node name="MotorcycleGreen" type="Sprite2D" parent="Node2D2/MotorcycleBlue"]
 position = Vector2(-100, 89)
 texture = ExtResource("26_4q1ut")
 
-[node name="MotorcycleRed" type="Sprite2D" parent="MotorcycleBlue/MotorcycleGreen"]
+[node name="MotorcycleRed" type="Sprite2D" parent="Node2D2/MotorcycleBlue/MotorcycleGreen"]
 position = Vector2(-76, 96)
 texture = ExtResource("27_tfdrg")
 
-[node name="MotorcycleYellow" type="Sprite2D" parent="MotorcycleBlue/MotorcycleGreen/MotorcycleRed"]
+[node name="MotorcycleYellow" type="Sprite2D" parent="Node2D2/MotorcycleBlue/MotorcycleGreen/MotorcycleRed"]
 position = Vector2(-113.999, 57.0006)
 texture = ExtResource("28_cmpci")
 
-[node name="MotorcycleBlack" type="Sprite2D" parent="MotorcycleBlue/MotorcycleGreen/MotorcycleRed/MotorcycleYellow"]
+[node name="MotorcycleBlack" type="Sprite2D" parent="Node2D2/MotorcycleBlue/MotorcycleGreen/MotorcycleRed/MotorcycleYellow"]
 position = Vector2(347.998, -718.001)
 rotation = 3.14159
 scale = Vector2(1.00874, 1.01039)
 texture = ExtResource("29_30v0x")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MotorcycleBlue"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node2D2/MotorcycleBlue"]
 libraries = {
 "": SubResource("AnimationLibrary_uy0cu")
 }
@@ -540,20 +544,31 @@ offset_left = 110.945
 offset_top = 113.554
 offset_right = -30.94
 offset_bottom = -58.5
+script = ExtResource("31_314xl")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="IndexButton" type="Node2D" parent="."]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextEdit4" type="TextEdit" parent="CanvasLayer/Control"]
-layout_mode = 0
+[node name="TextEdit4" type="TextEdit" parent="IndexButton"]
+offset_left = 5.54865e-05
 offset_top = 416.0
-offset_right = 55.0
+offset_right = 55.0001
 offset_bottom = 452.0
 scale = Vector2(2.4172, 2.13973)
 text = "Index"
 editable = false
+
+[node name="Button" type="Button" parent="IndexButton/TextEdit4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.317
+anchor_top = -2.886
+anchor_right = 1.364
+anchor_bottom = 2.5
+offset_left = 71.435
+offset_top = 101.896
+offset_right = -19.02
+offset_bottom = -54.0
+script = ExtResource("31_314xl")
+
+[connection signal="pressed" from="StartButton/TextEdit3/Button" to="StartButton/TextEdit3/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
+[connection signal="pressed" from="IndexButton/TextEdit4/Button" to="IndexButton/TextEdit4/Button" method="switchScene" binds= ["res://Index de cartes.tscn"]]
