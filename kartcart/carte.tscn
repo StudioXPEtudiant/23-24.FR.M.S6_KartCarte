@@ -1,7 +1,76 @@
-[gd_scene format=3 uid="uid://5f42gfc6es2y"]
+[gd_scene load_steps=4 format=3 uid="uid://5f42gfc6es2y"]
 
-[node name="CarteFaceVisible" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://2ab2dpyd0tp7" path="res://kenney_racing-pack/PNG/Blue/Default/bar_round_gloss_large.png" id="1_7tuby"]
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[sub_resource type="LabelSettings" id="LabelSettings_a0jsd"]
+font_size = 45
+
+[sub_resource type="ImageTexture" id="ImageTexture_4mc0p"]
+
+[node name="Carte" type="Node2D"]
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 87.0
+offset_top = 128.0
+offset_right = 227.0
+offset_bottom = 236.0
+
+[node name="BarRoundGlossLarge" type="Sprite2D" parent="."]
+position = Vector2(664, -256)
+scale = Vector2(5.79167, 8.33333)
+texture = ExtResource("1_7tuby")
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(3, 3)
+
+[node name="tail caneva" type="Polygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
+
+[node name="carte" type="Polygon2D" parent="."]
+position = Vector2(288, 0)
+color = Color(1, 0.498039, 0, 1)
+polygon = PackedVector2Array(0, 0, 576, 0, 576, 648, 0, 648)
+
+[node name="Fuel" type="Node2D" parent="carte"]
+
+[node name="fuel" type="Label" parent="carte/Fuel"]
+offset_left = 416.0
+offset_right = 574.0
+offset_bottom = 128.0
+text = "Nb 
+de fuel"
+label_settings = SubResource("LabelSettings_a0jsd")
+
+[node name="Rareté" type="Node2D" parent="carte"]
+
+[node name="rareté" type="Label" parent="carte/Rareté"]
+offset_right = 224.0
+offset_bottom = 128.0
+text = "Rareté"
+label_settings = SubResource("LabelSettings_a0jsd")
+
+[node name="Nom" type="Node2D" parent="carte"]
+
+[node name="nom" type="Label" parent="carte/Nom"]
+offset_left = 96.0
+offset_top = 128.0
+offset_right = 480.0
+offset_bottom = 192.0
+text = "Nom de la carte"
+label_settings = SubResource("LabelSettings_a0jsd")
+
+[node name="Description" type="Node2D" parent="carte"]
+
+[node name="description" type="Label" parent="carte/Description"]
+offset_left = 32.0
+offset_top = 448.0
+offset_right = 544.0
+offset_bottom = 640.0
+text = "description"
+label_settings = SubResource("LabelSettings_a0jsd")
+
+[node name="Node2D" type="Node2D" parent="carte"]
+
+[node name="Sprite2D" type="Sprite2D" parent="carte/Node2D"]
+texture = SubResource("ImageTexture_4mc0p")
