@@ -655,9 +655,11 @@ rotation = 2.35619
 
 [node name="Position10" type="Node2D" parent="Position"]
 position = Vector2(960, 320)
+rotation = 3.14159
 
 [node name="Position11" type="Node2D" parent="Position"]
 position = Vector2(960, 448)
+rotation = 3.14159
 
 [node name="Position12" type="Node2D" parent="Position"]
 position = Vector2(960, 576)
@@ -711,6 +713,7 @@ rotation = 3.14159
 
 [node name="Position25" type="Node2D" parent="Position"]
 position = Vector2(1856, 576)
+rotation = 3.14159
 
 [node name="Position26" type="Node2D" parent="Position"]
 position = Vector2(1856, 704)
