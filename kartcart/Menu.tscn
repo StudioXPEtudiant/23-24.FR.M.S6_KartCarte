@@ -1,0 +1,515 @@
+[gd_scene load_steps=35 format=3 uid="uid://cbydibtnn6mxk"]
+
+[ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_1eno2"]
+[ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="2_t5gkq"]
+[ext_resource type="Texture2D" uid="uid://bjn7djiki4tjg" path="res://kenney_racing-pack/PNG/Objects/light_yellow.png" id="7_3i4k5"]
+[ext_resource type="Texture2D" uid="uid://c6xskhqlmqjvk" path="res://kenney_racing-pack/PNG/Objects/light_white.png" id="8_0f0b8"]
+[ext_resource type="Texture2D" uid="uid://bk0vfjh7sv824" path="res://kenney_racing-pack/PNG/Objects/lights.png" id="9_mc6qi"]
+[ext_resource type="Texture2D" uid="uid://dpnje60jygt2q" path="res://kenney_racing-pack/PNG/Objects/oil.png" id="10_iqp1q"]
+[ext_resource type="Texture2D" uid="uid://by6d52s7a6jn7" path="res://kenney_racing-pack/PNG/Objects/tires_white_alt.png" id="11_hptk8"]
+[ext_resource type="Texture2D" uid="uid://bd1v3mxn5w2hh" path="res://kenney_racing-pack/PNG/Objects/tires_white.png" id="12_t2g6d"]
+[ext_resource type="Texture2D" uid="uid://bo16giu6sxjf5" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_1.png" id="13_qo8yr"]
+[ext_resource type="Texture2D" uid="uid://cw5rtbg5b3ul0" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_2.png" id="15_kakxh"]
+[ext_resource type="Texture2D" uid="uid://fpkrqt6cruhp" path="res://kenney_racing-pack/PNG/Objects/cone_down.png" id="17_wmnw4"]
+[ext_resource type="Texture2D" uid="uid://b1ekkxymigoe8" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="18_bs38c"]
+[ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_11bo6"]
+[ext_resource type="Texture2D" uid="uid://if011qdre2ik" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_blue.png" id="24_63d2o"]
+[ext_resource type="Texture2D" uid="uid://d3fqqbxe0s3fu" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_green.png" id="25_lk3tl"]
+[ext_resource type="Texture2D" uid="uid://c0glv5uj2dkl1" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_red.png" id="26_hqkwi"]
+[ext_resource type="Texture2D" uid="uid://vvjs3p6uul2p" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_yellow.png" id="27_3t6fc"]
+[ext_resource type="Texture2D" uid="uid://choiak6r7jm5t" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_black.png" id="28_4jess"]
+[ext_resource type="Texture2D" uid="uid://rglkmye3dsnh" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt01.png" id="29_t06fa"]
+[ext_resource type="Script" path="res://sceneManager.gd" id="31_6s45y"]
+
+[sub_resource type="Animation" id="Animation_2jdau"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("decor/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-59, -52)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("decor/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.09439]
+}
+
+[sub_resource type="Animation" id="Animation_l61l7"]
+resource_name = "Test anime pull"
+length = 50.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("decor/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 6.83333, 8.06667, 8.93333, 9.8, 10.5667, 11.4333, 12.0667, 13.15, 13.9667, 14.7667, 15.4, 16.0333, 16.9167, 17.8, 18.5667, 19.2333, 19.95, 20.5821, 20.6167, 21.25, 22.2333, 22.5988, 23.25, 23.3821, 23.8833, 24.4167, 25.15, 25.7, 26.4667, 27.1167, 27.7167, 28.3333, 29.0167, 29.6, 30.05, 30.7167, 31.25, 31.9, 32.65, 33.2667, 34.0167, 34.65, 35.5333, 36.3167, 37.0167, 37.95, 38.7167, 39.6333, 40.4667, 42.0667, 43, 43.5667, 44.05, 44.25, 44.45, 44.6333, 44.8167, 45.0167, 45.2167, 45.4167, 45.6167, 45.8333, 46.0333, 46.25, 46.45, 46.65, 46.8667, 47.0833, 47.3, 47.4833, 47.6833, 47.9, 48.1167, 48.3333, 48.5, 48.6833, 48.8667, 49.05, 49.2167, 49.4, 49.5833, 49.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 142), Vector2(188, -6), Vector2(206, 128), Vector2(404, 159), Vector2(498, 253), Vector2(755, 217), Vector2(580, 208), Vector2(431, 132), Vector2(291, 237), Vector2(629, 254), Vector2(496, 123), Vector2(177, 200), Vector2(138, 39), Vector2(313, 191), Vector2(609, 108), Vector2(735, 267), Vector2(301, 322), Vector2(240, 111), Vector2(0, 0), Vector2(586, 200), Vector2(602, 86), Vector2(205, 274), Vector2(0, 0), Vector2(88, 301), Vector2(0, 46), Vector2(399, 334), Vector2(529, 159), Vector2(299, 194), Vector2(265, 78), Vector2(611, 216), Vector2(707, 110), Vector2(631, 274), Vector2(461, 229), Vector2(520, 345), Vector2(720, 353), Vector2(613, 223), Vector2(445, 286), Vector2(681, 260), Vector2(403, 119), Vector2(248, 232), Vector2(380, 106), Vector2(454, 222), Vector2(259, 209), Vector2(591, 420), Vector2(695, 217), Vector2(244, 222), Vector2(404, 74), Vector2(47, 213), Vector2(571, 193), Vector2(313, 94), Vector2(248, 173), Vector2(325, 97), Vector2(456, 238), Vector2(387, 185), Vector2(380, 181), Vector2(353, 166), Vector2(338, 158), Vector2(328, 153), Vector2(312, 141), Vector2(324, 141), Vector2(383, 163), Vector2(432, 174), Vector2(443, 175), Vector2(506, 164), Vector2(536, 149), Vector2(538, 135), Vector2(531, 125), Vector2(402, 125), Vector2(339, 138), Vector2(307, 152), Vector2(301, 155), Vector2(286, 163), Vector2(257, 178), Vector2(246, 184), Vector2(248, 190), Vector2(278, 199), Vector2(337, 191), Vector2(397, 143), Vector2(105, 64), Vector2(49, 60), Vector2(95, 94), Vector2(162, 83), Vector2(162, 83)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("decor/Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r08vf"]
+_data = {
+"RESET": SubResource("Animation_2jdau"),
+"Test anime pull": SubResource("Animation_l61l7")
+}
+
+[sub_resource type="Animation" id="Animation_rggbf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1490, 1981)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.23517e-06]
+}
+
+[sub_resource type="Animation" id="Animation_egtsh"]
+resource_name = "new_animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.42301, 5.37301),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1490, 1981), Vector2(1490, 824), Vector2(1490, -387)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.23517e-06]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uy0cu"]
+_data = {
+"RESET": SubResource("Animation_rggbf"),
+"new_animation": SubResource("Animation_egtsh")
+}
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2gwke"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqgch"]
+texture = SubResource("CanvasTexture_2gwke")
+modulate_color = Color(0.693587, 0.531312, 1.92523e-07, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2x25t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ooqj3"]
+texture = SubResource("CanvasTexture_2x25t")
+modulate_color = Color(1, 1, 0, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_stuov"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlo7j"]
+texture = SubResource("CanvasTexture_stuov")
+modulate_color = Color(0.694118, 0.529412, 0, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qcyjk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ao1e4"]
+texture = SubResource("CanvasTexture_qcyjk")
+modulate_color = Color(1, 1, 0, 1)
+
+[node name="Menu" type="Node2D"]
+scale = Vector2(0.55, 0.55)
+
+[node name="decor" type="Node2D" parent="."]
+
+[node name="TribuneOverhangRed" type="Sprite2D" parent="decor"]
+position = Vector2(913, 650)
+scale = Vector2(6.772, 10.9235)
+texture = ExtResource("1_1eno2")
+
+[node name="Sprite2D" type="Sprite2D" parent="decor"]
+position = Vector2(-59, -52)
+rotation = 2.09439
+scale = Vector2(1.83407, 1.83707)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="decor/Sprite2D"]
+
+[node name="ArrowYellow3" type="Sprite2D" parent="decor/Sprite2D/RigidBody2D"]
+position = Vector2(172.055, -335.108)
+rotation = -0.523598
+texture = ExtResource("2_t5gkq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="decor"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_r08vf")
+}
+
+[node name="Lights" type="Sprite2D" parent="decor"]
+position = Vector2(700, 0)
+texture = ExtResource("9_mc6qi")
+
+[node name="LightYellow" type="Sprite2D" parent="decor/Lights"]
+position = Vector2(23, 114)
+rotation = -3.14159
+texture = ExtResource("7_3i4k5")
+
+[node name="LightWhite" type="Sprite2D" parent="decor/Lights"]
+position = Vector2(-17, 111)
+rotation = -3.14159
+texture = ExtResource("8_0f0b8")
+
+[node name="LightYellow2" type="Sprite2D" parent="decor/Lights"]
+position = Vector2(-56, 131)
+rotation = 3.14159
+texture = ExtResource("7_3i4k5")
+
+[node name="LightWhite2" type="Sprite2D" parent="decor/Lights"]
+position = Vector2(56.9999, 121)
+rotation = 3.14159
+texture = ExtResource("8_0f0b8")
+
+[node name="Lights2" type="Sprite2D" parent="decor"]
+position = Vector2(1400, 0)
+texture = ExtResource("9_mc6qi")
+
+[node name="LightYellow" type="Sprite2D" parent="decor/Lights2"]
+position = Vector2(23, 114)
+rotation = -3.14159
+texture = ExtResource("7_3i4k5")
+
+[node name="LightWhite" type="Sprite2D" parent="decor/Lights2"]
+position = Vector2(-17, 111)
+rotation = -3.14159
+texture = ExtResource("8_0f0b8")
+
+[node name="LightYellow2" type="Sprite2D" parent="decor/Lights2"]
+position = Vector2(-56, 131)
+rotation = 3.14159
+texture = ExtResource("7_3i4k5")
+
+[node name="LightWhite2" type="Sprite2D" parent="decor/Lights2"]
+position = Vector2(56.9999, 121)
+rotation = 3.14159
+texture = ExtResource("8_0f0b8")
+
+[node name="ArrowYellow" type="Sprite2D" parent="decor"]
+position = Vector2(109, 525)
+rotation = 1.57079
+texture = ExtResource("2_t5gkq")
+
+[node name="ArrowYellow2" type="Sprite2D" parent="decor"]
+position = Vector2(212, 525)
+rotation = 1.57079
+texture = ExtResource("2_t5gkq")
+
+[node name="Oil" type="Sprite2D" parent="decor"]
+position = Vector2(81, 76)
+texture = ExtResource("10_iqp1q")
+
+[node name="TiresWhiteAlt" type="Sprite2D" parent="decor"]
+position = Vector2(190, 37)
+texture = ExtResource("11_hptk8")
+
+[node name="TiresWhiteAlt2" type="Sprite2D" parent="decor"]
+position = Vector2(189, 124)
+texture = ExtResource("11_hptk8")
+
+[node name="TiresWhite" type="Sprite2D" parent="decor"]
+position = Vector2(278, 39)
+texture = ExtResource("12_t2g6d")
+
+[node name="TiresWhite2" type="Sprite2D" parent="decor"]
+position = Vector2(283, 124)
+texture = ExtResource("12_t2g6d")
+
+[node name="SkidmarkLong1" type="Sprite2D" parent="decor"]
+position = Vector2(279, 104)
+texture = ExtResource("13_qo8yr")
+
+[node name="SkidmarkLong2" type="Sprite2D" parent="decor"]
+position = Vector2(189, 106)
+texture = ExtResource("13_qo8yr")
+
+[node name="SkidmarkLong3" type="Sprite2D" parent="decor"]
+position = Vector2(249, 37)
+rotation = -1.57079
+texture = ExtResource("13_qo8yr")
+
+[node name="SkidmarkLong4" type="Sprite2D" parent="decor"]
+position = Vector2(250, 124)
+rotation = -1.57079
+texture = ExtResource("13_qo8yr")
+
+[node name="SkidmarkLong5" type="Sprite2D" parent="decor"]
+position = Vector2(514, 591)
+rotation = 0.261799
+texture = ExtResource("15_kakxh")
+
+[node name="SkidmarkLong6" type="Sprite2D" parent="decor"]
+position = Vector2(562, 410)
+rotation = -2.87979
+scale = Vector2(1, 0.937882)
+texture = ExtResource("15_kakxh")
+
+[node name="SkidmarkLong7" type="Sprite2D" parent="decor"]
+position = Vector2(609, 232)
+rotation = 0.261799
+texture = ExtResource("15_kakxh")
+
+[node name="SkidmarkLong8" type="Sprite2D" parent="decor"]
+position = Vector2(657, 57)
+rotation = 0.261799
+texture = ExtResource("15_kakxh")
+
+[node name="ConeDown" type="Sprite2D" parent="decor"]
+position = Vector2(579, 628)
+texture = ExtResource("17_wmnw4")
+
+[node name="ConeDown2" type="Sprite2D" parent="decor"]
+position = Vector2(473, 438)
+rotation = -2.35619
+texture = ExtResource("17_wmnw4")
+
+[node name="ConeStraight" type="Sprite2D" parent="decor"]
+position = Vector2(432, 612)
+rotation = 0.261799
+texture = ExtResource("18_bs38c")
+
+[node name="ConeStraight2" type="Sprite2D" parent="decor"]
+position = Vector2(604, 548)
+rotation = 0.261799
+texture = ExtResource("18_bs38c")
+
+[node name="ConeStraight3" type="Sprite2D" parent="decor"]
+position = Vector2(461, 515)
+rotation = 0.261799
+texture = ExtResource("18_bs38c")
+
+[node name="SkidmarkLong9" type="Sprite2D" parent="decor"]
+position = Vector2(461, 779)
+rotation = 0.261799
+texture = ExtResource("15_kakxh")
+
+[node name="SkidmarkLong10" type="Sprite2D" parent="decor"]
+position = Vector2(411, 966)
+rotation = 0.261799
+texture = ExtResource("15_kakxh")
+
+[node name="SkidmarkLong11" type="Sprite2D" parent="decor"]
+position = Vector2(362, 1151)
+rotation = 0.261799
+texture = ExtResource("15_kakxh")
+
+[node name="SkidmarkLong12" type="Sprite2D" parent="decor"]
+position = Vector2(311, 1336)
+rotation = 0.261799
+texture = ExtResource("15_kakxh")
+
+[node name="ConeDown3" type="Sprite2D" parent="decor"]
+position = Vector2(499, 976)
+texture = ExtResource("17_wmnw4")
+
+[node name="ConeStraight4" type="Sprite2D" parent="decor"]
+position = Vector2(448, 1073)
+texture = ExtResource("18_bs38c")
+
+[node name="ConeDown4" type="Sprite2D" parent="decor"]
+position = Vector2(346, 885)
+rotation = 1.0472
+texture = ExtResource("17_wmnw4")
+
+[node name="ConeDown5" type="Sprite2D" parent="decor"]
+position = Vector2(311, 1051)
+rotation = 2.61799
+texture = ExtResource("17_wmnw4")
+
+[node name="ArrowWhite2" type="Sprite2D" parent="decor"]
+position = Vector2(1030, 232)
+rotation = -1.57079
+texture = ExtResource("21_11bo6")
+
+[node name="MotorcycleBlue" type="Sprite2D" parent="decor"]
+position = Vector2(1490, 1981)
+texture = ExtResource("24_63d2o")
+
+[node name="MotorcycleGreen" type="Sprite2D" parent="decor/MotorcycleBlue"]
+position = Vector2(-100, 89)
+texture = ExtResource("25_lk3tl")
+
+[node name="MotorcycleRed" type="Sprite2D" parent="decor/MotorcycleBlue/MotorcycleGreen"]
+position = Vector2(-76, 96)
+texture = ExtResource("26_hqkwi")
+
+[node name="MotorcycleYellow" type="Sprite2D" parent="decor/MotorcycleBlue/MotorcycleGreen/MotorcycleRed"]
+position = Vector2(-113.999, 57.0006)
+texture = ExtResource("27_3t6fc")
+
+[node name="MotorcycleBlack" type="Sprite2D" parent="decor/MotorcycleBlue/MotorcycleGreen/MotorcycleRed/MotorcycleYellow"]
+position = Vector2(347.998, -718.001)
+rotation = 3.14159
+scale = Vector2(1.00874, 1.01039)
+texture = ExtResource("28_4jess")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="decor/MotorcycleBlue"]
+libraries = {
+"": SubResource("AnimationLibrary_uy0cu")
+}
+autoplay = "new_animation"
+
+[node name="ConeStraight10" type="Sprite2D" parent="decor"]
+position = Vector2(386, 445)
+texture = ExtResource("18_bs38c")
+
+[node name="RoadAsphalt02" type="Sprite2D" parent="decor"]
+position = Vector2(2004, 312)
+rotation = 2.87979
+scale = Vector2(1, 10.56)
+texture = ExtResource("29_t06fa")
+
+[node name="RoadAsphalt01" type="Sprite2D" parent="decor"]
+position = Vector2(1961.82, 563.636)
+rotation = -0.261804
+scale = Vector2(1.13116, -10.2513)
+texture = ExtResource("29_t06fa")
+
+[node name="ArrowWhite" type="Sprite2D" parent="decor"]
+position = Vector2(924, 229)
+rotation = -1.57079
+texture = ExtResource("21_11bo6")
+
+[node name="bouton" type="Node2D" parent="."]
+
+[node name="StartButton" type="Node2D" parent="bouton"]
+position = Vector2(641.818, 341.818)
+
+[node name="Button" type="Button" parent="bouton/StartButton"]
+anchors_preset = -1
+anchor_left = -1.317
+anchor_top = -2.886
+anchor_right = 1.364
+anchor_bottom = 2.5
+offset_left = 203.637
+offset_top = 69.0911
+offset_right = 336.637
+offset_bottom = 123.091
+scale = Vector2(2, 2)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0431373, 0, 1)
+theme_override_styles/hover = SubResource("StyleBoxTexture_hqgch")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ooqj3")
+text = "KartCarte
+Jouer"
+script = ExtResource("31_6s45y")
+
+[node name="paramètreButton2" type="Node2D" parent="bouton"]
+position = Vector2(641.818, 341.818)
+
+[node name="Button" type="Button" parent="bouton/paramètreButton2"]
+anchors_preset = -1
+anchor_left = -1.317
+anchor_top = -2.886
+anchor_right = 1.364
+anchor_bottom = 2.5
+offset_left = 1158.18
+offset_top = -274.545
+offset_right = 1258.18
+offset_bottom = -245.545
+scale = Vector2(2, 2)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0431373, 0, 1)
+theme_override_styles/hover = SubResource("StyleBoxTexture_hqgch")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ooqj3")
+text = "paramètre"
+script = ExtResource("31_6s45y")
+
+[node name="customeButton" type="Node2D" parent="bouton"]
+position = Vector2(641.818, 341.818)
+
+[node name="Button" type="Button" parent="bouton/customeButton"]
+anchors_preset = -1
+anchor_left = -1.317
+anchor_top = -2.886
+anchor_right = 1.364
+anchor_bottom = 2.5
+offset_left = 216.364
+offset_top = -292.727
+offset_right = 319.364
+offset_bottom = -263.727
+scale = Vector2(2, 2)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0431373, 0, 1)
+theme_override_styles/hover = SubResource("StyleBoxTexture_hqgch")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ooqj3")
+text = "custome kart"
+script = ExtResource("31_6s45y")
+
+[node name="IndexButton" type="Node2D" parent="bouton"]
+
+[node name="Button" type="Button" parent="bouton/IndexButton"]
+offset_left = 927.273
+offset_top = 550.909
+offset_right = 979.273
+offset_bottom = 581.909
+scale = Vector2(1.75, 1.75)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = SubResource("StyleBoxTexture_xlo7j")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ao1e4")
+text = "Index"
+script = ExtResource("31_6s45y")
+
+[connection signal="pressed" from="bouton/StartButton/Button" to="bouton/StartButton/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
+[connection signal="pressed" from="bouton/paramètreButton2/Button" to="bouton/paramètreButton2/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
+[connection signal="pressed" from="bouton/customeButton/Button" to="bouton/customeButton/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
+[connection signal="pressed" from="bouton/IndexButton/Button" to="bouton/IndexButton/Button" method="switchScene" binds= ["res://Index de cartes.tscn"]]
