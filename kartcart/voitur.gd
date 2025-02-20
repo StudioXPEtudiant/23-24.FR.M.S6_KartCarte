@@ -19,3 +19,7 @@ func mouve():
 		curentindex = 0
 	global_position = parentListPoint.get_children()[curentindex].global_position
 	global_rotation = parentListPoint.get_children()[curentindex].global_rotation
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.

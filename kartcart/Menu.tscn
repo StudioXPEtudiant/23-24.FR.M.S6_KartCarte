@@ -1,6 +1,7 @@
-[gd_scene load_steps=35 format=3 uid="uid://cbydibtnn6mxk"]
+[gd_scene load_steps=33 format=3 uid="uid://cbydibtnn6mxk"]
 
 [ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_1eno2"]
+[ext_resource type="Script" path="res://moto.gd" id="1_146xn"]
 [ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="2_t5gkq"]
 [ext_resource type="Texture2D" uid="uid://bjn7djiki4tjg" path="res://kenney_racing-pack/PNG/Objects/light_yellow.png" id="7_3i4k5"]
 [ext_resource type="Texture2D" uid="uid://c6xskhqlmqjvk" path="res://kenney_racing-pack/PNG/Objects/light_white.png" id="8_0f0b8"]
@@ -80,67 +81,6 @@ tracks/1/keys = {
 _data = {
 "RESET": SubResource("Animation_2jdau"),
 "Test anime pull": SubResource("Animation_l61l7")
-}
-
-[sub_resource type="Animation" id="Animation_rggbf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1490, 1981)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.23517e-06]
-}
-
-[sub_resource type="Animation" id="Animation_egtsh"]
-resource_name = "new_animation"
-length = 10.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.42301, 5.37301),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1490, 1981), Vector2(1490, 824), Vector2(1490, -387)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.23517e-06]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_uy0cu"]
-_data = {
-"RESET": SubResource("Animation_rggbf"),
-"new_animation": SubResource("Animation_egtsh")
 }
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2gwke"]
@@ -379,34 +319,6 @@ position = Vector2(1030, 232)
 rotation = -1.57079
 texture = ExtResource("21_11bo6")
 
-[node name="MotorcycleBlue" type="Sprite2D" parent="decor"]
-position = Vector2(1490, 1981)
-texture = ExtResource("24_63d2o")
-
-[node name="MotorcycleGreen" type="Sprite2D" parent="decor/MotorcycleBlue"]
-position = Vector2(-100, 89)
-texture = ExtResource("25_lk3tl")
-
-[node name="MotorcycleRed" type="Sprite2D" parent="decor/MotorcycleBlue/MotorcycleGreen"]
-position = Vector2(-76, 96)
-texture = ExtResource("26_hqkwi")
-
-[node name="MotorcycleYellow" type="Sprite2D" parent="decor/MotorcycleBlue/MotorcycleGreen/MotorcycleRed"]
-position = Vector2(-113.999, 57.0006)
-texture = ExtResource("27_3t6fc")
-
-[node name="MotorcycleBlack" type="Sprite2D" parent="decor/MotorcycleBlue/MotorcycleGreen/MotorcycleRed/MotorcycleYellow"]
-position = Vector2(347.998, -718.001)
-rotation = 3.14159
-scale = Vector2(1.00874, 1.01039)
-texture = ExtResource("28_4jess")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="decor/MotorcycleBlue"]
-libraries = {
-"": SubResource("AnimationLibrary_uy0cu")
-}
-autoplay = "new_animation"
-
 [node name="ConeStraight10" type="Sprite2D" parent="decor"]
 position = Vector2(386, 445)
 texture = ExtResource("18_bs38c")
@@ -427,6 +339,35 @@ texture = ExtResource("29_t06fa")
 position = Vector2(924, 229)
 rotation = -1.57079
 texture = ExtResource("21_11bo6")
+
+[node name="anim moto" type="Node2D" parent="."]
+script = ExtResource("1_146xn")
+vitess = 200
+
+[node name="MotorcycleBlue" type="Sprite2D" parent="anim moto"]
+editor_description = "anim
+"
+position = Vector2(1490, 1981)
+texture = ExtResource("24_63d2o")
+
+[node name="MotorcycleBlack" type="Sprite2D" parent="anim moto"]
+position = Vector2(1570.91, 1569.09)
+scale = Vector2(1.00874, 1.01039)
+texture = ExtResource("28_4jess")
+
+[node name="MotorcycleYellow" type="Sprite2D" parent="anim moto"]
+position = Vector2(1185.45, 2714.55)
+texture = ExtResource("27_3t6fc")
+script = ExtResource("1_146xn")
+vitess = 100
+
+[node name="MotorcycleRed" type="Sprite2D" parent="anim moto"]
+position = Vector2(1314, 2166)
+texture = ExtResource("26_hqkwi")
+
+[node name="MotorcycleGreen" type="Sprite2D" parent="anim moto"]
+position = Vector2(1390, 2070)
+texture = ExtResource("25_lk3tl")
 
 [node name="bouton" type="Node2D" parent="."]
 
@@ -482,9 +423,9 @@ anchor_left = -1.317
 anchor_top = -2.886
 anchor_right = 1.364
 anchor_bottom = 2.5
-offset_left = 216.364
+offset_left = 203.637
 offset_top = -292.727
-offset_right = 319.364
+offset_right = 327.637
 offset_bottom = -263.727
 scale = Vector2(2, 2)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
@@ -509,7 +450,19 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ao1e4")
 text = "Index"
 script = ExtResource("31_6s45y")
 
+[node name="quit" type="Node2D" parent="bouton"]
+
+[node name="Button" type="Button" parent="bouton/quit"]
+offset_left = 41.8182
+offset_top = 1076.36
+offset_right = 83.8182
+offset_bottom = 1107.36
+scale = Vector2(2, 2)
+text = "Quit"
+script = ExtResource("31_6s45y")
+
 [connection signal="pressed" from="bouton/StartButton/Button" to="bouton/StartButton/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
 [connection signal="pressed" from="bouton/paramètreButton2/Button" to="bouton/paramètreButton2/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
-[connection signal="pressed" from="bouton/customeButton/Button" to="bouton/customeButton/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
+[connection signal="pressed" from="bouton/customeButton/Button" to="bouton/customeButton/Button" method="switchScene" binds= ["res://custome_kart.tscn"]]
 [connection signal="pressed" from="bouton/IndexButton/Button" to="bouton/IndexButton/Button" method="switchScene" binds= ["res://Index de cartes.tscn"]]
+[connection signal="pressed" from="bouton/quit/Button" to="bouton/quit/Button" method="quit"]

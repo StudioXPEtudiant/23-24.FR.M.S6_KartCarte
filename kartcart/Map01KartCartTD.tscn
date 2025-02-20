@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://7eh5w82uvurn"]
+[gd_scene load_steps=25 format=3 uid="uid://7eh5w82uvurn"]
 
 [ext_resource type="Texture2D" uid="uid://begp2nu0rwvdn" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass04.png" id="2_1yfjm"]
 [ext_resource type="Texture2D" uid="uid://3gik375slgcc" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt42.png" id="2_04nto"]
@@ -23,6 +23,7 @@
 [ext_resource type="Script" path="res://voitur.gd" id="21_csyjq"]
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_rttx7"]
 [ext_resource type="Texture2D" uid="uid://bb0numvki8a2n" path="res://kenney_racing-pack/PNG/Cars/car_blue_1.png" id="22_r7exb"]
+[ext_resource type="Script" path="res://sceneManager.gd" id="24_wwgqa"]
 
 [node name="Map 01" type="Node2D"]
 scale = Vector2(0.25, 0.25)
@@ -820,4 +821,14 @@ grow_vertical = 2
 rotation = -1.5708
 text = "AVENCER DE 1"
 
+[node name="ButtonRetour" type="Button" parent="Bouton"]
+offset_left = 2340.0
+offset_top = 2244.0
+offset_right = 2478.0
+offset_bottom = 2289.0
+scale = Vector2(5, 5)
+text = "Retour Menu"
+script = ExtResource("24_wwgqa")
+
 [connection signal="pressed" from="Bouton/ArrowWhite/Button" to="Voitur" method="mouve"]
+[connection signal="pressed" from="Bouton/ButtonRetour" to="Bouton/ButtonRetour" method="switchScene" binds= ["res://Menu.tscn"]]
