@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://uf52eeqmwftn"]
+[gd_scene load_steps=3 format=3 uid="uid://uf52eeqmwftn"]
 
 [ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_3yw5k"]
+[ext_resource type="Script" path="res://sceneManager.gd" id="2_76o2x"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,17 +9,17 @@
 modulate = Color(0, 1, 1, 1)
 self_modulate = Color(0, 0, 0, 1)
 light_mask = 2
-position = Vector2(1462, 342)
-scale = Vector2(-6.59603, 14.21)
+position = Vector2(588.919, 320.618)
+scale = Vector2(-2.69835, 4.80607)
 texture = ExtResource("1_3yw5k")
 
 [node name="TribuneOverhangRed2" type="Sprite2D" parent="."]
-position = Vector2(545, -299)
-scale = Vector2(1, 4.68)
+position = Vector2(213, 179)
+scale = Vector2(0.375, 1.87472)
 texture = ExtResource("1_3yw5k")
 
 [node name="TribuneOverhangRed3" type="Sprite2D" parent="TribuneOverhangRed2"]
-position = Vector2(648, 2.35043)
+position = Vector2(637.333, -2.66709)
 scale = Vector2(-0.866139, -0.980425)
 texture = ExtResource("1_3yw5k")
 
@@ -50,3 +51,17 @@ texture = ExtResource("1_3yw5k")
 [node name="TribuneOverhangRed6" type="Sprite2D" parent="TribuneOverhangRed2/TribuneOverhangRed3"]
 position = Vector2(-1529.78, -166.725)
 texture = ExtResource("1_3yw5k")
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="ButtonRetour" type="Button" parent="Node2D"]
+offset_left = 28.0001
+offset_top = 22.0001
+offset_right = 138.0
+offset_bottom = 53.0001
+scale = Vector2(5, 5)
+text = "Retour Menu"
+script = ExtResource("2_76o2x")
+
+[connection signal="pressed" from="Node2D/ButtonRetour" to="Node2D/ButtonRetour" method="switchScene" binds= ["res://Menu.tscn"]]

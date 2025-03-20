@@ -462,7 +462,7 @@ text = "Quit"
 script = ExtResource("31_6s45y")
 
 [connection signal="pressed" from="bouton/StartButton/Button" to="bouton/StartButton/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
-[connection signal="pressed" from="bouton/paramètreButton2/Button" to="bouton/paramètreButton2/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
+[connection signal="pressed" from="bouton/paramètreButton2/Button" to="bouton/paramètreButton2/Button" method="switchScene" binds= ["res://Paramètre.tscn"]]
 [connection signal="pressed" from="bouton/customeButton/Button" to="bouton/customeButton/Button" method="switchScene" binds= ["res://custome_kart.tscn"]]
 [connection signal="pressed" from="bouton/IndexButton/Button" to="bouton/IndexButton/Button" method="switchScene" binds= ["res://Index de cartes.tscn"]]
 [connection signal="pressed" from="bouton/quit/Button" to="bouton/quit/Button" method="quit"]

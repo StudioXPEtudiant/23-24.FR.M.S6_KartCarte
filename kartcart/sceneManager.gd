@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func switchScene(Scene:String):
 	get_tree().change_scene_to_file(Scene)
-
+	
 func quit():
 	get_tree().quit()
 

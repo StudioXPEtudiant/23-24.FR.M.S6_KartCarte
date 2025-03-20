@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://7eh5w82uvurn"]
+[gd_scene load_steps=26 format=3 uid="uid://7eh5w82uvurn"]
 
 [ext_resource type="Texture2D" uid="uid://begp2nu0rwvdn" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass04.png" id="2_1yfjm"]
 [ext_resource type="Texture2D" uid="uid://3gik375slgcc" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt42.png" id="2_04nto"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cpg5wp5xho4it" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass01.png" id="17_4gb1s"]
 [ext_resource type="Texture2D" uid="uid://crqh026tij13s" path="res://kenney_racing-pack/PNG/Objects/rock3.png" id="17_bpexf"]
 [ext_resource type="Texture2D" uid="uid://b7mqx51yrf1dy" path="res://kenney_racing-pack/PNG/Objects/rock2.png" id="18_h04v6"]
+[ext_resource type="PackedScene" uid="uid://5f42gfc6es2y" path="res://carte.tscn" id="21_1xbwn"]
 [ext_resource type="Script" path="res://voitur.gd" id="21_csyjq"]
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_rttx7"]
 [ext_resource type="Texture2D" uid="uid://bb0numvki8a2n" path="res://kenney_racing-pack/PNG/Cars/car_blue_1.png" id="22_r7exb"]
@@ -788,6 +789,10 @@ position = Vector2(320, 832)
 
 [node name="Position44" type="Node2D" parent="Position"]
 position = Vector2(320, 704)
+
+[node name="Carte" parent="." instance=ExtResource("21_1xbwn")]
+position = Vector2(3304, -432)
+scale = Vector2(5, 5)
 
 [node name="Voitur" type="Node2D" parent="." node_paths=PackedStringArray("parentListPoint")]
 position = Vector2(0, -0.00012207)
