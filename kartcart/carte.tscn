@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://5f42gfc6es2y"]
+[gd_scene load_steps=5 format=3 uid="uid://5f42gfc6es2y"]
 
 [ext_resource type="Texture2D" uid="uid://b51k7k2nmd2o8" path="res://kenney_racing-pack/PNG/interface_carte.png" id="1_g7ty2"]
+[ext_resource type="Script" path="res://carte.gd" id="1_kca6b"]
+[ext_resource type="Script" path="res://labelNom.gd" id="2_mhvw0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a0jsd"]
 font_size = 45
 
 [node name="Carte" type="Node2D"]
+script = ExtResource("1_kca6b")
 metadata/_edit_horizontal_guides_ = [-56.0]
 
 [node name="tail caneva" type="Polygon2D" parent="."]
@@ -37,13 +40,15 @@ label_settings = SubResource("LabelSettings_a0jsd")
 
 [node name="Nom" type="Node2D" parent="carte"]
 
-[node name="nom" type="Label" parent="carte/Nom"]
+[node name="nom" type="Label" parent="carte/Nom" node_paths=PackedStringArray("carte")]
 offset_left = 96.0
 offset_top = 128.0
 offset_right = 480.0
 offset_bottom = 192.0
 text = "Nom de la carte"
 label_settings = SubResource("LabelSettings_a0jsd")
+script = ExtResource("2_mhvw0")
+carte = NodePath("../../..")
 
 [node name="Description" type="Node2D" parent="carte"]
 
