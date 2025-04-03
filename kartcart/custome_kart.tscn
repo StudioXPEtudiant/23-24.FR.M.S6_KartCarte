@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://duygn2wtmolau"]
+
+[ext_resource type="Script" path="res://sceneManager.gd" id="1_wxlap"]
+
+[node name="Custome kart" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="ButtonRetour" type="Button" parent="Node2D"]
+offset_left = 1736.0
+offset_top = 1110.0
+offset_right = 1846.0
+offset_bottom = 1141.0
+scale = Vector2(5, 5)
+text = "Retour Menu"
+script = ExtResource("1_wxlap")
+
+[connection signal="pressed" from="Node2D/ButtonRetour" to="Node2D/ButtonRetour" method="switchScene" binds= ["res://Menu.tscn"]]

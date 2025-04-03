@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://3hygfyfv1g7q"]
+
+[ext_resource type="Script" path="res://valeurParamètre.gd" id="1_g2q6w"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.211765, 0.211765, 0.211765, 1)
+
+[node name="HSplitContainer" type="HSplitContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+theme_override_constants/minimum_grab_thickness = 24
+
+[node name="VSplitContainer" type="VSplitContainer" parent="ColorRect/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = 0
+theme_override_constants/minimum_grab_thickness = 24
+
+[node name="HSlider" type="HSlider" parent="ColorRect"]
+layout_mode = 2
+offset_left = 373.0
+offset_top = 147.0
+offset_right = 734.0
+offset_bottom = 253.0
+script = ExtResource("1_g2q6w")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 887.0
+offset_top = 521.0
+offset_right = 1066.0
+offset_bottom = 608.0
+text = "Retour"
+
+[connection signal="drag_ended" from="ColorRect/HSlider" to="ColorRect/HSlider" method="_on_drag_ended"]
+[connection signal="value_changed" from="ColorRect/HSlider" to="ColorRect/HSlider" method="_on_value_changed"]
