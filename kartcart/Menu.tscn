@@ -1,7 +1,6 @@
-[gd_scene load_steps=33 format=3 uid="uid://cbydibtnn6mxk"]
+[gd_scene load_steps=31 format=3 uid="uid://cbydibtnn6mxk"]
 
 [ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_1eno2"]
-[ext_resource type="Script" path="res://moto.gd" id="1_146xn"]
 [ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="2_t5gkq"]
 [ext_resource type="Texture2D" uid="uid://bjn7djiki4tjg" path="res://kenney_racing-pack/PNG/Objects/light_yellow.png" id="7_3i4k5"]
 [ext_resource type="Texture2D" uid="uid://c6xskhqlmqjvk" path="res://kenney_racing-pack/PNG/Objects/light_white.png" id="8_0f0b8"]
@@ -20,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://vvjs3p6uul2p" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_yellow.png" id="27_3t6fc"]
 [ext_resource type="Texture2D" uid="uid://choiak6r7jm5t" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_black.png" id="28_4jess"]
 [ext_resource type="Texture2D" uid="uid://rglkmye3dsnh" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt01.png" id="29_t06fa"]
-[ext_resource type="Script" path="res://sceneManager.gd" id="31_6s45y"]
 
 [sub_resource type="Animation" id="Animation_2jdau"]
 length = 0.001
@@ -341,8 +339,6 @@ rotation = -1.57079
 texture = ExtResource("21_11bo6")
 
 [node name="anim moto" type="Node2D" parent="."]
-script = ExtResource("1_146xn")
-vitess = 200
 
 [node name="MotorcycleBlue" type="Sprite2D" parent="anim moto"]
 editor_description = "anim
@@ -358,8 +354,6 @@ texture = ExtResource("28_4jess")
 [node name="MotorcycleYellow" type="Sprite2D" parent="anim moto"]
 position = Vector2(1185.45, 2714.55)
 texture = ExtResource("27_3t6fc")
-script = ExtResource("1_146xn")
-vitess = 100
 
 [node name="MotorcycleRed" type="Sprite2D" parent="anim moto"]
 position = Vector2(1314, 2166)
@@ -391,7 +385,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_hqgch")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ooqj3")
 text = "KartCarte
 Jouer"
-script = ExtResource("31_6s45y")
 
 [node name="paramètreButton2" type="Node2D" parent="bouton"]
 position = Vector2(641.818, 341.818)
@@ -412,7 +405,6 @@ theme_override_colors/font_color = Color(0, 0.0431373, 0, 1)
 theme_override_styles/hover = SubResource("StyleBoxTexture_hqgch")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ooqj3")
 text = "paramètre"
-script = ExtResource("31_6s45y")
 
 [node name="customeButton" type="Node2D" parent="bouton"]
 position = Vector2(641.818, 341.818)
@@ -433,7 +425,6 @@ theme_override_colors/font_color = Color(0, 0.0431373, 0, 1)
 theme_override_styles/hover = SubResource("StyleBoxTexture_hqgch")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ooqj3")
 text = "custome kart"
-script = ExtResource("31_6s45y")
 
 [node name="IndexButton" type="Node2D" parent="bouton"]
 
@@ -448,7 +439,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/hover = SubResource("StyleBoxTexture_xlo7j")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ao1e4")
 text = "Index"
-script = ExtResource("31_6s45y")
 
 [node name="quit" type="Node2D" parent="bouton"]
 
@@ -459,10 +449,5 @@ offset_right = 83.8182
 offset_bottom = 1107.36
 scale = Vector2(2, 2)
 text = "Quit"
-script = ExtResource("31_6s45y")
 
-[connection signal="pressed" from="bouton/StartButton/Button" to="bouton/StartButton/Button" method="switchScene" binds= ["res://Map01KartCartTD.tscn"]]
-[connection signal="pressed" from="bouton/paramètreButton2/Button" to="bouton/paramètreButton2/Button" method="switchScene" binds= ["res://Paramètre.tscn"]]
-[connection signal="pressed" from="bouton/customeButton/Button" to="bouton/customeButton/Button" method="switchScene" binds= ["res://custome_kart.tscn"]]
-[connection signal="pressed" from="bouton/IndexButton/Button" to="bouton/IndexButton/Button" method="switchScene" binds= ["res://Index de cartes.tscn"]]
 [connection signal="pressed" from="bouton/quit/Button" to="bouton/quit/Button" method="quit"]

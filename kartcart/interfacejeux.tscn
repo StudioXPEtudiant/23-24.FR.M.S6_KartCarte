@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://nhj0rkxe5kvw"]
+
+[ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_rnvjv"]
+[ext_resource type="Texture2D" uid="uid://d0vouu233fp00" path="res://kenney_racing-pack/PNG/Objects/barrier_white.png" id="1_sn0uj"]
+[ext_resource type="Texture2D" uid="uid://bvrfs40v3v64" path="res://kenney_racing-pack/PNG/Objects/tribune_empty.png" id="2_soi5y"]
+[ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="3_chqnl"]
+[ext_resource type="Texture2D" uid="uid://d1xg35wf7s50u" path="res://kenney_racing-pack/PNG/Objects/barrier_red.png" id="5_8hb3n"]
+[ext_resource type="Script" path="res://Nbrdecarte.gd" id="5_t7ss2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Décoration" type="Node2D" parent="."]
+
+[node name="BarrierWhite" type="Sprite2D" parent="Décoration"]
+position = Vector2(58.9999, 464)
+scale = Vector2(0.428571, 5.87097)
+texture = ExtResource("1_sn0uj")
+
+[node name="TribuneEmpty" type="Sprite2D" parent="Décoration"]
+position = Vector2(-423, 197)
+scale = Vector2(0.214286, 1.66144)
+texture = ExtResource("2_soi5y")
+
+[node name="affichage" type="Node2D" parent="."]
+
+[node name="PV" type="Node2D" parent="affichage"]
+
+[node name="Skip" type="Node2D" parent="affichage"]
+
+[node name="ArrowWhite" type="Sprite2D" parent="affichage/Skip"]
+position = Vector2(1097, 68)
+rotation = 1.5708
+scale = Vector2(0.754823, 0.661616)
+texture = ExtResource("3_chqnl")
+
+[node name="Info" type="Node2D" parent="affichage"]
+
+[node name="Jeux" type="Node2D" parent="."]
+
+[node name="deck" type="Node2D" parent="Jeux"]
+
+[node name="TribuneOverhangRed" type="Sprite2D" parent="Jeux/deck"]
+modulate = Color(0.76297, 0.659723, 0.736276, 1)
+position = Vector2(1081.5, 534)
+scale = Vector2(0.323661, 1.56944)
+texture = ExtResource("1_rnvjv")
+script = ExtResource("5_t7ss2")
+
+[node name="Label" type="Label" parent="Jeux/deck/TribuneOverhangRed"]
+offset_left = -72.6068
+offset_top = -32.4957
+offset_right = -32.6068
+offset_bottom = -9.49567
+scale = Vector2(7.5991, 2.47649)
+text = "30"
+
+[node name="Main" type="Node2D" parent="Jeux"]
+
+[node name="BarrierWhite3" type="Sprite2D" parent="Jeux/Main"]
+position = Vector2(628.5, 533.5)
+scale = Vector2(2.50952, 3.62903)
+texture = ExtResource("1_sn0uj")
+
+[node name="Essence" type="Node2D" parent="Jeux"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Jeux"]
+offset_top = 12.0
+offset_right = 210.0
+offset_bottom = 74.0
+texture_under = ExtResource("1_sn0uj")
+texture_progress = ExtResource("5_8hb3n")
