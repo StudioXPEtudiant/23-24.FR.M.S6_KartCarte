@@ -1,0 +1,313 @@
+[gd_scene load_steps=26 format=3 uid="uid://d3fdybgaan0rk"]
+
+[ext_resource type="Texture2D" uid="uid://bob8up75xiphu" path="res://kenney_ui-pack/PNG/Blue/Double/button_rectangle_depth_gradient.png" id="1_xafnu"]
+[ext_resource type="Texture2D" uid="uid://j8yeeh38mxns" path="res://Capture d'écran 2025-05-08 192441.png" id="2_7fmik"]
+[ext_resource type="Texture2D" uid="uid://d3qtdibjlrbvd" path="res://kenney_ui-pack/PNG/Blue/Double/button_rectangle_border.png" id="2_8pk28"]
+[ext_resource type="Texture2D" uid="uid://buqcgyikg80t4" path="res://Capture d'écran 2025-05-08 192415.png" id="3_qionq"]
+[ext_resource type="Texture2D" uid="uid://dftaegbppo8mn" path="res://Capture d'écran 2025-05-08 192402.png" id="4_bseee"]
+[ext_resource type="Texture2D" uid="uid://3t5fqcfdr2f7" path="res://kenney_ui-pack/PNG/Blue/Double/arrow_basic_e_small.png" id="5_krq44"]
+[ext_resource type="Texture2D" uid="uid://c6xskhqlmqjvk" path="res://kenney_racing-pack/PNG/Objects/light_white.png" id="7_fwuru"]
+[ext_resource type="Texture2D" uid="uid://dehbtv6c54xeu" path="res://kenney_racing-pack/PNG/Extra/Default/bar_shadow_round_large_m.png" id="7_la7iu"]
+[ext_resource type="Texture2D" uid="uid://b03cb78ojoec7" path="res://kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0043.png" id="8_tv5a6"]
+[ext_resource type="Texture2D" uid="uid://durtbpn28h52k" path="res://kenney_racing-pack/PNG/Extra/Default/panel_glass_notch_br.png" id="8_vxfv1"]
+[ext_resource type="Texture2D" uid="uid://bbsm5quet6nd1" path="res://kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0045.png" id="9_i7eba"]
+[ext_resource type="Texture2D" uid="uid://usgde8usix7f" path="res://kenney_racing-pack/PNG/Extra/Default/panel_glass_notch_tl.png" id="9_k37bn"]
+[ext_resource type="Texture2D" uid="uid://b446br8yj331n" path="res://kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0044.png" id="10_7nfls"]
+[ext_resource type="Texture2D" uid="uid://iigf5lnrr63g" path="res://kenney_racing-pack/PNG/Extra/Default/panel_glass_notch_tr.png" id="10_8uxxt"]
+[ext_resource type="Texture2D" uid="uid://b1ekkxymigoe8" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="11_64ksl"]
+[ext_resource type="Texture2D" uid="uid://fpkrqt6cruhp" path="res://kenney_racing-pack/PNG/Objects/cone_down.png" id="13_bhocr"]
+[ext_resource type="Texture2D" uid="uid://cw5rtbg5b3ul0" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_2.png" id="15_hvmrh"]
+[ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="18_wdif3"]
+[ext_resource type="Texture2D" uid="uid://bmn7fnv62cit5" path="res://kenney_racing-pack/PNG/Cars/car_black_small_1.png" id="19_r1sy6"]
+[ext_resource type="Texture2D" uid="uid://cgtmvy3a8tc2u" path="res://kenney_racing-pack/PNG/Extra/Default/button_square.png" id="20_v6ofa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7qw4i"]
+font_size = 28
+font_color = Color(0.658824, 1, 0, 1)
+outline_size = 3
+outline_color = Color(1, 0, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfpps"]
+font_size = 41
+font_color = Color(0.0823529, 0.321569, 1, 1)
+
+[sub_resource type="Animation" id="Animation_ahat3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/CarBlackSmall1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(692, 777)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/CarBlackSmall1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_62kk6"]
+resource_name = "Voiturenoir"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/CarBlackSmall1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667, 1.63333, 2.43333, 2.96667, 4, 4.23333, 5.83333, 6.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(692, 777), Vector2(711, 580), Vector2(636, 307), Vector2(611, 307), Vector2(612, 448), Vector2(495, 491), Vector2(420, 472), Vector2(-124, 179), Vector2(-114, 781)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/CarBlackSmall1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.83333, 2.03333, 2.2, 2.33333, 2.43333, 2.6, 2.96667, 3.53333, 4, 4.23333, 4.53333, 6.4, 7.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.261799, -0.523599, -0.785398, -1.0472, -1.309, -2.35619, -3.14159, -2.35619, -1.8326, -1.309, -1.0472, -3.14159, -4.71239]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vgdbe"]
+_data = {
+"RESET": SubResource("Animation_ahat3"),
+"Voiturenoir": SubResource("Animation_62kk6")
+}
+
+[node name="Choixdesmaps" type="Node2D"]
+
+[node name="Décoration" type="Node2D" parent="."]
+
+[node name="ButtonRectangleDepthGradient" type="Sprite2D" parent="Décoration"]
+z_index = -1
+position = Vector2(561, 337)
+scale = Vector2(3.27344, 6.46875)
+texture = ExtResource("1_xafnu")
+
+[node name="BarShadowRoundLargeM" type="Sprite2D" parent="Décoration/ButtonRectangleDepthGradient"]
+position = Vector2(-32.3819, -37.4106)
+scale = Vector2(6.03341, 0.154589)
+texture = ExtResource("7_la7iu")
+
+[node name="PanelGlassNotchBr" type="Sprite2D" parent="Décoration/ButtonRectangleDepthGradient/BarShadowRoundLargeM"]
+position = Vector2(33.7215, 522)
+scale = Vector2(0.0506329, 1)
+texture = ExtResource("8_vxfv1")
+
+[node name="LightWhite" type="Sprite2D" parent="Décoration/ButtonRectangleDepthGradient/BarShadowRoundLargeM"]
+position = Vector2(-17.5696, 12)
+rotation = 1.62139
+scale = Vector2(0.708013, 0.708013)
+skew = 1.46962
+texture = ExtResource("7_fwuru")
+
+[node name="PanelGlassNotchTr" type="Sprite2D" parent="Décoration/ButtonRectangleDepthGradient"]
+position = Vector2(171.074, -47.1498)
+scale = Vector2(0.305489, 0.154589)
+texture = ExtResource("10_8uxxt")
+
+[node name="PanelGlassNotchTl" type="Sprite2D" parent="Décoration/ButtonRectangleDepthGradient"]
+position = Vector2(-161.909, -47.3044)
+scale = Vector2(0.305489, 0.154589)
+texture = ExtResource("9_k37bn")
+
+[node name="ButtonRectangleBorder" type="Sprite2D" parent="Décoration/ButtonRectangleDepthGradient"]
+position = Vector2(-134.721, 37.5652)
+scale = Vector2(0.191726, 0.154589)
+texture = ExtResource("2_8pk28")
+
+[node name="Label" type="Label" parent="Décoration"]
+z_index = 1
+offset_left = 241.0
+offset_top = 32.0
+offset_right = 765.0
+offset_bottom = 95.0
+text = "choisis qu'elle carte tu veux jouer"
+label_settings = SubResource("LabelSettings_7qw4i")
+
+[node name="Label2" type="Label" parent="Décoration/Label"]
+layout_mode = 0
+offset_left = -178.0
+offset_top = 519.0
+offset_right = -65.0
+offset_bottom = 584.0
+text = " Deck"
+label_settings = SubResource("LabelSettings_tfpps")
+
+[node name="Tile0045" type="Sprite2D" parent="Décoration"]
+position = Vector2(726.375, 46)
+scale = Vector2(2.14844, 2.875)
+texture = ExtResource("9_i7eba")
+
+[node name="Tile0044" type="Sprite2D" parent="Décoration/Tile0045"]
+position = Vector2(-120.96, 0)
+scale = Vector2(6.56, 1)
+texture = ExtResource("10_7nfls")
+
+[node name="Tile0043" type="Sprite2D" parent="Décoration/Tile0045"]
+position = Vector2(-246.865, 0.52174)
+scale = Vector2(1.30909, 1.03261)
+texture = ExtResource("8_tv5a6")
+
+[node name="SkidmarkLong6" type="Sprite2D" parent="Décoration"]
+position = Vector2(7.80424, 236.837)
+rotation = -1.0472
+scale = Vector2(0.999999, 0.892079)
+texture = ExtResource("15_hvmrh")
+
+[node name="SkidmarkLong5" type="Sprite2D" parent="Décoration/SkidmarkLong6"]
+position = Vector2(0, 189.314)
+scale = Vector2(1, 0.97202)
+texture = ExtResource("15_hvmrh")
+
+[node name="SkidmarkLong4" type="Sprite2D" parent="Décoration/SkidmarkLong6/SkidmarkLong5"]
+position = Vector2(-1.52588e-05, 201.502)
+scale = Vector2(1, 1.09898)
+texture = ExtResource("15_hvmrh")
+
+[node name="SkidmarkLong3" type="Sprite2D" parent="Décoration/SkidmarkLong6/SkidmarkLong5/SkidmarkLong4"]
+position = Vector2(-0.616623, 192.753)
+scale = Vector2(1, 1.00784)
+texture = ExtResource("15_hvmrh")
+
+[node name="SkidmarkLong7" type="Sprite2D" parent="Décoration/SkidmarkLong6/SkidmarkLong5/SkidmarkLong4/SkidmarkLong3"]
+position = Vector2(-6.10352e-05, 368.066)
+scale = Vector2(1, 0.840904)
+texture = ExtResource("15_hvmrh")
+
+[node name="SkidmarkLong2" type="Sprite2D" parent="Décoration/SkidmarkLong6/SkidmarkLong5/SkidmarkLong4/SkidmarkLong3/SkidmarkLong7"]
+position = Vector2(3.05176e-05, -210.163)
+scale = Vector2(1, 1.1892)
+texture = ExtResource("15_hvmrh")
+
+[node name="ConeStraight2" type="Sprite2D" parent="Décoration"]
+position = Vector2(171.486, 428.526)
+rotation = -1.309
+scale = Vector2(0.980271, 0.831249)
+
+[node name="ConeDown" type="Sprite2D" parent="Décoration/ConeStraight2"]
+position = Vector2(-75.9669, 319.679)
+rotation = -2.35619
+scale = Vector2(0.928368, 0.845624)
+texture = ExtResource("13_bhocr")
+
+[node name="ConeStraight2" type="Sprite2D" parent="Décoration/ConeStraight2"]
+position = Vector2(36.9635, -157.264)
+rotation = 1.309
+scale = Vector2(0.673831, 0.563956)
+texture = ExtResource("11_64ksl")
+
+[node name="ConeDown2" type="Sprite2D" parent="Décoration/ConeStraight2"]
+position = Vector2(160.726, -24.9851)
+rotation = -0.523599
+scale = Vector2(0.733858, 0.7591)
+texture = ExtResource("13_bhocr")
+
+[node name="ConeDown3" type="Sprite2D" parent="Décoration/ConeStraight2"]
+position = Vector2(87.878, 338.864)
+rotation = 0.261799
+scale = Vector2(0.921135, 0.84089)
+texture = ExtResource("13_bhocr")
+
+[node name="ConeStraight" type="Sprite2D" parent="Décoration/ConeStraight2"]
+position = Vector2(107.763, 216.72)
+rotation = 1.309
+scale = Vector2(0.743418, 0.727273)
+texture = ExtResource("11_64ksl")
+
+[node name="ArrowWhite3" type="Sprite2D" parent="Décoration"]
+physics_interpolation_mode = 2
+position = Vector2(528, 202)
+rotation = 1.57079
+texture = ExtResource("18_wdif3")
+
+[node name="ArrowWhite2" type="Sprite2D" parent="Décoration/ArrowWhite3"]
+position = Vector2(1, 85)
+texture = ExtResource("18_wdif3")
+
+[node name="ArrowWhite" type="Sprite2D" parent="Décoration/ArrowWhite3"]
+position = Vector2(1, 170)
+texture = ExtResource("18_wdif3")
+
+[node name="Les maps" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Les maps"]
+z_index = 1
+position = Vector2(978, 117)
+scale = Vector2(0.301038, 0.377301)
+texture = ExtResource("2_7fmik")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Les maps"]
+z_index = 1
+position = Vector2(978, 318)
+scale = Vector2(0.229519, 0.259346)
+texture = ExtResource("3_qionq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Les maps"]
+z_index = 1
+position = Vector2(978.5, 526)
+scale = Vector2(0.256975, 0.28125)
+texture = ExtResource("4_bseee")
+
+[node name="Flèches" type="Node2D" parent="Les maps"]
+
+[node name="ArrowBasicESmall" type="Sprite2D" parent="Les maps/Flèches"]
+z_index = 2
+position = Vector2(976, 313)
+texture = ExtResource("5_krq44")
+
+[node name="ArrowBasicESmall2" type="Sprite2D" parent="Les maps/Flèches"]
+z_index = 2
+position = Vector2(976, 527)
+texture = ExtResource("5_krq44")
+
+[node name="ArrowBasicESmall3" type="Sprite2D" parent="Les maps/Flèches"]
+z_index = 2
+position = Vector2(976, 119)
+texture = ExtResource("5_krq44")
+
+[node name="animation" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="animation"]
+libraries = {
+"": SubResource("AnimationLibrary_vgdbe")
+}
+autoplay = "Voiturenoir"
+
+[node name="CarBlackSmall1" type="Sprite2D" parent="animation/AnimationPlayer"]
+position = Vector2(692, 777)
+texture = ExtResource("19_r1sy6")
+
+[node name="ButtonSquare" type="Sprite2D" parent="."]
+position = Vector2(978, 119.25)
+scale = Vector2(2.875, 2.27344)
+texture = ExtResource("20_v6ofa")
+
+[node name="ButtonSquare2" type="Sprite2D" parent="."]
+position = Vector2(978, 316)
+scale = Vector2(2.875, 2.27344)
+texture = ExtResource("20_v6ofa")
+
+[node name="ButtonSquare3" type="Sprite2D" parent="."]
+position = Vector2(978, 528.5)
+scale = Vector2(2.875, 2.20312)
+texture = ExtResource("20_v6ofa")
