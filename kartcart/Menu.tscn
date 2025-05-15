@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cbydibtnn6mxk"]
+[gd_scene load_steps=32 format=3 uid="uid://cbydibtnn6mxk"]
 
 [ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_1eno2"]
 [ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="2_t5gkq"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://b1ekkxymigoe8" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="18_bs38c"]
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_11bo6"]
 [ext_resource type="Texture2D" uid="uid://bb0numvki8a2n" path="res://kenney_racing-pack/PNG/Cars/car_blue_1.png" id="21_oiree"]
-[ext_resource type="Script" path="res://AnnimVoiture.gd" id="23_vpwkr"]
 [ext_resource type="Texture2D" uid="uid://if011qdre2ik" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_blue.png" id="24_63d2o"]
 [ext_resource type="Texture2D" uid="uid://d3fqqbxe0s3fu" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_green.png" id="25_lk3tl"]
 [ext_resource type="Texture2D" uid="uid://c0glv5uj2dkl1" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_red.png" id="26_hqkwi"]
@@ -410,12 +409,10 @@ vitess = 150
 
 [node name="anim car" type="Node2D" parent="."]
 
-[node name="CarBlue1" type="Sprite2D" parent="anim car" node_paths=PackedStringArray("listeDePoint")]
+[node name="CarBlue1" type="Sprite2D" parent="anim car"]
 position = Vector2(2129.09, 309.091)
 rotation = -1.5708
 texture = ExtResource("21_oiree")
-script = ExtResource("23_vpwkr")
-listeDePoint = [NodePath("../point 01"), NodePath("../point 02"), NodePath("../point 03"), NodePath("../point 04")]
 
 [node name="point 01" type="Node2D" parent="anim car"]
 position = Vector2(2070, 250)
