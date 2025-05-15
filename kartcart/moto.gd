@@ -1,6 +1,7 @@
 extends Node2D
 
-@export var vitess:int=10
+@export var vitess:int=100
+@export var HauteurDépart:int=1270
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -9,3 +10,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position.y=position.y-vitess*delta
+	if position.y < -10 :
+		position.y=HauteurDépart
+	

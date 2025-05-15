@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cbydibtnn6mxk"]
+[gd_scene load_steps=33 format=3 uid="uid://cbydibtnn6mxk"]
 
 [ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_1eno2"]
 [ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="2_t5gkq"]
@@ -9,10 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://by6d52s7a6jn7" path="res://kenney_racing-pack/PNG/Objects/tires_white_alt.png" id="11_hptk8"]
 [ext_resource type="Texture2D" uid="uid://bd1v3mxn5w2hh" path="res://kenney_racing-pack/PNG/Objects/tires_white.png" id="12_t2g6d"]
 [ext_resource type="Texture2D" uid="uid://bo16giu6sxjf5" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_1.png" id="13_qo8yr"]
+[ext_resource type="Script" path="res://Scene.gd" id="15_f4ydv"]
 [ext_resource type="Texture2D" uid="uid://cw5rtbg5b3ul0" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_2.png" id="15_kakxh"]
+[ext_resource type="Script" path="res://moto.gd" id="15_yel2q"]
 [ext_resource type="Texture2D" uid="uid://fpkrqt6cruhp" path="res://kenney_racing-pack/PNG/Objects/cone_down.png" id="17_wmnw4"]
 [ext_resource type="Texture2D" uid="uid://b1ekkxymigoe8" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="18_bs38c"]
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_11bo6"]
+[ext_resource type="Texture2D" uid="uid://bb0numvki8a2n" path="res://kenney_racing-pack/PNG/Cars/car_blue_1.png" id="21_oiree"]
+[ext_resource type="Script" path="res://AnnimVoiture.gd" id="23_vpwkr"]
 [ext_resource type="Texture2D" uid="uid://if011qdre2ik" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_blue.png" id="24_63d2o"]
 [ext_resource type="Texture2D" uid="uid://d3fqqbxe0s3fu" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_green.png" id="25_lk3tl"]
 [ext_resource type="Texture2D" uid="uid://c0glv5uj2dkl1" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_red.png" id="26_hqkwi"]
@@ -20,66 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://choiak6r7jm5t" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_black.png" id="28_4jess"]
 [ext_resource type="Texture2D" uid="uid://rglkmye3dsnh" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt01.png" id="29_t06fa"]
 
-[sub_resource type="Animation" id="Animation_2jdau"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("decor/Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-59, -52)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("decor/Sprite2D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [2.09439]
-}
-
-[sub_resource type="Animation" id="Animation_l61l7"]
-resource_name = "Test anime pull"
-length = 50.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("decor/Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4, 6.83333, 8.06667, 8.93333, 9.8, 10.5667, 11.4333, 12.0667, 13.15, 13.9667, 14.7667, 15.4, 16.0333, 16.9167, 17.8, 18.5667, 19.2333, 19.95, 20.5821, 20.6167, 21.25, 22.2333, 22.5988, 23.25, 23.3821, 23.8833, 24.4167, 25.15, 25.7, 26.4667, 27.1167, 27.7167, 28.3333, 29.0167, 29.6, 30.05, 30.7167, 31.25, 31.9, 32.65, 33.2667, 34.0167, 34.65, 35.5333, 36.3167, 37.0167, 37.95, 38.7167, 39.6333, 40.4667, 42.0667, 43, 43.5667, 44.05, 44.25, 44.45, 44.6333, 44.8167, 45.0167, 45.2167, 45.4167, 45.6167, 45.8333, 46.0333, 46.25, 46.45, 46.65, 46.8667, 47.0833, 47.3, 47.4833, 47.6833, 47.9, 48.1167, 48.3333, 48.5, 48.6833, 48.8667, 49.05, 49.2167, 49.4, 49.5833, 49.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 142), Vector2(188, -6), Vector2(206, 128), Vector2(404, 159), Vector2(498, 253), Vector2(755, 217), Vector2(580, 208), Vector2(431, 132), Vector2(291, 237), Vector2(629, 254), Vector2(496, 123), Vector2(177, 200), Vector2(138, 39), Vector2(313, 191), Vector2(609, 108), Vector2(735, 267), Vector2(301, 322), Vector2(240, 111), Vector2(0, 0), Vector2(586, 200), Vector2(602, 86), Vector2(205, 274), Vector2(0, 0), Vector2(88, 301), Vector2(0, 46), Vector2(399, 334), Vector2(529, 159), Vector2(299, 194), Vector2(265, 78), Vector2(611, 216), Vector2(707, 110), Vector2(631, 274), Vector2(461, 229), Vector2(520, 345), Vector2(720, 353), Vector2(613, 223), Vector2(445, 286), Vector2(681, 260), Vector2(403, 119), Vector2(248, 232), Vector2(380, 106), Vector2(454, 222), Vector2(259, 209), Vector2(591, 420), Vector2(695, 217), Vector2(244, 222), Vector2(404, 74), Vector2(47, 213), Vector2(571, 193), Vector2(313, 94), Vector2(248, 173), Vector2(325, 97), Vector2(456, 238), Vector2(387, 185), Vector2(380, 181), Vector2(353, 166), Vector2(338, 158), Vector2(328, 153), Vector2(312, 141), Vector2(324, 141), Vector2(383, 163), Vector2(432, 174), Vector2(443, 175), Vector2(506, 164), Vector2(536, 149), Vector2(538, 135), Vector2(531, 125), Vector2(402, 125), Vector2(339, 138), Vector2(307, 152), Vector2(301, 155), Vector2(286, 163), Vector2(257, 178), Vector2(246, 184), Vector2(248, 190), Vector2(278, 199), Vector2(337, 191), Vector2(397, 143), Vector2(105, 64), Vector2(49, 60), Vector2(95, 94), Vector2(162, 83), Vector2(162, 83)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("decor/Sprite2D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_r08vf"]
-_data = {
-"RESET": SubResource("Animation_2jdau"),
-"Test anime pull": SubResource("Animation_l61l7")
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ulmpb"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2gwke"]
 
@@ -122,16 +67,13 @@ scale = Vector2(1.83407, 1.83707)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="decor/Sprite2D"]
 
-[node name="ArrowYellow3" type="Sprite2D" parent="decor/Sprite2D/RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="decor/Sprite2D/RigidBody2D"]
+shape = SubResource("RectangleShape2D_ulmpb")
+
+[node name="ArrowYellow3" type="Sprite2D" parent="decor/Sprite2D/RigidBody2D/CollisionShape2D"]
 position = Vector2(172.055, -335.108)
 rotation = -0.523598
 texture = ExtResource("2_t5gkq")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="decor"]
-root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_r08vf")
-}
 
 [node name="Lights" type="Sprite2D" parent="decor"]
 position = Vector2(700, 0)
@@ -338,31 +280,6 @@ position = Vector2(924, 229)
 rotation = -1.57079
 texture = ExtResource("21_11bo6")
 
-[node name="anim moto" type="Node2D" parent="."]
-
-[node name="MotorcycleBlue" type="Sprite2D" parent="anim moto"]
-editor_description = "anim
-"
-position = Vector2(1490, 1981)
-texture = ExtResource("24_63d2o")
-
-[node name="MotorcycleBlack" type="Sprite2D" parent="anim moto"]
-position = Vector2(1570.91, 1569.09)
-scale = Vector2(1.00874, 1.01039)
-texture = ExtResource("28_4jess")
-
-[node name="MotorcycleYellow" type="Sprite2D" parent="anim moto"]
-position = Vector2(1185.45, 2714.55)
-texture = ExtResource("27_3t6fc")
-
-[node name="MotorcycleRed" type="Sprite2D" parent="anim moto"]
-position = Vector2(1314, 2166)
-texture = ExtResource("26_hqkwi")
-
-[node name="MotorcycleGreen" type="Sprite2D" parent="anim moto"]
-position = Vector2(1390, 2070)
-texture = ExtResource("25_lk3tl")
-
 [node name="bouton" type="Node2D" parent="."]
 
 [node name="StartButton" type="Node2D" parent="bouton"]
@@ -385,6 +302,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_hqgch")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ooqj3")
 text = "KartCarte
 Jouer"
+script = ExtResource("15_f4ydv")
 
 [node name="paramètreButton2" type="Node2D" parent="bouton"]
 position = Vector2(641.818, 341.818)
@@ -405,6 +323,7 @@ theme_override_colors/font_color = Color(0, 0.0431373, 0, 1)
 theme_override_styles/hover = SubResource("StyleBoxTexture_hqgch")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ooqj3")
 text = "paramètre"
+script = ExtResource("15_f4ydv")
 
 [node name="customeButton" type="Node2D" parent="bouton"]
 position = Vector2(641.818, 341.818)
@@ -449,5 +368,69 @@ offset_right = 83.8182
 offset_bottom = 1107.36
 scale = Vector2(2, 2)
 text = "Quit"
+script = ExtResource("15_f4ydv")
 
-[connection signal="pressed" from="bouton/quit/Button" to="bouton/quit/Button" method="quit"]
+[node name="anim moto" type="Node2D" parent="."]
+
+[node name="MotorcycleBlue" type="Sprite2D" parent="anim moto"]
+editor_description = "anim
+"
+position = Vector2(1460, 1814)
+texture = ExtResource("24_63d2o")
+script = ExtResource("15_yel2q")
+vitess = 180
+"HauteurDépart" = 1814
+
+[node name="MotorcycleBlack" type="Sprite2D" parent="anim moto"]
+position = Vector2(1560, 1270.91)
+scale = Vector2(1.00874, 1.01039)
+texture = ExtResource("28_4jess")
+script = ExtResource("15_yel2q")
+vitess = 80
+
+[node name="MotorcycleYellow" type="Sprite2D" parent="anim moto"]
+position = Vector2(1160, 2135)
+texture = ExtResource("27_3t6fc")
+script = ExtResource("15_yel2q")
+vitess = 200
+"HauteurDépart" = 2135
+
+[node name="MotorcycleRed" type="Sprite2D" parent="anim moto"]
+position = Vector2(1260, 1572)
+texture = ExtResource("26_hqkwi")
+script = ExtResource("15_yel2q")
+"HauteurDépart" = 1572
+
+[node name="MotorcycleGreen" type="Sprite2D" parent="anim moto"]
+position = Vector2(1360, 1623)
+texture = ExtResource("25_lk3tl")
+script = ExtResource("15_yel2q")
+vitess = 150
+"HauteurDépart" = 1623
+
+[node name="anim car" type="Node2D" parent="."]
+
+[node name="CarBlue1" type="Sprite2D" parent="anim car" node_paths=PackedStringArray("listeDePoint")]
+position = Vector2(2129.09, 309.091)
+rotation = -1.5708
+texture = ExtResource("21_oiree")
+script = ExtResource("23_vpwkr")
+listeDePoint = [NodePath("../point 01"), NodePath("../point 02"), NodePath("../point 03"), NodePath("../point 04")]
+
+[node name="point 01" type="Node2D" parent="anim car"]
+position = Vector2(2070, 250)
+rotation = -1.5708
+
+[node name="point 02" type="Node2D" parent="anim car"]
+position = Vector2(700, 250)
+rotation = -1.5708
+
+[node name="point 03" type="Node2D" parent="anim car"]
+position = Vector2(600, 350)
+rotation = 3.14159
+
+[node name="point 04" type="Node2D" parent="anim car"]
+position = Vector2(600, 1300)
+rotation = 3.14159
+
+[connection signal="pressed" from="bouton/quit/Button" to="bouton/quit/Button" method="exit"]

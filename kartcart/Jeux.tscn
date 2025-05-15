@@ -14,27 +14,24 @@ metadata/VolumeSons = 0.0
 
 [node name="Map 01" parent="." instance=ExtResource("2_v6bc0")]
 
+[node name="Carte" parent="Map 01" index="4"]
+position = Vector2(5956, 268)
+
 [node name="ButtonRetour" parent="Map 01/Bouton" index="1"]
-script = null
+script = ExtResource("1_an442")
 
 [node name="Control" parent="." instance=ExtResource("2_jgo8m")]
+
+[node name="Button" parent="Control" index="1"]
+script = ExtResource("1_an442")
 
 [node name="Menu" parent="." instance=ExtResource("1_nrwbb")]
 
 [node name="Button" parent="Menu/bouton/StartButton" index="0"]
-script = null
-
-[node name="Button" parent="Menu/bouton/paramètreButton2" index="0"]
-script = null
-
-[node name="Button" parent="Menu/bouton/customeButton" index="0"]
-script = null
-
-[node name="Button" parent="Menu/bouton/IndexButton" index="0"]
-script = null
-
-[node name="Button" parent="Menu/bouton/quit" index="0"]
-script = null
+offset_left = 204.0
+offset_top = 69.0
+offset_right = 327.0
+offset_bottom = 117.0
 
 [node name="Sons" type="Node2D" parent="."]
 
@@ -65,7 +62,9 @@ script = ExtResource("5_gnu7q")
 [node name="06" type="Node2D" parent="ListeCarte"]
 script = ExtResource("5_gnu7q")
 
+[connection signal="pressed" from="Map 01/Bouton/ButtonRetour" to="." method="switchNode" binds= [0]]
 [connection signal="value_changed" from="Control/ColorRect/HSlider" to="Sons/AudioListener2D/musique" method="set_volume_db"]
+[connection signal="pressed" from="Control/Button" to="." method="switchNode" binds= [0]]
 [connection signal="pressed" from="Menu/bouton/StartButton/Button" to="." method="switchNode" binds= [2]]
 [connection signal="pressed" from="Menu/bouton/paramètreButton2/Button" to="." method="switchNode" binds= [1]]
 

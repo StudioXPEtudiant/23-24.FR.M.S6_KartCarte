@@ -15,3 +15,7 @@ func switchNode(numNode:int):
 	remove_child(CurNode)
 	CurNode=listNode[numNode]
 	add_child(CurNode)
+
+
+func exit():
+	get_tree().quit()
