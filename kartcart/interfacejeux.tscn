@@ -79,3 +79,19 @@ offset_right = 210.0
 offset_bottom = 74.0
 texture_under = ExtResource("1_sn0uj")
 texture_progress = ExtResource("5_8hb3n")
+
+[node name="prendre ou jeter" type="Node2D" parent="Jeux"]
+
+[node name="jeter" type="Button" parent="Jeux/prendre ou jeter"]
+offset_left = 300.0
+offset_top = 320.0
+offset_right = 500.0
+offset_bottom = 370.0
+text = "jeter"
+
+[node name="prendre" type="Button" parent="Jeux/prendre ou jeter"]
+offset_left = 600.0
+offset_top = 320.0
+offset_right = 800.0
+offset_bottom = 370.0
+text = "prendre"
