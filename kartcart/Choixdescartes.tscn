@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d3fdybgaan0rk"]
+[gd_scene load_steps=28 format=3 uid="uid://d3fdybgaan0rk"]
 
 [ext_resource type="Texture2D" uid="uid://bob8up75xiphu" path="res://kenney_ui-pack/PNG/Blue/Double/button_rectangle_depth_gradient.png" id="1_xafnu"]
 [ext_resource type="Texture2D" uid="uid://j8yeeh38mxns" path="res://Capture d'écran 2025-05-08 192441.png" id="2_7fmik"]
@@ -19,7 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://cw5rtbg5b3ul0" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_2.png" id="15_hvmrh"]
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="18_wdif3"]
 [ext_resource type="Texture2D" uid="uid://bmn7fnv62cit5" path="res://kenney_racing-pack/PNG/Cars/car_black_small_1.png" id="19_r1sy6"]
+[ext_resource type="Texture2D" uid="uid://c0v0en4hjakgy" path="res://kenney_ui-pack/PNG/Extra/Double/input_outline_square.png" id="20_bledu"]
 [ext_resource type="Texture2D" uid="uid://cgtmvy3a8tc2u" path="res://kenney_racing-pack/PNG/Extra/Default/button_square.png" id="20_v6ofa"]
+[ext_resource type="Texture2D" uid="uid://b8lp606ehu3ia" path="res://Capture d'écran 2025-05-15 193850.png" id="21_0se11"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7qw4i"]
 font_size = 28
@@ -248,6 +250,21 @@ texture = ExtResource("18_wdif3")
 position = Vector2(1, 170)
 texture = ExtResource("18_wdif3")
 
+[node name="ButtonSquare" type="Sprite2D" parent="Décoration"]
+position = Vector2(978, 119.25)
+scale = Vector2(2.875, 2.27344)
+texture = ExtResource("20_v6ofa")
+
+[node name="ButtonSquare2" type="Sprite2D" parent="Décoration"]
+position = Vector2(978, 316)
+scale = Vector2(2.875, 2.27344)
+texture = ExtResource("20_v6ofa")
+
+[node name="ButtonSquare3" type="Sprite2D" parent="Décoration"]
+position = Vector2(978, 528.5)
+scale = Vector2(2.875, 2.20312)
+texture = ExtResource("20_v6ofa")
+
 [node name="Les maps" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Les maps"]
@@ -270,11 +287,6 @@ texture = ExtResource("4_bseee")
 
 [node name="Flèches" type="Node2D" parent="Les maps"]
 
-[node name="ArrowBasicESmall" type="Sprite2D" parent="Les maps/Flèches"]
-z_index = 2
-position = Vector2(976, 313)
-texture = ExtResource("5_krq44")
-
 [node name="ArrowBasicESmall2" type="Sprite2D" parent="Les maps/Flèches"]
 z_index = 2
 position = Vector2(976, 527)
@@ -284,6 +296,24 @@ texture = ExtResource("5_krq44")
 z_index = 2
 position = Vector2(976, 119)
 texture = ExtResource("5_krq44")
+
+[node name="ArrowBasicESmall" type="Sprite2D" parent="Les maps/Flèches"]
+z_index = 2
+position = Vector2(976, 313)
+texture = ExtResource("5_krq44")
+
+[node name="Aléatoire" type="Node2D" parent="Les maps"]
+
+[node name="InputOutlineSquare" type="Sprite2D" parent="Les maps/Aléatoire"]
+z_index = -1
+position = Vector2(771, 316)
+scale = Vector2(1.23438, 1.14062)
+texture = ExtResource("20_bledu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Les maps/Aléatoire"]
+position = Vector2(771, 318)
+scale = Vector2(0.197324, 0.250559)
+texture = ExtResource("21_0se11")
 
 [node name="animation" type="Node2D" parent="."]
 
@@ -296,18 +326,3 @@ autoplay = "Voiturenoir"
 [node name="CarBlackSmall1" type="Sprite2D" parent="animation/AnimationPlayer"]
 position = Vector2(692, 777)
 texture = ExtResource("19_r1sy6")
-
-[node name="ButtonSquare" type="Sprite2D" parent="."]
-position = Vector2(978, 119.25)
-scale = Vector2(2.875, 2.27344)
-texture = ExtResource("20_v6ofa")
-
-[node name="ButtonSquare2" type="Sprite2D" parent="."]
-position = Vector2(978, 316)
-scale = Vector2(2.875, 2.27344)
-texture = ExtResource("20_v6ofa")
-
-[node name="ButtonSquare3" type="Sprite2D" parent="."]
-position = Vector2(978, 528.5)
-scale = Vector2(2.875, 2.20312)
-texture = ExtResource("20_v6ofa")
