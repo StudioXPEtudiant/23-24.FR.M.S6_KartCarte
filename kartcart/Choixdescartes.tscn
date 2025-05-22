@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d3fdybgaan0rk"]
+[gd_scene load_steps=33 format=3 uid="uid://d3fdybgaan0rk"]
 
 [ext_resource type="Texture2D" uid="uid://bob8up75xiphu" path="res://kenney_ui-pack/PNG/Blue/Double/button_rectangle_depth_gradient.png" id="1_xafnu"]
 [ext_resource type="Texture2D" uid="uid://j8yeeh38mxns" path="res://Capture d'écran 2025-05-08 192441.png" id="2_7fmik"]
@@ -21,7 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://bmn7fnv62cit5" path="res://kenney_racing-pack/PNG/Cars/car_black_small_1.png" id="19_r1sy6"]
 [ext_resource type="Texture2D" uid="uid://c0v0en4hjakgy" path="res://kenney_ui-pack/PNG/Extra/Double/input_outline_square.png" id="20_bledu"]
 [ext_resource type="Texture2D" uid="uid://cgtmvy3a8tc2u" path="res://kenney_racing-pack/PNG/Extra/Default/button_square.png" id="20_v6ofa"]
-[ext_resource type="Texture2D" uid="uid://b8lp606ehu3ia" path="res://Capture d'écran 2025-05-15 193850.png" id="21_0se11"]
+[ext_resource type="Texture2D" uid="uid://dyie6owcfu82s" path="res://Capture d'écran 2025-05-15 204310.png" id="23_8i753"]
+[ext_resource type="Texture2D" uid="uid://dpnje60jygt2q" path="res://kenney_racing-pack/PNG/Objects/oil.png" id="23_dhug5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7qw4i"]
 font_size = 28
@@ -32,6 +33,35 @@ outline_color = Color(1, 0, 1, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_tfpps"]
 font_size = 41
 font_color = Color(0.0823529, 0.321569, 1, 1)
+
+[sub_resource type="Animation" id="Animation_amp27"]
+resource_name = "PointIT"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer2/pointInt:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(776, 325)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer2/pointInt:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1, 1.46667, 2.03333, 3.13333, 4.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.261799, 0.0, -0.261799, 0.261799, -0.261799, 0.261799]
+}
 
 [sub_resource type="Animation" id="Animation_ahat3"]
 length = 0.001
@@ -59,6 +89,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer2/pointInt:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(776, 325)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer2/pointInt:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_62kk6"]
 resource_name = "Voiturenoir"
@@ -71,7 +125,7 @@ tracks/0/path = NodePath("AnimationPlayer/CarBlackSmall1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.266667, 1.63333, 2.43333, 2.96667, 4, 4.23333, 5.83333, 6.4),
+"times": PackedFloat32Array(0, 0.266667, 1.73333, 2.43333, 3.76667, 5.23333, 5.43333, 6.56667, 7.33333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(692, 777), Vector2(711, 580), Vector2(636, 307), Vector2(611, 307), Vector2(612, 448), Vector2(495, 491), Vector2(420, 472), Vector2(-124, 179), Vector2(-114, 781)]
@@ -83,7 +137,7 @@ tracks/1/path = NodePath("AnimationPlayer/CarBlackSmall1:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.83333, 2.03333, 2.2, 2.33333, 2.43333, 2.6, 2.96667, 3.53333, 4, 4.23333, 4.53333, 6.4, 7.1),
+"times": PackedFloat32Array(0, 1.9, 2.03333, 2.16667, 2.3, 2.53333, 2.76667, 3.76667, 4.23333, 5.23333, 5.43333, 5.7, 7.33333, 8.06667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [0.0, -0.261799, -0.523599, -0.785398, -1.0472, -1.309, -2.35619, -3.14159, -2.35619, -1.8326, -1.309, -1.0472, -3.14159, -4.71239]
@@ -91,8 +145,71 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgdbe"]
 _data = {
+"PointIT": SubResource("Animation_amp27"),
 "RESET": SubResource("Animation_ahat3"),
 "Voiturenoir": SubResource("Animation_62kk6")
+}
+
+[sub_resource type="Animation" id="Animation_myscs"]
+resource_name = "PointInt"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer2/pointInt:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(776, 325)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer2/pointInt:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.523598, -0.261799, 0.523598, -0.523598, 0.523598]
+}
+
+[sub_resource type="Animation" id="Animation_na01v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer2/pointInt:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(776, 325)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer2/pointInt:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xcqqi"]
+_data = {
+"PointInt": SubResource("Animation_myscs"),
+"RESET": SubResource("Animation_na01v")
 }
 
 [node name="Choixdesmaps" type="Node2D"]
@@ -101,9 +218,10 @@ _data = {
 
 [node name="ButtonRectangleDepthGradient" type="Sprite2D" parent="Décoration"]
 z_index = -1
-position = Vector2(561, 337)
+position = Vector2(562, 337)
 scale = Vector2(3.27344, 6.46875)
 texture = ExtResource("1_xafnu")
+metadata/_edit_lock_ = true
 
 [node name="BarShadowRoundLargeM" type="Sprite2D" parent="Décoration/ButtonRectangleDepthGradient"]
 position = Vector2(-32.3819, -37.4106)
@@ -139,11 +257,11 @@ texture = ExtResource("2_8pk28")
 
 [node name="Label" type="Label" parent="Décoration"]
 z_index = 1
-offset_left = 241.0
-offset_top = 32.0
-offset_right = 765.0
-offset_bottom = 95.0
-text = "choisis qu'elle carte tu veux jouer"
+offset_left = 219.0
+offset_top = 27.0
+offset_right = 743.0
+offset_bottom = 90.0
+text = "Choisit quelles cartes tu veux jouer ?"
 label_settings = SubResource("LabelSettings_7qw4i")
 
 [node name="Label2" type="Label" parent="Décoration/Label"]
@@ -265,6 +383,11 @@ position = Vector2(978, 528.5)
 scale = Vector2(2.875, 2.20312)
 texture = ExtResource("20_v6ofa")
 
+[node name="Oil" type="Sprite2D" parent="Décoration"]
+position = Vector2(594, 374)
+scale = Vector2(1.51835, 1.56316)
+texture = ExtResource("23_dhug5")
+
 [node name="Les maps" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Les maps"]
@@ -306,14 +429,9 @@ texture = ExtResource("5_krq44")
 
 [node name="InputOutlineSquare" type="Sprite2D" parent="Les maps/Aléatoire"]
 z_index = -1
-position = Vector2(771, 316)
-scale = Vector2(1.23438, 1.14062)
+position = Vector2(775.5, 318.5)
+scale = Vector2(1.30469, 1.38281)
 texture = ExtResource("20_bledu")
-
-[node name="Sprite2D" type="Sprite2D" parent="Les maps/Aléatoire"]
-position = Vector2(771, 318)
-scale = Vector2(0.197324, 0.250559)
-texture = ExtResource("21_0se11")
 
 [node name="animation" type="Node2D" parent="."]
 
@@ -326,3 +444,14 @@ autoplay = "Voiturenoir"
 [node name="CarBlackSmall1" type="Sprite2D" parent="animation/AnimationPlayer"]
 position = Vector2(692, 777)
 texture = ExtResource("19_r1sy6")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="animation"]
+libraries = {
+"": SubResource("AnimationLibrary_xcqqi")
+}
+autoplay = "PointInt"
+
+[node name="pointInt" type="Sprite2D" parent="animation/AnimationPlayer2"]
+position = Vector2(776, 325)
+scale = Vector2(0.197324, 0.250559)
+texture = ExtResource("23_8i753")
