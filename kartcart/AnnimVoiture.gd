@@ -9,7 +9,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	positionAnnime += delta *0.50
+	positionAnnime += delta /listeDePoint[tronsson].global_position.distance_to(listeDePoint[tronsson+1].global_position) *150
 	#  % de la distance entre les deux point
 	if positionAnnime > 1:
 		positionAnnime = 0
@@ -17,5 +17,8 @@ func _process(delta: float) -> void:
 		if tronsson >= listeDePoint.size()-1:
 			tronsson = 0
 	global_position = lerp(listeDePoint[tronsson].global_position,listeDePoint[tronsson+1].global_position,positionAnnime)
-	global_rotation = lerp(listeDePoint[tronsson].global_rotation,listeDePoint[tronsson+1].global_rotation,positionAnnime)
-# elle tourne dans le movais sens
+	if abs(listeDePoint[tronsson].global_rotation + (listeDePoint[tronsson+1].global_rotation)) <= 180:
+		
+		global_rotation = lerp(listeDePoint[tronsson].global_rotation,listeDePoint[tronsson+1].global_rotation,positionAnnime)
+	else:
+		global_rotation = lerp(listeDePoint[tronsson+1].global_rotation,listeDePoint[tronsson].global_rotation,positionAnnime)
