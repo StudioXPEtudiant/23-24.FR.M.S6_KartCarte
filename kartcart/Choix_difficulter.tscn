@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://pjuy50ekffnd"]
+[gd_scene load_steps=19 format=3 uid="uid://pjuy50ekffnd"]
 
 [ext_resource type="Texture2D" uid="uid://ddlbyii8lcdjs" path="res://kenney_ui-pack/PNG/Extra/Double/button_square_depth_line.png" id="1_2cr4w"]
 [ext_resource type="Texture2D" uid="uid://duegbyxp3d5rg" path="res://kenney_ui-pack/PNG/Blue/Double/button_rectangle_line.png" id="2_godjf"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cx3qrw1js2jm5" path="res://kenney_racing-pack/PNG/Objects/barrel_red_down.png" id="11_7cqfj"]
 [ext_resource type="Texture2D" uid="uid://c0cuwhqdx6rxy" path="res://kenney_ui-pack/PNG/Green/Default/arrow_basic_e.png" id="13_1kg8d"]
 [ext_resource type="Texture2D" uid="uid://dvutpv2e4hxmc" path="res://kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0000.png" id="14_nmnxy"]
+[ext_resource type="Texture2D" uid="uid://mlpxtv5rfrsk" path="res://kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thin outline/tile_0000.png" id="15_nf3is"]
 
 [sub_resource type="Animation" id="Animation_x43hl"]
 length = 0.001
@@ -295,3 +296,11 @@ metadata/_tab_index = 2
 visible = false
 layout_mode = 2
 metadata/_tab_index = 3
+
+[node name="Tile0000" type="Sprite2D" parent="."]
+position = Vector2(98, 151)
+texture = ExtResource("15_nf3is")
+
+[node name="Tile0001" type="Sprite2D" parent="."]
+position = Vector2(276, 155)
+texture = ExtResource("15_nf3is")
