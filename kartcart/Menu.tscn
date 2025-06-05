@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cbydibtnn6mxk"]
+[gd_scene load_steps=33 format=3 uid="uid://cbydibtnn6mxk"]
 
 [ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_1eno2"]
 [ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="2_t5gkq"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b1ekkxymigoe8" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="18_bs38c"]
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_11bo6"]
 [ext_resource type="Texture2D" uid="uid://bb0numvki8a2n" path="res://kenney_racing-pack/PNG/Cars/car_blue_1.png" id="21_oiree"]
+[ext_resource type="Script" path="res://AnnimVoiture.gd" id="23_5tx7h"]
 [ext_resource type="Texture2D" uid="uid://if011qdre2ik" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_blue.png" id="24_63d2o"]
 [ext_resource type="Texture2D" uid="uid://d3fqqbxe0s3fu" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_green.png" id="25_lk3tl"]
 [ext_resource type="Texture2D" uid="uid://c0glv5uj2dkl1" path="res://kenney_racing-pack/PNG/Motorcycles/motorcycle_red.png" id="26_hqkwi"]
@@ -55,7 +56,7 @@ scale = Vector2(0.55, 0.55)
 [node name="decor" type="Node2D" parent="."]
 
 [node name="TribuneOverhangRed" type="Sprite2D" parent="decor"]
-position = Vector2(913, 650)
+position = Vector2(901.818, 641.818)
 scale = Vector2(6.772, 10.9235)
 texture = ExtResource("1_1eno2")
 
@@ -134,6 +135,11 @@ texture = ExtResource("2_t5gkq")
 
 [node name="Oil" type="Sprite2D" parent="decor"]
 position = Vector2(81, 76)
+texture = ExtResource("10_iqp1q")
+
+[node name="Oil" type="Sprite2D" parent="decor/Oil"]
+position = Vector2(515.364, 291.273)
+scale = Vector2(0.658779, 0.761364)
 texture = ExtResource("10_iqp1q")
 
 [node name="TiresWhiteAlt" type="Sprite2D" parent="decor"]
@@ -409,10 +415,12 @@ vitess = 150
 
 [node name="anim car" type="Node2D" parent="."]
 
-[node name="CarBlue1" type="Sprite2D" parent="anim car"]
+[node name="CarBlue1" type="Sprite2D" parent="anim car" node_paths=PackedStringArray("listeDePoint")]
 position = Vector2(2129.09, 309.091)
 rotation = -1.5708
 texture = ExtResource("21_oiree")
+script = ExtResource("23_5tx7h")
+listeDePoint = [NodePath("../point 01"), NodePath("../point 02"), NodePath("../point 05"), NodePath("../point 03"), NodePath("../point 06"), NodePath("../point 04")]
 
 [node name="point 01" type="Node2D" parent="anim car"]
 position = Vector2(2070, 250)
@@ -422,12 +430,20 @@ rotation = -1.5708
 position = Vector2(700, 250)
 rotation = -1.5708
 
+[node name="point 05" type="Node2D" parent="anim car"]
+position = Vector2(500, 250)
+rotation = 2.79253
+
 [node name="point 03" type="Node2D" parent="anim car"]
 position = Vector2(600, 350)
-rotation = 3.14159
+rotation = 2.96706
+
+[node name="point 06" type="Node2D" parent="anim car"]
+position = Vector2(612.727, 383.636)
+rotation = -3.14159
 
 [node name="point 04" type="Node2D" parent="anim car"]
 position = Vector2(600, 1300)
-rotation = 3.14159
+rotation = -3.14159
 
 [connection signal="pressed" from="bouton/quit/Button" to="bouton/quit/Button" method="exit"]
