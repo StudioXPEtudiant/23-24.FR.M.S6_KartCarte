@@ -1,0 +1,297 @@
+[gd_scene load_steps=18 format=3 uid="uid://pjuy50ekffnd"]
+
+[ext_resource type="Texture2D" uid="uid://ddlbyii8lcdjs" path="res://kenney_ui-pack/PNG/Extra/Double/button_square_depth_line.png" id="1_2cr4w"]
+[ext_resource type="Texture2D" uid="uid://duegbyxp3d5rg" path="res://kenney_ui-pack/PNG/Blue/Double/button_rectangle_line.png" id="2_godjf"]
+[ext_resource type="Texture2D" uid="uid://cqqyojv6ujvu1" path="res://kenney_racing-pack/PNG/Extra/Default/panel_glass_tab.png" id="3_wsacm"]
+[ext_resource type="Texture2D" uid="uid://drdetqutxoap8" path="res://kenney_racing-pack/PNG/Extra/Default/panel_glass_tab_blade.png" id="4_s8wgm"]
+[ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="5_61ulv"]
+[ext_resource type="Texture2D" uid="uid://bjn7djiki4tjg" path="res://kenney_racing-pack/PNG/Objects/light_yellow.png" id="6_2efq3"]
+[ext_resource type="Texture2D" uid="uid://cw5rtbg5b3ul0" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_2.png" id="7_2hoqy"]
+[ext_resource type="Texture2D" uid="uid://c7gtbap24lwvp" path="res://kenney_racing-pack/PNG/Cars/car_green_small_1.png" id="8_5dtao"]
+[ext_resource type="Texture2D" uid="uid://b1ekkxymigoe8" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="9_fdsl0"]
+[ext_resource type="Texture2D" uid="uid://c2jxutpwcswos" path="res://kenney_racing-pack/PNG/Extra/Default/car_red_4.png" id="9_wnsvm"]
+[ext_resource type="Texture2D" uid="uid://fpkrqt6cruhp" path="res://kenney_racing-pack/PNG/Objects/cone_down.png" id="10_el23e"]
+[ext_resource type="Texture2D" uid="uid://cx3qrw1js2jm5" path="res://kenney_racing-pack/PNG/Objects/barrel_red_down.png" id="11_7cqfj"]
+[ext_resource type="Texture2D" uid="uid://c0cuwhqdx6rxy" path="res://kenney_ui-pack/PNG/Green/Default/arrow_basic_e.png" id="13_1kg8d"]
+[ext_resource type="Texture2D" uid="uid://dvutpv2e4hxmc" path="res://kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0000.png" id="14_nmnxy"]
+
+[sub_resource type="Animation" id="Animation_x43hl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Décoration/Animation/AnimationPlayer/CarRed4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1171, 740)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Décoration/Animation/AnimationPlayer/CarRed4:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.261799]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Décoration/Animation/AnimationPlayer/CarGreenSmall1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(684, 692)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Décoration/Animation/AnimationPlayer/CarGreenSmall1:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_h2ukm"]
+resource_name = "Voiture_verte1"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Décoration/Animation/AnimationPlayer/CarRed4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.96667, 6.63333, 7.73333, 8.16667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1171, 740), Vector2(1089, 421), Vector2(1018, 149), Vector2(845, 112), Vector2(-109, -114), Vector2(-109, 805)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Décoration/Animation/AnimationPlayer/CarRed4:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.43333, 4.03333, 6.6, 6.86667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.261799, -0.785398, -1.309, -1.0472, -1.309]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Décoration/Animation/AnimationPlayer/CarGreenSmall1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.7, 5.53333, 6.03333, 8.16667, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(684, 692), Vector2(685, 497), Vector2(684, 306), Vector2(683, -60), Vector2(-109, -60), Vector2(-109, 799)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Décoration/Animation/AnimationPlayer/CarGreenSmall1:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g77mq"]
+_data = {
+"RESET": SubResource("Animation_x43hl"),
+"Voiture_verte1": SubResource("Animation_h2ukm")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Décoration" type="Node" parent="."]
+
+[node name="ButtonSquareDepthLine" type="Sprite2D" parent="Décoration"]
+z_index = -1
+position = Vector2(576.5, 356)
+scale = Vector2(10.7109, 6.5)
+texture = ExtResource("1_2cr4w")
+
+[node name="ButtonRectangleLine" type="Sprite2D" parent="Décoration"]
+position = Vector2(181, 91)
+scale = Vector2(0.800001, 0.44)
+texture = ExtResource("2_godjf")
+
+[node name="Label" type="Label" parent="Décoration"]
+modulate = Color(1, 0.509804, 0, 1)
+offset_left = 48.0
+offset_top = 61.0
+offset_right = 88.0
+offset_bottom = 84.0
+scale = Vector2(1.74935, 2.21633)
+text = "Choisis la difficulté
+"
+
+[node name="PanelGlassTab" type="Sprite2D" parent="Décoration"]
+position = Vector2(493, 513)
+rotation = -0.261799
+texture = ExtResource("3_wsacm")
+
+[node name="PanelGlassTab2" type="Sprite2D" parent="Décoration"]
+position = Vector2(543, 270)
+rotation = 1.0472
+texture = ExtResource("3_wsacm")
+
+[node name="PanelGlassTab3" type="Sprite2D" parent="Décoration"]
+position = Vector2(303, 557)
+rotation = -1.0472
+texture = ExtResource("3_wsacm")
+
+[node name="PanelGlassTab4" type="Sprite2D" parent="Décoration"]
+position = Vector2(848, 234)
+rotation = 2.35619
+texture = ExtResource("3_wsacm")
+
+[node name="PanelGlassTabBlade" type="Sprite2D" parent="Décoration"]
+position = Vector2(1117, 31)
+rotation = -3.14159
+texture = ExtResource("4_s8wgm")
+
+[node name="PanelGlassTabBlade2" type="Sprite2D" parent="Décoration"]
+z_index = 3
+position = Vector2(32, 613)
+texture = ExtResource("4_s8wgm")
+
+[node name="Animation" type="Node" parent="Décoration"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Décoration/Animation"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_g77mq")
+}
+autoplay = "Voiture_verte1"
+
+[node name="CarGreenSmall1" type="Sprite2D" parent="Décoration/Animation/AnimationPlayer"]
+position = Vector2(684, 692)
+texture = ExtResource("8_5dtao")
+
+[node name="CarRed4" type="Sprite2D" parent="Décoration/Animation/AnimationPlayer"]
+position = Vector2(1171, 740)
+rotation = -0.261799
+texture = ExtResource("9_wnsvm")
+
+[node name="SkidmarkLong2" type="Sprite2D" parent="Décoration/Animation"]
+z_index = -1
+position = Vector2(684, 593)
+scale = Vector2(0.680001, 1)
+texture = ExtResource("7_2hoqy")
+
+[node name="SkidmarkLong3" type="Sprite2D" parent="Décoration/Animation"]
+position = Vector2(1128, 581)
+rotation = -0.261799
+texture = ExtResource("7_2hoqy")
+
+[node name="ArrowYellow" type="Sprite2D" parent="Décoration"]
+z_index = 1
+position = Vector2(695, 256)
+texture = ExtResource("5_61ulv")
+
+[node name="LightYellow" type="Sprite2D" parent="Décoration"]
+z_index = -1
+position = Vector2(1047, 91)
+rotation = -2.35619
+texture = ExtResource("6_2efq3")
+
+[node name="ArrowYellow2" type="Sprite2D" parent="Décoration"]
+z_index = -1
+position = Vector2(690, 99)
+texture = ExtResource("5_61ulv")
+
+[node name="ArrowYellow3" type="Sprite2D" parent="Décoration"]
+z_index = -1
+position = Vector2(693, 178)
+texture = ExtResource("5_61ulv")
+
+[node name="ConeStraight" type="Sprite2D" parent="Décoration"]
+z_index = 2
+position = Vector2(596, 355)
+texture = ExtResource("9_fdsl0")
+
+[node name="ConeStraight2" type="Sprite2D" parent="Décoration"]
+z_index = 2
+position = Vector2(785, 355)
+texture = ExtResource("9_fdsl0")
+
+[node name="ConeStraight3" type="Sprite2D" parent="Décoration"]
+z_index = 2
+position = Vector2(858, 358)
+texture = ExtResource("9_fdsl0")
+
+[node name="ConeDown" type="Sprite2D" parent="Décoration"]
+z_index = 2
+position = Vector2(619, 285)
+rotation = -2.35619
+texture = ExtResource("10_el23e")
+
+[node name="BarrelRedDown" type="Sprite2D" parent="Décoration"]
+position = Vector2(182, 626)
+texture = ExtResource("11_7cqfj")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+offset_left = 48.0
+offset_top = 221.0
+offset_right = 307.0
+offset_bottom = 430.0
+scale = Vector2(1.2, 1.12783)
+theme_override_colors/font_unselected_color = Color(0.592157, 0.145098, 0.796078, 1)
+theme_override_colors/font_selected_color = Color(0, 1, 0.772549, 1)
+theme_override_font_sizes/font_size = 10
+current_tab = 0
+
+[node name="Facile" type="Panel" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ArrowBasicE" type="Sprite2D" parent="TabContainer/Facile"]
+z_index = 1
+position = Vector2(120, 96.8122)
+scale = Vector2(2.03125, 2.4106)
+texture = ExtResource("13_1kg8d")
+
+[node name="Tile0000" type="Sprite2D" parent="TabContainer/Facile"]
+position = Vector2(117.5, 97.6989)
+scale = Vector2(4.14634, 3.73767)
+texture = ExtResource("14_nmnxy")
+
+[node name="Moyen" type="Panel" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Difficile" type="Panel" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Spécial" type="Panel" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
