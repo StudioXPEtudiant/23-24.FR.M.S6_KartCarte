@@ -137,6 +137,11 @@ texture = ExtResource("2_t5gkq")
 position = Vector2(81, 76)
 texture = ExtResource("10_iqp1q")
 
+[node name="Oil" type="Sprite2D" parent="decor/Oil"]
+position = Vector2(515.364, 291.273)
+scale = Vector2(0.658779, 0.761364)
+texture = ExtResource("10_iqp1q")
+
 [node name="TiresWhiteAlt" type="Sprite2D" parent="decor"]
 position = Vector2(190, 37)
 texture = ExtResource("11_hptk8")
@@ -434,7 +439,7 @@ position = Vector2(600, 350)
 rotation = 2.96706
 
 [node name="point 06" type="Node2D" parent="anim car"]
-position = Vector2(600, 400)
+position = Vector2(612.727, 383.636)
 rotation = -3.14159
 
 [node name="point 04" type="Node2D" parent="anim car"]
