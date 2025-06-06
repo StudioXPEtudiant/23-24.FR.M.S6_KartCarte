@@ -131,6 +131,7 @@ _data = {
 [node name="Décoration" type="Node" parent="."]
 
 [node name="ButtonSquareDepthLine" type="Sprite2D" parent="Décoration"]
+modulate = Color(0.964706, 0.901961, 0.819608, 1)
 z_index = -1
 position = Vector2(576.5, 356)
 scale = Vector2(10.7109, 6.5)
@@ -195,6 +196,7 @@ position = Vector2(684, 692)
 texture = ExtResource("8_5dtao")
 
 [node name="CarRed4" type="Sprite2D" parent="Décoration/Animation/AnimationPlayer"]
+z_index = 1
 position = Vector2(1171, 740)
 rotation = -0.261799
 texture = ExtResource("9_wnsvm")
@@ -211,7 +213,7 @@ rotation = -0.261799
 texture = ExtResource("7_2hoqy")
 
 [node name="ArrowYellow" type="Sprite2D" parent="Décoration"]
-z_index = 1
+z_index = -1
 position = Vector2(695, 256)
 texture = ExtResource("5_61ulv")
 
@@ -259,7 +261,7 @@ texture = ExtResource("11_7cqfj")
 [node name="TabContainer" type="TabContainer" parent="."]
 offset_left = 48.0
 offset_top = 221.0
-offset_right = 307.0
+offset_right = 348.0
 offset_bottom = 430.0
 scale = Vector2(1.2, 1.12783)
 theme_override_colors/font_unselected_color = Color(0.592157, 0.145098, 0.796078, 1)
@@ -273,29 +275,100 @@ metadata/_tab_index = 0
 
 [node name="ArrowBasicE" type="Sprite2D" parent="TabContainer/Facile"]
 z_index = 1
-position = Vector2(120, 96.8122)
-scale = Vector2(2.03125, 2.4106)
+position = Vector2(147.5, 91.4923)
+scale = Vector2(3, 3.561)
 texture = ExtResource("13_1kg8d")
 
 [node name="Tile0000" type="Sprite2D" parent="TabContainer/Facile"]
-position = Vector2(117.5, 97.6989)
-scale = Vector2(4.14634, 3.73767)
+position = Vector2(143.333, 93.2656)
+scale = Vector2(6, 5.41)
 texture = ExtResource("14_nmnxy")
+
+[node name="Label" type="Label" parent="TabContainer/Facile"]
+z_index = 1
+layout_mode = 0
+offset_left = 110.833
+offset_top = 70.2125
+offset_right = 158.833
+offset_bottom = 95.2125
+scale = Vector2(1.4, 1.4)
+text = "Facile"
 
 [node name="Moyen" type="Panel" parent="TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
+[node name="ArrowBasicE" type="Sprite2D" parent="TabContainer/Moyen"]
+modulate = Color(0.918737, 0.670703, 0.195109, 1)
+z_index = 1
+position = Vector2(147.5, 91.4923)
+scale = Vector2(3, 3.561)
+texture = ExtResource("13_1kg8d")
+
+[node name="Tile0000" type="Sprite2D" parent="TabContainer/Moyen"]
+position = Vector2(143.333, 93.2656)
+scale = Vector2(6, 5.41)
+texture = ExtResource("14_nmnxy")
+
+[node name="Label" type="Label" parent="TabContainer/Moyen"]
+z_index = 1
+offset_left = 110.833
+offset_top = 70.2125
+offset_right = 158.833
+offset_bottom = 95.2125
+scale = Vector2(1.4, 1.4)
+text = "Moyen"
+
 [node name="Difficile" type="Panel" parent="TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
+[node name="ArrowBasicE" type="Sprite2D" parent="TabContainer/Difficile"]
+z_index = 1
+position = Vector2(147.5, 91.4923)
+scale = Vector2(3, 3.561)
+texture = ExtResource("13_1kg8d")
+
+[node name="Tile0000" type="Sprite2D" parent="TabContainer/Difficile"]
+position = Vector2(143.333, 93.2656)
+scale = Vector2(6, 5.41)
+texture = ExtResource("14_nmnxy")
+
+[node name="Label" type="Label" parent="TabContainer/Difficile"]
+z_index = 1
+offset_left = 110.833
+offset_top = 70.2125
+offset_right = 158.833
+offset_bottom = 95.2125
+scale = Vector2(1.3, 1.3)
+text = "Difficile"
+
 [node name="Spécial" type="Panel" parent="TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 3
+
+[node name="ArrowBasicE" type="Sprite2D" parent="TabContainer/Spécial"]
+z_index = 1
+position = Vector2(147.5, 91.4923)
+scale = Vector2(3, 3.561)
+texture = ExtResource("13_1kg8d")
+
+[node name="Tile0000" type="Sprite2D" parent="TabContainer/Spécial"]
+position = Vector2(143.333, 93.2656)
+scale = Vector2(6, 5.41)
+texture = ExtResource("14_nmnxy")
+
+[node name="Label" type="Label" parent="TabContainer/Spécial"]
+z_index = 1
+offset_left = 110.833
+offset_top = 70.2125
+offset_right = 158.833
+offset_bottom = 95.2125
+scale = Vector2(1.4, 1.4)
+text = "Spécial"
 
 [node name="Tile0000" type="Sprite2D" parent="."]
 position = Vector2(98, 151)
