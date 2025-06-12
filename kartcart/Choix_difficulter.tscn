@@ -313,6 +313,7 @@ texture = ExtResource("14_nmnxy")
 
 [node name="Label" type="Label" parent="TabContainer/Moyen"]
 z_index = 1
+layout_mode = 0
 offset_left = 110.833
 offset_top = 70.2125
 offset_right = 158.833
@@ -338,6 +339,7 @@ texture = ExtResource("14_nmnxy")
 
 [node name="Label" type="Label" parent="TabContainer/Difficile"]
 z_index = 1
+layout_mode = 0
 offset_left = 110.833
 offset_top = 70.2125
 offset_right = 158.833
@@ -363,6 +365,7 @@ texture = ExtResource("14_nmnxy")
 
 [node name="Label" type="Label" parent="TabContainer/Spécial"]
 z_index = 1
+layout_mode = 0
 offset_left = 110.833
 offset_top = 70.2125
 offset_right = 158.833
