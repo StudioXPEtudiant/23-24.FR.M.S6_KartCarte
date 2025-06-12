@@ -191,6 +191,7 @@ libraries = {
 autoplay = "Voiture_verte1"
 
 [node name="CarGreenSmall1" type="Sprite2D" parent="Décoration/Animation/AnimationPlayer"]
+z_index = 1
 position = Vector2(684, 692)
 texture = ExtResource("8_5dtao")
 
@@ -211,7 +212,6 @@ rotation = -0.261799
 texture = ExtResource("7_2hoqy")
 
 [node name="ArrowYellow" type="Sprite2D" parent="Décoration"]
-z_index = 1
 position = Vector2(695, 256)
 texture = ExtResource("5_61ulv")
 
