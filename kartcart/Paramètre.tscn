@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://3hygfyfv1g7q"]
+[gd_scene load_steps=3 format=3 uid="uid://3hygfyfv1g7q"]
 
 [ext_resource type="Script" path="res://valeurParamètre.gd" id="1_g2q6w"]
+[ext_resource type="AudioStream" uid="uid://ds4d85xilge3" path="res://Windows Background.wav" id="2_vfa1i"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.211765, 0.211765, 0.211765, 1)
+color = Color(0.23, 0.23, 0.23, 1)
 
 [node name="HSplitContainer" type="HSplitContainer" parent="ColorRect"]
 layout_mode = 1
@@ -53,6 +54,9 @@ offset_top = 521.0
 offset_right = 1066.0
 offset_bottom = 608.0
 text = "Retour"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vfa1i")
 
 [connection signal="drag_ended" from="ColorRect/HSlider" to="ColorRect/HSlider" method="_on_drag_ended"]
 [connection signal="value_changed" from="ColorRect/HSlider" to="ColorRect/HSlider" method="_on_value_changed"]

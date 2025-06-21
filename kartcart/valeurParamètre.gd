@@ -15,9 +15,14 @@ func _process(delta: float) -> void:
 
 
 func _on_value_changed(value: float) -> void:
+	
 	SonsVolume = value
 	print(SonsVolume)
 	pass # Replace with function body.
 	
 	
 	
+
+
+func _on_drag_ended(value_changed: bool) -> void:
+	pass # Replace with function body.

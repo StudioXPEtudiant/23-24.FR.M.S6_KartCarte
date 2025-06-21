@@ -24,6 +24,9 @@ script = ExtResource("1_an442")
 
 [node name="Control" parent="." instance=ExtResource("2_jgo8m")]
 
+[node name="HSlider" parent="Control/ColorRect" index="1"]
+value = 50.0
+
 [node name="Button" parent="Control" index="1"]
 script = ExtResource("1_an442")
 
@@ -33,6 +36,7 @@ script = ExtResource("1_an442")
 current = true
 
 [node name="musique" type="AudioStreamPlayer2D" parent="Sons/AudioListener2D"]
+volume_db = 50.0
 
 [node name="sfx" type="AudioStreamPlayer2D" parent="Sons/AudioListener2D"]
 
