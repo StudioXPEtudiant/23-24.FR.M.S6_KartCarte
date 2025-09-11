@@ -44,20 +44,98 @@ volume_db = 50.0
 
 [node name="01" type="Node2D" parent="ListeCarte"]
 script = ExtResource("5_gnu7q")
+nom = "C'est la sauce"
+NombreDeFuel = -1
+NomEffet = "-1Fuel + flaque de fuel"
+defEffet = "-1 d'essence pour nous et sa met une flaque d'essence"
 
 [node name="02" type="Node2D" parent="ListeCarte"]
 script = ExtResource("5_gnu7q")
+nom = "Fuite d'essence"
+Niveau = 1
+NombreDeFuel = 2
+NomEffet = "Player2 -1Fuel"
+defEffet = "enlève 1 d'essence a l'adversaire"
 
 [node name="03" type="Node2D" parent="ListeCarte"]
 script = ExtResource("5_gnu7q")
+nom = "Turbo"
+Niveau = 1
+NombreDeFuel = 2
+NomEffet = "+2move"
+defEffet = "te fait avencer directement de 2 case"
 
 [node name="04" type="Node2D" parent="ListeCarte"]
 script = ExtResource("5_gnu7q")
+nom = "Repioche"
+Niveau = 1
+NombreDeFuel = 2
+NomEffet = "+1Cart"
+defEffet = "Piocher une cart"
 
 [node name="05" type="Node2D" parent="ListeCarte"]
 script = ExtResource("5_gnu7q")
+nom = "Turbo Bancale"
+NombreDeFuel = 2
+NomEffet = "+2move + 0move au prochain tour"
+defEffet = "permet d'avancer de 2 cases en plus mais vous êtes immobilisé au prochain tour"
 
 [node name="06" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+nom = "sabotage"
+Niveau = 1
+NombreDeFuel = 3
+NomEffet = "Player2-1Fuel +1Fuel +0move"
+defEffet = "enlève 1 d'essence a l'adversaire et vous en donne 1 mais vous ne pouvez pas avancer ce tour"
+
+[node name="07" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+nom = "triche"
+Niveau = 1
+NombreDeFuel = 2
+NomEffet = "Player2 0move + -2fuel"
+defEffet = "empèche l'autre de bouger pour un tour mais vous perdez 2 d'essences"
+
+[node name="08" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+nom = "chance du débutant"
+Niveau = 2
+NombreDeFuel = 4
+
+[node name="09" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="10" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="11" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="12" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="13" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="14" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="15" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="16" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="17" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="18" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="19" type="Node2D" parent="ListeCarte"]
+script = ExtResource("5_gnu7q")
+
+[node name="20" type="Node2D" parent="ListeCarte"]
 script = ExtResource("5_gnu7q")
 
 [node name="Choixdesmaps" parent="." instance=ExtResource("5_creng")]

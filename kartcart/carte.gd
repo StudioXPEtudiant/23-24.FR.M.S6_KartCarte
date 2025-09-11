@@ -4,7 +4,7 @@ class_name carte
 
 @export var nom:String
 
-@export var Niveau:String
+@export var Niveau:int
 
 @export var NombreDansDeck:int
 
