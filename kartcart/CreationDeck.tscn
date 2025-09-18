@@ -259,7 +259,6 @@ texture = ExtResource("5_0nnvo")
 [node name="LightWhite4" type="Sprite2D" parent="décor"]
 position = Vector2(477, 138)
 rotation = 2.87979
-scale = Vector2(1, 1)
 texture = ExtResource("5_0nnvo")
 
 [node name="Circuit" type="Node2D" parent="."]
