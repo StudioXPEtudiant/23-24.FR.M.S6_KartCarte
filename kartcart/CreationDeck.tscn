@@ -1,0 +1,421 @@
+[gd_scene load_steps=22 format=3 uid="uid://3xsky0nv0uwm"]
+
+[ext_resource type="Texture2D" uid="uid://bg57nutuduymr" path="res://kenney_ui-pack/PNG/Green/Default/button_square_depth_line.png" id="1_jxmv2"]
+[ext_resource type="Texture2D" uid="uid://d1xcpit52uqj6" path="res://kenney_ui-pack/PNG/Green/Default/slide_hangle.png" id="2_kqv8r"]
+[ext_resource type="Texture2D" uid="uid://ccn7od74suem5" path="res://kenney_ui-pack/PNG/Green/Default/button_rectangle_depth_border.png" id="3_cgce2"]
+[ext_resource type="Texture2D" uid="uid://d4mo1cfrgdbag" path="res://kenney_ui-pack/PNG/Green/Default/button_rectangle_border.png" id="4_nd2t4"]
+[ext_resource type="Texture2D" uid="uid://c6xskhqlmqjvk" path="res://kenney_racing-pack/PNG/Objects/light_white.png" id="5_0nnvo"]
+[ext_resource type="Texture2D" uid="uid://b2dtl0vlv8g4l" path="res://kenney_racing-pack/PNG/Cars/car_black_small_3.png" id="6_y60af"]
+[ext_resource type="Texture2D" uid="uid://bk0vfjh7sv824" path="res://kenney_racing-pack/PNG/Objects/lights.png" id="7_0to5l"]
+[ext_resource type="Texture2D" uid="uid://dmhsvp53iy6t7" path="res://kenney_racing-pack/PNG/Tiles/Sand road/road_sand90.png" id="7_d0ieo"]
+[ext_resource type="Texture2D" uid="uid://bgs7x2tf0tbr4" path="res://kenney_racing-pack/PNG/Tiles/Sand road/road_sand36.png" id="8_4om1v"]
+[ext_resource type="Texture2D" uid="uid://cglobn72blx0c" path="res://kenney_racing-pack/PNG/Cars/car_green_small_4.png" id="10_1h3xu"]
+[ext_resource type="Texture2D" uid="uid://blb0q2w0ibii3" path="res://kenney_racing-pack/PNG/Cars/car_blue_small_2.png" id="11_vjwgy"]
+[ext_resource type="Texture2D" uid="uid://dpnje60jygt2q" path="res://kenney_racing-pack/PNG/Objects/oil.png" id="12_4udyq"]
+[ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="13_jx5s7"]
+[ext_resource type="Texture2D" uid="uid://clf3jfims0j04" path="res://kenney_racing-pack/PNG/Objects/rock1.png" id="14_l2pwd"]
+[ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="15_5ty3j"]
+[ext_resource type="Texture2D" uid="uid://fpkrqt6cruhp" path="res://kenney_racing-pack/PNG/Objects/cone_down.png" id="16_2f6ak"]
+[ext_resource type="Texture2D" uid="uid://b1ekkxymigoe8" path="res://kenney_racing-pack/PNG/Objects/cone_straight.png" id="17_cbuv2"]
+[ext_resource type="Texture2D" uid="uid://lpyingt1ox0f" path="res://kenney_racing-pack/PNG/Objects/skidmark_long_3.png" id="18_igdxj"]
+
+[sub_resource type="Animation" id="Animation_6luyc"]
+resource_name = "Course"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/CarBlackSmall3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 1.26667, 2.23333, 4, 5.53333, 7.3, 8.4, 8.8, 9.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-124, 273), Vector2(-36, 273), Vector2(24, 272), Vector2(352, 281), Vector2(419, 278), Vector2(684, 278), Vector2(1273, 269), Vector2(1246, 754), Vector2(-180, 729), Vector2(-176, 283)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/CarBlackSmall3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.57079]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/CarGreenSmall4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.333333, 1.26667, 2.23333, 4, 5.76667, 6.36667, 6.86667, 7.1, 7.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-173, 398), Vector2(-26, 398), Vector2(80, 401), Vector2(377, 393), Vector2(522, 397), Vector2(552, 410), Vector2(517, 533), Vector2(476, 707), Vector2(-180, 749), Vector2(-198, 410)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/CarGreenSmall4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5.53333, 5.76667, 6.16667, 6.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [1.57079, 2.09439, 1.0472, -0.523598, -1.309]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/CarBlueSmall2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.333333, 1.26667, 2.23333, 4, 5.53333, 7.3, 8.03333, 8.4, 8.8, 9.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-143, 331), Vector2(0, 333), Vector2(117, 333), Vector2(289, 333), Vector2(463, 335), Vector2(768, 335), Vector2(1151, 342), Vector2(1356, 366), Vector2(1347, 808), Vector2(-183, 774), Vector2(-176, 344)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/CarBlueSmall2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.57079]
+}
+
+[sub_resource type="Animation" id="Animation_p668m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/CarBlackSmall3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-124, 273)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/CarBlackSmall3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.57079]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/CarGreenSmall4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-173, 398)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/CarGreenSmall4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.57079]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/CarBlueSmall2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-143, 331)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/CarBlueSmall2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.57079]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3rexs"]
+_data = {
+"Course": SubResource("Animation_6luyc"),
+"RESET": SubResource("Animation_p668m")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="décor" type="Node2D" parent="."]
+
+[node name="ButtonSquareDepthLine" type="Sprite2D" parent="décor"]
+position = Vector2(574.5, 351.5)
+scale = Vector2(21.8281, 13.2031)
+texture = ExtResource("1_jxmv2")
+
+[node name="SlideHangle" type="Sprite2D" parent="décor"]
+position = Vector2(67, 49)
+rotation = 2.0944
+texture = ExtResource("2_kqv8r")
+
+[node name="SlideHangle2" type="Sprite2D" parent="décor"]
+position = Vector2(1088, 49)
+rotation = -2.35619
+texture = ExtResource("2_kqv8r")
+
+[node name="ButtonRectangleDepthBorder" type="Sprite2D" parent="décor"]
+position = Vector2(825, 141)
+scale = Vector2(1.8725, 1.6875)
+texture = ExtResource("3_cgce2")
+
+[node name="Label" type="Label" parent="décor"]
+modulate = Color(0, 0, 1, 1)
+offset_left = 684.0
+offset_top = 103.0
+offset_right = 828.0
+offset_bottom = 130.0
+scale = Vector2(2.038, 2.6747)
+text = "Création du deck"
+
+[node name="ButtonRectangleBorder" type="Sprite2D" parent="décor"]
+modulate = Color(0.607843, 0.160784, 1, 1)
+position = Vector2(176, 556)
+texture = ExtResource("4_nd2t4")
+
+[node name="Label2" type="Label" parent="décor"]
+offset_left = 117.0
+offset_top = 533.0
+offset_right = 162.0
+offset_bottom = 556.0
+scale = Vector2(2.10825, 2.15979)
+text = "Menu"
+
+[node name="ButtonRectangleBorder2" type="Sprite2D" parent="décor"]
+position = Vector2(926, 547)
+scale = Vector2(-1.67296, 1.49882)
+texture = ExtResource("4_nd2t4")
+
+[node name="Label3" type="Label" parent="décor"]
+modulate = Color(1, 0.101961, 0, 1)
+offset_left = 796.0
+offset_top = 533.0
+offset_right = 1019.0
+offset_bottom = 556.0
+scale = Vector2(1.1615, 1.64831)
+text = "Choix d'un deck sauvegarder"
+
+[node name="LightWhite" type="Sprite2D" parent="décor"]
+position = Vector2(303, 123)
+rotation = -2.87979
+texture = ExtResource("5_0nnvo")
+
+[node name="Lights" type="Sprite2D" parent="décor"]
+position = Vector2(383, 25)
+texture = ExtResource("7_0to5l")
+
+[node name="LightWhite2" type="Sprite2D" parent="décor"]
+position = Vector2(367, 147)
+rotation = -3.14159
+texture = ExtResource("5_0nnvo")
+
+[node name="LightWhite3" type="Sprite2D" parent="décor"]
+position = Vector2(403, 154)
+rotation = 3.14159
+texture = ExtResource("5_0nnvo")
+
+[node name="LightWhite4" type="Sprite2D" parent="décor"]
+position = Vector2(477, 138)
+rotation = 2.87979
+scale = Vector2(1, 1)
+texture = ExtResource("5_0nnvo")
+
+[node name="Circuit" type="Node2D" parent="."]
+
+[node name="RoadSand91" type="Sprite2D" parent="Circuit"]
+position = Vector2(815, 278)
+scale = Vector2(1.08, 1)
+texture = ExtResource("7_d0ieo")
+
+[node name="RoadSand91" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(255, 2)
+texture = ExtResource("7_d0ieo")
+
+[node name="RoadSand92" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(382, 2)
+texture = ExtResource("7_d0ieo")
+
+[node name="RoadSand93" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-127, -1)
+texture = ExtResource("7_d0ieo")
+
+[node name="RoadSand94" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-253, -1)
+texture = ExtResource("7_d0ieo")
+
+[node name="RoadSand95" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-378, -2)
+texture = ExtResource("7_d0ieo")
+
+[node name="RoadSand96" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-506, -2)
+texture = ExtResource("7_d0ieo")
+
+[node name="RoadSand97" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-634, -2)
+texture = ExtResource("7_d0ieo")
+
+[node name="RoadSand98" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-761, -2)
+texture = ExtResource("7_d0ieo")
+
+[node name="RoadSand36" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-762, 119)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand37" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-635, 120)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand38" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-512, 120)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand39" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-387, 120)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand40" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-260, 120)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand41" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-131, 120)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand42" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(-3, 119)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand43" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(123, 120)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand44" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(250, 121)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand45" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(375, 121)
+texture = ExtResource("8_4om1v")
+
+[node name="RoadSand90" type="Sprite2D" parent="Circuit/RoadSand91"]
+position = Vector2(128, 2)
+texture = ExtResource("7_d0ieo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3rexs")
+}
+autoplay = "Course"
+
+[node name="CarBlackSmall3" type="Sprite2D" parent="AnimationPlayer"]
+z_index = 1
+position = Vector2(-124, 273)
+rotation = 1.57079
+texture = ExtResource("6_y60af")
+
+[node name="CarGreenSmall4" type="Sprite2D" parent="AnimationPlayer"]
+z_index = 1
+position = Vector2(-173, 398)
+rotation = 1.57079
+texture = ExtResource("10_1h3xu")
+
+[node name="CarBlueSmall2" type="Sprite2D" parent="AnimationPlayer"]
+z_index = 1
+position = Vector2(-143, 331)
+rotation = 1.57079
+texture = ExtResource("11_vjwgy")
+
+[node name="Oil" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(541, 399)
+texture = ExtResource("12_4udyq")
+
+[node name="ArrowWhite" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(382, 283)
+rotation = -1.57079
+scale = Vector2(0.392911, 0.519981)
+texture = ExtResource("13_jx5s7")
+
+[node name="ArrowWhite2" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(60, 282)
+rotation = -1.57079
+scale = Vector2(0.422913, 0.560694)
+texture = ExtResource("13_jx5s7")
+
+[node name="Rock1" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(120, 391)
+scale = Vector2(0.400001, 0.4)
+texture = ExtResource("14_l2pwd")
+
+[node name="ArrowYellow" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(835, 274)
+rotation = 1.57079
+scale = Vector2(0.439999, 0.440005)
+texture = ExtResource("15_5ty3j")
+
+[node name="ConeDown" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(661, 405)
+rotation = -0.523598
+texture = ExtResource("16_2f6ak")
+
+[node name="ConeStraight" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(616, 462)
+texture = ExtResource("17_cbuv2")
+
+[node name="ConeStraight2" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(562, 582)
+texture = ExtResource("17_cbuv2")
+
+[node name="ConeDown2" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(438, 541)
+rotation = 2.35619
+texture = ExtResource("16_2f6ak")
+
+[node name="SkidmarkLong3" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(953, 276)
+rotation = -1.57079
+scale = Vector2(0.484455, 0.85587)
+texture = ExtResource("18_igdxj")

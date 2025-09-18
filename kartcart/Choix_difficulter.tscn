@@ -127,7 +127,7 @@ _data = {
 "Voiture_verte1": SubResource("Animation_h2ukm")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Décoration" type="Node" parent="."]
 
