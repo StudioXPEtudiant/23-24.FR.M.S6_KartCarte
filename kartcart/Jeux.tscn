@@ -18,6 +18,7 @@ metadata/VolumeSons = 0.0
 
 [node name="Carte" parent="Map 01" index="4"]
 position = Vector2(5956, 268)
+nom = "ok"
 
 [node name="ButtonRetour" parent="Map 01/Bouton" index="1"]
 script = ExtResource("1_an442")
@@ -104,6 +105,9 @@ NombreDeFuel = 4
 
 [node name="09" type="Node2D" parent="ListeCarte"]
 script = ExtResource("5_gnu7q")
+nom = "Nitro"
+Niveau = 2
+NombreDeFuel = 3
 
 [node name="10" type="Node2D" parent="ListeCarte"]
 script = ExtResource("5_gnu7q")

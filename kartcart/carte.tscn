@@ -45,7 +45,6 @@ offset_left = 96.0
 offset_top = 128.0
 offset_right = 480.0
 offset_bottom = 192.0
-text = "Nom de la carte"
 label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("2_mhvw0")
 carte = NodePath("../../..")
