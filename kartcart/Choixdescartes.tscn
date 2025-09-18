@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://d3fdybgaan0rk"]
+[gd_scene load_steps=36 format=3 uid="uid://d3fdybgaan0rk"]
 
 [ext_resource type="Texture2D" uid="uid://bob8up75xiphu" path="res://kenney_ui-pack/PNG/Blue/Double/button_rectangle_depth_gradient.png" id="1_xafnu"]
 [ext_resource type="Texture2D" uid="uid://j8yeeh38mxns" path="res://Capture d'écran 2025-05-08 192441.png" id="2_7fmik"]
@@ -24,16 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://cgtmvy3a8tc2u" path="res://kenney_racing-pack/PNG/Extra/Default/button_square.png" id="20_v6ofa"]
 [ext_resource type="Texture2D" uid="uid://dyie6owcfu82s" path="res://Capture d'écran 2025-05-15 204310.png" id="23_8i753"]
 [ext_resource type="Texture2D" uid="uid://dpnje60jygt2q" path="res://kenney_racing-pack/PNG/Objects/oil.png" id="23_dhug5"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_7qw4i"]
-font_size = 28
-font_color = Color(0.658824, 1, 0, 1)
-outline_size = 3
-outline_color = Color(1, 0, 1, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_tfpps"]
-font_size = 41
-font_color = Color(0.0823529, 0.321569, 1, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3th5t"]
 
@@ -215,6 +205,18 @@ _data = {
 "RESET": SubResource("Animation_na01v")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_7qw4i"]
+font_size = 28
+font_color = Color(0.658824, 1, 0, 1)
+outline_size = 3
+outline_color = Color(1, 0, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tfpps"]
+font_size = 41
+font_color = Color(0.0823529, 0.321569, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kkcf1"]
+
 [node name="Choixdesmaps" type="Node2D"]
 
 [node name="Décoration" type="Node2D" parent="."]
@@ -252,29 +254,6 @@ texture = ExtResource("10_8uxxt")
 position = Vector2(-161.909, -47.3044)
 scale = Vector2(0.305489, 0.154589)
 texture = ExtResource("9_k37bn")
-
-[node name="ButtonRectangleBorder" type="Sprite2D" parent="Décoration/ButtonRectangleDepthGradient"]
-position = Vector2(-134.721, 37.5652)
-scale = Vector2(0.191726, 0.154589)
-texture = ExtResource("2_8pk28")
-
-[node name="Label" type="Label" parent="Décoration"]
-z_index = 1
-offset_left = 219.0
-offset_top = 27.0
-offset_right = 743.0
-offset_bottom = 90.0
-text = "Choisit quelles cartes tu veux jouer ?"
-label_settings = SubResource("LabelSettings_7qw4i")
-
-[node name="Label2" type="Label" parent="Décoration/Label"]
-layout_mode = 0
-offset_left = -178.0
-offset_top = 519.0
-offset_right = -65.0
-offset_bottom = 584.0
-text = " Deck"
-label_settings = SubResource("LabelSettings_tfpps")
 
 [node name="Tile0045" type="Sprite2D" parent="Décoration"]
 position = Vector2(726.375, 46)
@@ -466,3 +445,36 @@ autoplay = "PointInt"
 position = Vector2(776, 325)
 scale = Vector2(0.197324, 0.250559)
 texture = ExtResource("23_8i753")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 219.0
+offset_top = 27.0
+offset_right = 743.0
+offset_bottom = 90.0
+text = "Choisit quelles cartes tu veux jouer ?"
+label_settings = SubResource("LabelSettings_7qw4i")
+
+[node name="Retour Menu" type="Node2D" parent="."]
+scale = Vector2(0.75, 0.75)
+
+[node name="ButtonRectangleBorder" type="Sprite2D" parent="Retour Menu"]
+position = Vector2(160.999, 770)
+scale = Vector2(0.835073, 0.864583)
+texture = ExtResource("2_8pk28")
+
+[node name="text retour menu" type="Label" parent="Retour Menu"]
+offset_left = 22.6667
+offset_top = 740.0
+offset_right = 307.667
+offset_bottom = 809.0
+text = " Retour Menu"
+label_settings = SubResource("LabelSettings_tfpps")
+
+[node name="Button" type="Button" parent="Retour Menu"]
+offset_left = 11.0
+offset_top = 725.0
+offset_right = 311.0
+offset_bottom = 815.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kkcf1")
+script = ExtResource("18_33741")

@@ -158,6 +158,8 @@ offset_bottom = 117.0
 [connection signal="value_changed" from="Control/ColorRect/HSlider" to="Sons/AudioListener2D/musique" method="set_volume_db"]
 [connection signal="pressed" from="Control/Button" to="." method="switchNode" binds= [0]]
 [connection signal="pressed" from="Choixdesmaps/Les maps/Sprite2D/Button" to="." method="switchNode" binds= [4]]
+[connection signal="pressed" from="Choixdesmaps/Retour Menu/Button" to="." method="switchNode" binds= [0]]
+[connection signal="pressed" from="Choix Difficulter/TabContainer/Facile/Button" to="." method="switchNode" binds= [2]]
 [connection signal="pressed" from="Menu/bouton/StartButton/Button" to="." method="switchNode" binds= [3]]
 [connection signal="pressed" from="Menu/bouton/paramètreButton2/Button" to="." method="switchNode" binds= [1]]
 
