@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://5f42gfc6es2y"]
+[gd_scene load_steps=6 format=3 uid="uid://5f42gfc6es2y"]
 
 [ext_resource type="Texture2D" uid="uid://b51k7k2nmd2o8" path="res://kenney_racing-pack/PNG/interface_carte.png" id="1_g7ty2"]
 [ext_resource type="Script" path="res://carte.gd" id="1_kca6b"]
+[ext_resource type="Script" path="res://labelFuel.gd" id="2_33dub"]
 [ext_resource type="Script" path="res://labelNom.gd" id="2_mhvw0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a0jsd"]
@@ -22,13 +23,15 @@ polygon = PackedVector2Array(0, 0, 576, 0, 576, 648, 0, 648)
 
 [node name="Fuel" type="Node2D" parent="carte"]
 
-[node name="fuel" type="Label" parent="carte/Fuel"]
+[node name="fuel" type="Label" parent="carte/Fuel" node_paths=PackedStringArray("carte")]
 offset_left = 416.0
 offset_right = 574.0
 offset_bottom = 128.0
 text = "Nb 
 de fuel"
 label_settings = SubResource("LabelSettings_a0jsd")
+script = ExtResource("2_33dub")
+carte = NodePath("../../..")
 
 [node name="Rareté" type="Node2D" parent="carte"]
 
