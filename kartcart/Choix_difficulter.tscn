@@ -264,7 +264,7 @@ rotation = -2.35619
 texture = ExtResource("10_el23e")
 
 [node name="BarrelRedDown" type="Sprite2D" parent="Décoration"]
-position = Vector2(907, 587)
+position = Vector2(904, 571)
 rotation = -1.5708
 texture = ExtResource("11_7cqfj")
 
