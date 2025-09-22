@@ -18,9 +18,6 @@ func _on_value_changed(value: float) -> void:
 	
 	SonsVolume = value
 	print(SonsVolume)
-	pass # Replace with function body.
-	
-	
 	
 
 

@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://5f42gfc6es2y"]
+[gd_scene load_steps=9 format=3 uid="uid://5f42gfc6es2y"]
 
 [ext_resource type="Texture2D" uid="uid://b51k7k2nmd2o8" path="res://kenney_racing-pack/PNG/interface_carte.png" id="1_g7ty2"]
 [ext_resource type="Script" path="res://carte.gd" id="1_kca6b"]
 [ext_resource type="Script" path="res://labelFuel.gd" id="2_33dub"]
 [ext_resource type="Script" path="res://labelNom.gd" id="2_mhvw0"]
+[ext_resource type="Script" path="res://labelRareté.gd" id="3_8w1e5"]
+[ext_resource type="Script" path="res://labelDescription.gd" id="5_5m81a"]
+[ext_resource type="Script" path="res://labelEffet.gd" id="6_usnwb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a0jsd"]
 font_size = 45
@@ -27,19 +30,20 @@ polygon = PackedVector2Array(0, 0, 576, 0, 576, 648, 0, 648)
 offset_left = 416.0
 offset_right = 574.0
 offset_bottom = 128.0
-text = "Nb 
-de fuel"
+text = "0"
 label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("2_33dub")
 carte = NodePath("../../..")
 
 [node name="Rareté" type="Node2D" parent="carte"]
 
-[node name="rareté" type="Label" parent="carte/Rareté"]
+[node name="rareté" type="Label" parent="carte/Rareté" node_paths=PackedStringArray("carte")]
 offset_right = 224.0
 offset_bottom = 128.0
 text = "Rareté"
 label_settings = SubResource("LabelSettings_a0jsd")
+script = ExtResource("3_8w1e5")
+carte = NodePath("../../..")
 
 [node name="Nom" type="Node2D" parent="carte"]
 
@@ -52,15 +56,29 @@ label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("2_mhvw0")
 carte = NodePath("../../..")
 
-[node name="Description" type="Node2D" parent="carte"]
+[node name="DefEffet" type="Node2D" parent="carte"]
 
-[node name="description" type="Label" parent="carte/Description"]
+[node name="description" type="Label" parent="carte/DefEffet" node_paths=PackedStringArray("carte")]
 offset_left = 32.0
 offset_top = 448.0
 offset_right = 544.0
 offset_bottom = 640.0
 text = "description"
 label_settings = SubResource("LabelSettings_a0jsd")
+script = ExtResource("5_5m81a")
+carte = NodePath("../../..")
+
+[node name="Effet" type="Node2D" parent="carte"]
+
+[node name="Effet" type="Label" parent="carte/Effet" node_paths=PackedStringArray("carte")]
+offset_left = 32.0
+offset_top = 448.0
+offset_right = 544.0
+offset_bottom = 640.0
+text = "description"
+label_settings = SubResource("LabelSettings_a0jsd")
+script = ExtResource("6_usnwb")
+carte = NodePath("../../..")
 
 [node name="Image" type="Node2D" parent="carte"]
 
