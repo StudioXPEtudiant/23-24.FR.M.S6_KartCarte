@@ -1,6 +1,10 @@
 extends Node
 var SonsVolume = 0
 
+@onready var sons_volume_player: AudioStreamPlayer = $"../../SonsVolumePlayer"
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -15,9 +19,11 @@ func _process(delta: float) -> void:
 
 
 func _on_value_changed(value: float) -> void:
-	
 	SonsVolume = value
+	SonsVolume = (SonsVolume-50)/2-10
+	sons_volume_player.volume_db = SonsVolume
 	print(SonsVolume)
+	sons_volume_player.play()
 	
 
 
