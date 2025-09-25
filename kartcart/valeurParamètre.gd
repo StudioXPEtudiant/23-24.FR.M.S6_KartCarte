@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 
 func _on_value_changed(value: float) -> void:
 	SonsVolume = value
-	SonsVolume = (SonsVolume-50)/2-10
+	SonsVolume = (SonsVolume-50)/4
 	sons_volume_player.volume_db = SonsVolume
 	print(SonsVolume)
 	sons_volume_player.play()
