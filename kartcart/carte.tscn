@@ -20,7 +20,6 @@ visible = false
 polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
 
 [node name="carte" type="Polygon2D" parent="."]
-position = Vector2(288, 0)
 color = Color(1, 0.498039, 0, 1)
 polygon = PackedVector2Array(0, 0, 576, 0, 576, 648, 0, 648)
 
@@ -40,7 +39,7 @@ carte = NodePath("../../..")
 [node name="rareté" type="Label" parent="carte/Rareté" node_paths=PackedStringArray("carte")]
 offset_right = 224.0
 offset_bottom = 128.0
-text = "Rareté"
+text = "0"
 label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("3_8w1e5")
 carte = NodePath("../../..")
@@ -63,7 +62,6 @@ offset_left = 32.0
 offset_top = 448.0
 offset_right = 544.0
 offset_bottom = 640.0
-text = "description"
 label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("5_5m81a")
 carte = NodePath("../../..")
@@ -75,7 +73,6 @@ offset_left = 32.0
 offset_top = 448.0
 offset_right = 544.0
 offset_bottom = 640.0
-text = "description"
 label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("6_usnwb")
 carte = NodePath("../../..")

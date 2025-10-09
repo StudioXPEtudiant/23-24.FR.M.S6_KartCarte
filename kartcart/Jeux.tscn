@@ -1,48 +1,28 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfl3qhtnx5pwb"]
+[gd_scene load_steps=11 format=3 uid="uid://cfl3qhtnx5pwb"]
 
 [ext_resource type="Script" path="res://Scene.gd" id="1_an442"]
 [ext_resource type="PackedScene" uid="uid://cbydibtnn6mxk" path="res://Menu.tscn" id="1_nrwbb"]
 [ext_resource type="PackedScene" uid="uid://3hygfyfv1g7q" path="res://Paramètre.tscn" id="2_jgo8m"]
 [ext_resource type="PackedScene" uid="uid://7eh5w82uvurn" path="res://Map01KartCartTD.tscn" id="2_v6bc0"]
+[ext_resource type="PackedScene" uid="uid://5f42gfc6es2y" path="res://carte.tscn" id="4_hnte0"]
 [ext_resource type="PackedScene" uid="uid://d3fdybgaan0rk" path="res://Choixdescartes.tscn" id="5_creng"]
 [ext_resource type="Script" path="res://carte.gd" id="5_gnu7q"]
 [ext_resource type="PackedScene" uid="uid://pjuy50ekffnd" path="res://Choix_difficulter.tscn" id="6_ieg5b"]
 [ext_resource type="PackedScene" uid="uid://3xsky0nv0uwm" path="res://CreationDeck.tscn" id="8_scjqj"]
+[ext_resource type="PackedScene" uid="uid://muq2uju536vp" path="res://Index de Carte.tscn" id="10_7fcsm"]
 
 [node name="Jeux" type="Node2D" node_paths=PackedStringArray("listNode", "CurNode")]
 script = ExtResource("1_an442")
-listNode = [NodePath("Menu"), NodePath("Control"), NodePath("Map 01"), NodePath("Choixdesmaps"), NodePath("Choix Difficulter"), NodePath("CréationDeck")]
+listNode = [NodePath("Menu"), NodePath("Control"), NodePath("Map 01"), NodePath("Choixdesmaps"), NodePath("Choix Difficulter"), NodePath("CréationDeck"), NodePath("IndexDeCarte")]
 CurNode = NodePath("Menu")
 metadata/VolumeSons = 0.0
 
-[node name="Map 01" parent="." instance=ExtResource("2_v6bc0")]
-
-[node name="Carte" parent="Map 01" index="4"]
-position = Vector2(5956, 268)
-nom = "ok"
-
-[node name="ButtonRetour" parent="Map 01/Bouton" index="1"]
-script = ExtResource("1_an442")
-
-[node name="Control" parent="." instance=ExtResource("2_jgo8m")]
-
-[node name="Button" parent="Control" index="1"]
-script = ExtResource("1_an442")
-
-[node name="Sons" type="Node2D" parent="."]
-
-[node name="AudioListener2D" type="AudioListener2D" parent="Sons"]
-current = true
-
-[node name="musique" type="AudioStreamPlayer2D" parent="Sons/AudioListener2D"]
-volume_db = 50.0
-
-[node name="sfx" type="AudioStreamPlayer2D" parent="Sons/AudioListener2D"]
-
 [node name="ListeCarte" type="Node" parent="."]
 
-[node name="01" type="Node2D" parent="ListeCarte"]
-script = ExtResource("5_gnu7q")
+[node name="carte01" parent="ListeCarte" instance=ExtResource("4_hnte0")]
+visible = false
+position = Vector2(10, 10)
+scale = Vector2(0.5, 0.5)
 nom = "C'est la sauce"
 NombreDeFuel = -1
 NomEffet = "-1Fuel + flaque de fuel"
@@ -107,6 +87,32 @@ nom = "Nitro"
 Niveau = 2
 NombreDeFuel = 3
 
+[node name="IndexDeCarte" parent="." instance=ExtResource("10_7fcsm")]
+
+[node name="Map 01" parent="." instance=ExtResource("2_v6bc0")]
+
+[node name="Carte" parent="Map 01" index="4"]
+position = Vector2(5956, 268)
+nom = "ok"
+
+[node name="ButtonRetour" parent="Map 01/Bouton" index="1"]
+script = ExtResource("1_an442")
+
+[node name="Control" parent="." instance=ExtResource("2_jgo8m")]
+
+[node name="Button" parent="Control" index="1"]
+script = ExtResource("1_an442")
+
+[node name="Sons" type="Node2D" parent="."]
+
+[node name="AudioListener2D" type="AudioListener2D" parent="Sons"]
+current = true
+
+[node name="musique" type="AudioStreamPlayer2D" parent="Sons/AudioListener2D"]
+volume_db = 50.0
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="Sons/AudioListener2D"]
+
 [node name="Choixdesmaps" parent="." instance=ExtResource("5_creng")]
 
 [node name="Choix Difficulter" parent="." instance=ExtResource("6_ieg5b")]
@@ -130,9 +136,11 @@ offset_bottom = 117.0
 [connection signal="pressed" from="Choix Difficulter/Retour Menu/Button" to="." method="switchNode" binds= [0]]
 [connection signal="pressed" from="Menu/bouton/StartButton/Button" to="." method="switchNode" binds= [5]]
 [connection signal="pressed" from="Menu/bouton/paramètreButton2/Button" to="." method="switchNode" binds= [1]]
+[connection signal="pressed" from="Menu/bouton/IndexButton/Button" to="." method="switchNode" binds= [6]]
 [connection signal="pressed" from="CréationDeck/décor/Retour Menu2/Button" to="." method="switchNode" binds= [0]]
 [connection signal="pressed" from="CréationDeck/Suivant/Button" to="." method="switchNode" binds= [3]]
 
+[editable path="IndexDeCarte"]
 [editable path="Map 01"]
 [editable path="Control"]
 [editable path="Choixdesmaps"]
