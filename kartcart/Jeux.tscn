@@ -21,14 +21,227 @@ metadata/VolumeSons = 0.0
 
 [node name="carte01" parent="ListeCarte" instance=ExtResource("4_hnte0")]
 visible = false
-position = Vector2(10, 10)
+position = Vector2(10, 1000)
 scale = Vector2(0.5, 0.5)
 nom = "C'est la sauce"
 NombreDeFuel = -1
 NomEffet = "-1Fuel + flaque de fuel"
 defEffet = "-1 d'essence pour nous et sa met une flaque d'essence"
 
+[node name="fuel" parent="ListeCarte/carte01/carte/Fuel" index="0"]
+text = "-1"
+
+[node name="nom" parent="ListeCarte/carte01/carte/Nom" index="0"]
+text = "C'est la sauce"
+
+[node name="description" parent="ListeCarte/carte01/carte/DefEffet" index="0"]
+text = "-1 d'essence pour nous et sa met une flaque d'essence"
+
+[node name="Effet" parent="ListeCarte/carte01/carte/Effet" index="0"]
+text = "-1Fuel + flaque de fuel"
+
+[node name="carte02" parent="ListeCarte" instance=ExtResource("4_hnte0")]
+visible = false
+position = Vector2(10, 1000)
+scale = Vector2(0.5, 0.5)
+nom = "Fuite d'essence"
+Niveau = 1
+NombreDeFuel = 2
+NomEffet = "Player2 -1Fuel"
+defEffet = "enlève 1 d'essence a l'adversaire"
+
+[node name="fuel" parent="ListeCarte/carte02/carte/Fuel" index="0"]
+text = "2"
+
+[node name="rareté" parent="ListeCarte/carte02/carte/Rareté" index="0"]
+text = "1"
+
+[node name="nom" parent="ListeCarte/carte02/carte/Nom" index="0"]
+text = "Fuite d'essence"
+
+[node name="description" parent="ListeCarte/carte02/carte/DefEffet" index="0"]
+text = "enlève 1 d'essence a l'adversaire"
+
+[node name="Effet" parent="ListeCarte/carte02/carte/Effet" index="0"]
+text = "Player2 -1Fuel"
+
+[node name="carte03" parent="ListeCarte" instance=ExtResource("4_hnte0")]
+visible = false
+position = Vector2(10, 1000)
+scale = Vector2(0.5, 0.5)
+nom = "Turbo"
+Niveau = 1
+NombreDeFuel = 2
+NomEffet = "+2move"
+defEffet = "te fait avencer directement de 2 case"
+
+[node name="fuel" parent="ListeCarte/carte03/carte/Fuel" index="0"]
+text = "2"
+
+[node name="rareté" parent="ListeCarte/carte03/carte/Rareté" index="0"]
+text = "1"
+
+[node name="nom" parent="ListeCarte/carte03/carte/Nom" index="0"]
+text = "Turbo"
+
+[node name="description" parent="ListeCarte/carte03/carte/DefEffet" index="0"]
+text = "te fait avencer directement de 2 case"
+
+[node name="Effet" parent="ListeCarte/carte03/carte/Effet" index="0"]
+text = "+2move"
+
+[node name="carte04" parent="ListeCarte" instance=ExtResource("4_hnte0")]
+visible = false
+position = Vector2(10, 1000)
+scale = Vector2(0.5, 0.5)
+nom = "Repioche"
+Niveau = 1
+NombreDeFuel = 2
+NomEffet = "+1Cart"
+defEffet = "Piocher une cart"
+
+[node name="fuel" parent="ListeCarte/carte04/carte/Fuel" index="0"]
+text = "2"
+
+[node name="rareté" parent="ListeCarte/carte04/carte/Rareté" index="0"]
+text = "1"
+
+[node name="nom" parent="ListeCarte/carte04/carte/Nom" index="0"]
+text = "Repioche"
+
+[node name="description" parent="ListeCarte/carte04/carte/DefEffet" index="0"]
+text = "Piocher une cart"
+
+[node name="Effet" parent="ListeCarte/carte04/carte/Effet" index="0"]
+text = "+1Cart"
+
+[node name="carte05" parent="ListeCarte" instance=ExtResource("4_hnte0")]
+visible = false
+position = Vector2(10, 1000)
+scale = Vector2(0.5, 0.5)
+nom = "Turbo Bancale"
+Niveau = 1
+NombreDeFuel = 2
+NomEffet = "+2move + 0move au prochain tour"
+defEffet = "permet d'avancer de 2 cases en plus mais vous êtes immobilisé au prochain tour"
+
+[node name="fuel" parent="ListeCarte/carte05/carte/Fuel" index="0"]
+text = "2"
+
+[node name="rareté" parent="ListeCarte/carte05/carte/Rareté" index="0"]
+text = "1"
+
+[node name="nom" parent="ListeCarte/carte05/carte/Nom" index="0"]
+text = "Turbo Bancale"
+
+[node name="description" parent="ListeCarte/carte05/carte/DefEffet" index="0"]
+text = "permet d'avancer de 2 cases en plus mais vous êtes immobilisé au prochain tour"
+
+[node name="Effet" parent="ListeCarte/carte05/carte/Effet" index="0"]
+text = "+2move + 0move au prochain tour"
+
+[node name="carte06" parent="ListeCarte" instance=ExtResource("4_hnte0")]
+visible = false
+position = Vector2(10, 1000)
+scale = Vector2(0.5, 0.5)
+nom = "sabotage"
+Niveau = 1
+NombreDeFuel = 3
+NomEffet = "Player2-1Fuel +1Fuel +0move"
+defEffet = "enlève 1 d'essence a l'adversaire et vous en donne 1 mais vous ne pouvez pas avancer ce tour"
+
+[node name="fuel" parent="ListeCarte/carte06/carte/Fuel" index="0"]
+text = "3"
+
+[node name="rareté" parent="ListeCarte/carte06/carte/Rareté" index="0"]
+text = "1"
+
+[node name="nom" parent="ListeCarte/carte06/carte/Nom" index="0"]
+text = "sabotage"
+
+[node name="description" parent="ListeCarte/carte06/carte/DefEffet" index="0"]
+text = "enlève 1 d'essence a l'adversaire et vous en donne 1 mais vous ne pouvez pas avancer ce tour"
+
+[node name="Effet" parent="ListeCarte/carte06/carte/Effet" index="0"]
+text = "Player2-1Fuel +1Fuel +0move"
+
+[node name="carte07" parent="ListeCarte" instance=ExtResource("4_hnte0")]
+visible = false
+position = Vector2(10, 1000)
+scale = Vector2(0.5, 0.5)
+nom = "stop"
+Niveau = 1
+NombreDeFuel = 2
+NomEffet = "Player2 0move + -2fuel"
+defEffet = "empèche l'autre de bouger pour un tour mais vous perdez 2 d'essences"
+
+[node name="fuel" parent="ListeCarte/carte07/carte/Fuel" index="0"]
+text = "2"
+
+[node name="rareté" parent="ListeCarte/carte07/carte/Rareté" index="0"]
+text = "1"
+
+[node name="nom" parent="ListeCarte/carte07/carte/Nom" index="0"]
+text = "stop"
+
+[node name="description" parent="ListeCarte/carte07/carte/DefEffet" index="0"]
+text = "empèche l'autre de bouger pour un tour mais vous perdez 2 d'essences"
+
+[node name="Effet" parent="ListeCarte/carte07/carte/Effet" index="0"]
+text = "Player2 0move + -2fuel"
+
+[node name="carte08" parent="ListeCarte" instance=ExtResource("4_hnte0")]
+visible = false
+position = Vector2(10, 1000)
+scale = Vector2(0.5, 0.5)
+nom = "chance du débutant"
+Niveau = 2
+NombreDeFuel = 4
+NomEffet = "+1 carte (Niveau: 2;3)"
+defEffet = "vous piochez immédiatement une carte rare ou légendaire"
+
+[node name="fuel" parent="ListeCarte/carte08/carte/Fuel" index="0"]
+text = "4"
+
+[node name="rareté" parent="ListeCarte/carte08/carte/Rareté" index="0"]
+text = "2"
+
+[node name="nom" parent="ListeCarte/carte08/carte/Nom" index="0"]
+text = "chance du débutant"
+
+[node name="description" parent="ListeCarte/carte08/carte/DefEffet" index="0"]
+text = "vous piochez immédiatement une carte rare ou légendaire"
+
+[node name="Effet" parent="ListeCarte/carte08/carte/Effet" index="0"]
+text = "+1 carte (Niveau: 2;3)"
+
+[node name="carte09" parent="ListeCarte" instance=ExtResource("4_hnte0")]
+visible = false
+position = Vector2(10, 1000)
+scale = Vector2(0.5, 0.5)
+nom = "Nitro"
+Niveau = 2
+NombreDeFuel = 3
+NomEffet = "permet d'avancer de 4 cases mais vous ne piocher pas au prochain tour"
+defEffet = "permet d'avancer de 4 cases mais vous ne piocher pas au prochain tour"
+
+[node name="fuel" parent="ListeCarte/carte09/carte/Fuel" index="0"]
+text = "3"
+
+[node name="rareté" parent="ListeCarte/carte09/carte/Rareté" index="0"]
+text = "2"
+
+[node name="nom" parent="ListeCarte/carte09/carte/Nom" index="0"]
+text = "Nitro"
+
+[node name="description" parent="ListeCarte/carte09/carte/DefEffet" index="0"]
+text = "permet d'avancer de 4 cases mais vous ne piocher pas au prochain tour"
+
+[node name="Effet" parent="ListeCarte/carte09/carte/Effet" index="0"]
+text = "permet d'avancer de 4 cases mais vous ne piocher pas au prochain tour"
+
 [node name="02" type="Node2D" parent="ListeCarte"]
+visible = false
 script = ExtResource("5_gnu7q")
 nom = "Fuite d'essence"
 Niveau = 1
@@ -37,6 +250,7 @@ NomEffet = "Player2 -1Fuel"
 defEffet = "enlève 1 d'essence a l'adversaire"
 
 [node name="03" type="Node2D" parent="ListeCarte"]
+visible = false
 script = ExtResource("5_gnu7q")
 nom = "Turbo"
 Niveau = 1
@@ -45,6 +259,7 @@ NomEffet = "+2move"
 defEffet = "te fait avencer directement de 2 case"
 
 [node name="04" type="Node2D" parent="ListeCarte"]
+visible = false
 script = ExtResource("5_gnu7q")
 nom = "Repioche"
 Niveau = 1
@@ -53,13 +268,16 @@ NomEffet = "+1Cart"
 defEffet = "Piocher une cart"
 
 [node name="05" type="Node2D" parent="ListeCarte"]
+visible = false
 script = ExtResource("5_gnu7q")
 nom = "Turbo Bancale"
+Niveau = 1
 NombreDeFuel = 2
 NomEffet = "+2move + 0move au prochain tour"
 defEffet = "permet d'avancer de 2 cases en plus mais vous êtes immobilisé au prochain tour"
 
 [node name="06" type="Node2D" parent="ListeCarte"]
+visible = false
 script = ExtResource("5_gnu7q")
 nom = "sabotage"
 Niveau = 1
@@ -68,24 +286,31 @@ NomEffet = "Player2-1Fuel +1Fuel +0move"
 defEffet = "enlève 1 d'essence a l'adversaire et vous en donne 1 mais vous ne pouvez pas avancer ce tour"
 
 [node name="07" type="Node2D" parent="ListeCarte"]
+visible = false
 script = ExtResource("5_gnu7q")
-nom = "triche"
+nom = "stop"
 Niveau = 1
 NombreDeFuel = 2
 NomEffet = "Player2 0move + -2fuel"
 defEffet = "empèche l'autre de bouger pour un tour mais vous perdez 2 d'essences"
 
 [node name="08" type="Node2D" parent="ListeCarte"]
+visible = false
 script = ExtResource("5_gnu7q")
 nom = "chance du débutant"
 Niveau = 2
 NombreDeFuel = 4
+NomEffet = "+1 carte (Niveau: 2;3)"
+defEffet = "vous piochez immédiatement une carte rare ou légendaire"
 
 [node name="09" type="Node2D" parent="ListeCarte"]
+visible = false
 script = ExtResource("5_gnu7q")
 nom = "Nitro"
 Niveau = 2
 NombreDeFuel = 3
+NomEffet = "+4move -pioche prochain tour"
+defEffet = "permet d'avancer de 4 cases mais vous ne piocher pas au prochain tour"
 
 [node name="IndexDeCarte" parent="." instance=ExtResource("10_7fcsm")]
 
@@ -140,6 +365,15 @@ offset_bottom = 117.0
 [connection signal="pressed" from="CréationDeck/décor/Retour Menu2/Button" to="." method="switchNode" binds= [0]]
 [connection signal="pressed" from="CréationDeck/Suivant/Button" to="." method="switchNode" binds= [3]]
 
+[editable path="ListeCarte/carte01"]
+[editable path="ListeCarte/carte02"]
+[editable path="ListeCarte/carte03"]
+[editable path="ListeCarte/carte04"]
+[editable path="ListeCarte/carte05"]
+[editable path="ListeCarte/carte06"]
+[editable path="ListeCarte/carte07"]
+[editable path="ListeCarte/carte08"]
+[editable path="ListeCarte/carte09"]
 [editable path="IndexDeCarte"]
 [editable path="Map 01"]
 [editable path="Control"]

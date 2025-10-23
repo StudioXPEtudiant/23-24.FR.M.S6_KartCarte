@@ -47,10 +47,10 @@ carte = NodePath("../../..")
 [node name="Nom" type="Node2D" parent="carte"]
 
 [node name="nom" type="Label" parent="carte/Nom" node_paths=PackedStringArray("carte")]
-offset_left = 96.0
-offset_top = 128.0
-offset_right = 480.0
-offset_bottom = 192.0
+offset_left = 80.0
+offset_top = 72.0
+offset_right = 464.0
+offset_bottom = 136.0
 label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("2_mhvw0")
 carte = NodePath("../../..")
@@ -59,10 +59,11 @@ carte = NodePath("../../..")
 
 [node name="description" type="Label" parent="carte/DefEffet" node_paths=PackedStringArray("carte")]
 offset_left = 32.0
-offset_top = 448.0
+offset_top = 480.0
 offset_right = 544.0
-offset_bottom = 640.0
+offset_bottom = 592.0
 label_settings = SubResource("LabelSettings_a0jsd")
+autowrap_mode = 2
 script = ExtResource("5_5m81a")
 carte = NodePath("../../..")
 
@@ -70,16 +71,17 @@ carte = NodePath("../../..")
 
 [node name="Effet" type="Label" parent="carte/Effet" node_paths=PackedStringArray("carte")]
 offset_left = 32.0
-offset_top = 448.0
+offset_top = 408.0
 offset_right = 544.0
-offset_bottom = 640.0
+offset_bottom = 472.0
 label_settings = SubResource("LabelSettings_a0jsd")
+autowrap_mode = 2
 script = ExtResource("6_usnwb")
 carte = NodePath("../../..")
 
 [node name="Image" type="Node2D" parent="carte"]
 
 [node name="Sprite2D" type="Sprite2D" parent="carte/Image"]
-position = Vector2(280, 324)
+position = Vector2(280, 280)
 scale = Vector2(0.486815, 0.346003)
 texture = ExtResource("1_g7ty2")

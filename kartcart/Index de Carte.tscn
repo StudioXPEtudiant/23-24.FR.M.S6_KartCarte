@@ -3,13 +3,15 @@
 [ext_resource type="Script" path="res://index_de_carte.gd" id="1_l7ljf"]
 
 [node name="IndexDeCarte" type="Node2D"]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_right = 1150.0
+offset_bottom = 642.0
+
+[node name="HFlowContainer" type="HFlowContainer" parent="ScrollContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(1150, 2000)
+layout_mode = 2
+
+[node name="Node2D" type="Node2D" parent="ScrollContainer/HFlowContainer"]
 script = ExtResource("1_l7ljf")
-
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="Label" type="Label" parent="Node2D"]
-offset_left = 749.0
-offset_top = 256.0
-offset_right = 789.0
-offset_bottom = 279.0
-text = "test"

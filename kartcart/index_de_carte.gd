@@ -6,12 +6,13 @@ var yOrigine:float = 10
 var TailCarte:Vector2 = Vector2(576/2,648/2)
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	ListeCarte = $"../ListeCarte".get_children()
+	ListeCarte = $"../../../../ListeCarte".get_children()
 	ListeCarte.size()
 	for i in range(0,ListeCarte.size()):
-		var carte:Node2D = ListeCarte[0].duplicate()
+		var carte:Node2D = ListeCarte[i].duplicate()
 		carte.visible = true
 		add_child(carte)
 		carte.scale = Vector2(0.5,0.5)
