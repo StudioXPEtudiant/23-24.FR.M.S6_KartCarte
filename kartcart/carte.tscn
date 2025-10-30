@@ -39,7 +39,7 @@ carte = NodePath("../../..")
 [node name="rareté" type="Label" parent="carte/Rareté" node_paths=PackedStringArray("carte")]
 offset_right = 224.0
 offset_bottom = 128.0
-text = "0"
+text = "Niveau :0"
 label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("3_8w1e5")
 carte = NodePath("../../..")
@@ -48,9 +48,9 @@ carte = NodePath("../../..")
 
 [node name="nom" type="Label" parent="carte/Nom" node_paths=PackedStringArray("carte")]
 offset_left = 80.0
-offset_top = 72.0
+offset_top = 56.0
 offset_right = 464.0
-offset_bottom = 136.0
+offset_bottom = 120.0
 label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("2_mhvw0")
 carte = NodePath("../../..")
@@ -59,9 +59,9 @@ carte = NodePath("../../..")
 
 [node name="description" type="Label" parent="carte/DefEffet" node_paths=PackedStringArray("carte")]
 offset_left = 32.0
-offset_top = 480.0
+offset_top = 464.0
 offset_right = 544.0
-offset_bottom = 592.0
+offset_bottom = 576.0
 label_settings = SubResource("LabelSettings_a0jsd")
 autowrap_mode = 2
 script = ExtResource("5_5m81a")
@@ -70,10 +70,10 @@ carte = NodePath("../../..")
 [node name="Effet" type="Node2D" parent="carte"]
 
 [node name="Effet" type="Label" parent="carte/Effet" node_paths=PackedStringArray("carte")]
-offset_left = 32.0
-offset_top = 408.0
-offset_right = 544.0
-offset_bottom = 472.0
+offset_left = 24.0
+offset_top = 350.0
+offset_right = 536.0
+offset_bottom = 414.0
 label_settings = SubResource("LabelSettings_a0jsd")
 autowrap_mode = 2
 script = ExtResource("6_usnwb")
@@ -82,6 +82,6 @@ carte = NodePath("../../..")
 [node name="Image" type="Node2D" parent="carte"]
 
 [node name="Sprite2D" type="Sprite2D" parent="carte/Image"]
-position = Vector2(280, 280)
-scale = Vector2(0.486815, 0.346003)
+position = Vector2(280, 240)
+scale = Vector2(0.405679, 0.288336)
 texture = ExtResource("1_g7ty2")

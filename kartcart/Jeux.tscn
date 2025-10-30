@@ -29,7 +29,10 @@ NomEffet = "-1Fuel + flaque de fuel"
 defEffet = "-1 d'essence pour nous et sa met une flaque d'essence"
 
 [node name="fuel" parent="ListeCarte/carte01/carte/Fuel" index="0"]
-text = "-1"
+text = "-1 fuel"
+
+[node name="rareté" parent="ListeCarte/carte01/carte/Rareté" index="0"]
+text = "Niveau :0"
 
 [node name="nom" parent="ListeCarte/carte01/carte/Nom" index="0"]
 text = "C'est la sauce"
@@ -51,10 +54,10 @@ NomEffet = "Player2 -1Fuel"
 defEffet = "enlève 1 d'essence a l'adversaire"
 
 [node name="fuel" parent="ListeCarte/carte02/carte/Fuel" index="0"]
-text = "2"
+text = "2 fuel"
 
 [node name="rareté" parent="ListeCarte/carte02/carte/Rareté" index="0"]
-text = "1"
+text = "Niveau :1"
 
 [node name="nom" parent="ListeCarte/carte02/carte/Nom" index="0"]
 text = "Fuite d'essence"
@@ -76,10 +79,10 @@ NomEffet = "+2move"
 defEffet = "te fait avencer directement de 2 case"
 
 [node name="fuel" parent="ListeCarte/carte03/carte/Fuel" index="0"]
-text = "2"
+text = "2 fuel"
 
 [node name="rareté" parent="ListeCarte/carte03/carte/Rareté" index="0"]
-text = "1"
+text = "Niveau :1"
 
 [node name="nom" parent="ListeCarte/carte03/carte/Nom" index="0"]
 text = "Turbo"
@@ -101,10 +104,10 @@ NomEffet = "+1Cart"
 defEffet = "Piocher une cart"
 
 [node name="fuel" parent="ListeCarte/carte04/carte/Fuel" index="0"]
-text = "2"
+text = "2 fuel"
 
 [node name="rareté" parent="ListeCarte/carte04/carte/Rareté" index="0"]
-text = "1"
+text = "Niveau :1"
 
 [node name="nom" parent="ListeCarte/carte04/carte/Nom" index="0"]
 text = "Repioche"
@@ -126,10 +129,10 @@ NomEffet = "+2move + 0move au prochain tour"
 defEffet = "permet d'avancer de 2 cases en plus mais vous êtes immobilisé au prochain tour"
 
 [node name="fuel" parent="ListeCarte/carte05/carte/Fuel" index="0"]
-text = "2"
+text = "2 fuel"
 
 [node name="rareté" parent="ListeCarte/carte05/carte/Rareté" index="0"]
-text = "1"
+text = "Niveau :1"
 
 [node name="nom" parent="ListeCarte/carte05/carte/Nom" index="0"]
 text = "Turbo Bancale"
@@ -151,10 +154,10 @@ NomEffet = "Player2-1Fuel +1Fuel +0move"
 defEffet = "enlève 1 d'essence a l'adversaire et vous en donne 1 mais vous ne pouvez pas avancer ce tour"
 
 [node name="fuel" parent="ListeCarte/carte06/carte/Fuel" index="0"]
-text = "3"
+text = "3 fuel"
 
 [node name="rareté" parent="ListeCarte/carte06/carte/Rareté" index="0"]
-text = "1"
+text = "Niveau :1"
 
 [node name="nom" parent="ListeCarte/carte06/carte/Nom" index="0"]
 text = "sabotage"
@@ -176,10 +179,10 @@ NomEffet = "Player2 0move + -2fuel"
 defEffet = "empèche l'autre de bouger pour un tour mais vous perdez 2 d'essences"
 
 [node name="fuel" parent="ListeCarte/carte07/carte/Fuel" index="0"]
-text = "2"
+text = "2 fuel"
 
 [node name="rareté" parent="ListeCarte/carte07/carte/Rareté" index="0"]
-text = "1"
+text = "Niveau :1"
 
 [node name="nom" parent="ListeCarte/carte07/carte/Nom" index="0"]
 text = "stop"
@@ -201,10 +204,10 @@ NomEffet = "+1 carte (Niveau: 2;3)"
 defEffet = "vous piochez immédiatement une carte rare ou légendaire"
 
 [node name="fuel" parent="ListeCarte/carte08/carte/Fuel" index="0"]
-text = "4"
+text = "4 fuel"
 
 [node name="rareté" parent="ListeCarte/carte08/carte/Rareté" index="0"]
-text = "2"
+text = "Niveau :2"
 
 [node name="nom" parent="ListeCarte/carte08/carte/Nom" index="0"]
 text = "chance du débutant"
@@ -226,10 +229,10 @@ NomEffet = "permet d'avancer de 4 cases mais vous ne piocher pas au prochain tou
 defEffet = "permet d'avancer de 4 cases mais vous ne piocher pas au prochain tour"
 
 [node name="fuel" parent="ListeCarte/carte09/carte/Fuel" index="0"]
-text = "3"
+text = "3 fuel"
 
 [node name="rareté" parent="ListeCarte/carte09/carte/Rareté" index="0"]
-text = "2"
+text = "Niveau :2"
 
 [node name="nom" parent="ListeCarte/carte09/carte/Nom" index="0"]
 text = "Nitro"
