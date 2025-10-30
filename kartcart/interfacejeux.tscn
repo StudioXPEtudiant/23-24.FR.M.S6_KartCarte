@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://nhj0rkxe5kvw"]
+[gd_scene load_steps=8 format=3 uid="uid://nhj0rkxe5kvw"]
 
 [ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_rnvjv"]
 [ext_resource type="Texture2D" uid="uid://d0vouu233fp00" path="res://kenney_racing-pack/PNG/Objects/barrier_white.png" id="1_sn0uj"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="3_chqnl"]
 [ext_resource type="Texture2D" uid="uid://d1xg35wf7s50u" path="res://kenney_racing-pack/PNG/Objects/barrier_red.png" id="5_8hb3n"]
 [ext_resource type="Script" path="res://Nbrdecarte.gd" id="5_t7ss2"]
+[ext_resource type="Texture2D" uid="uid://brbwq0f044wl6" path="res://kenney_racing-pack/PNG/Cars/car_black_1.png" id="7_enfd2"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -95,3 +96,7 @@ offset_top = 320.0
 offset_right = 800.0
 offset_bottom = 370.0
 text = "prendre"
+
+[node name="CarBlack1" type="Sprite2D" parent="."]
+position = Vector2(-192, 476)
+texture = ExtResource("7_enfd2")
