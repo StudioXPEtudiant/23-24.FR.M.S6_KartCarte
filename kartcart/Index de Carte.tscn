@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://muq2uju536vp"]
+[gd_scene load_steps=6 format=3 uid="uid://muq2uju536vp"]
 
 [ext_resource type="Script" path="res://index_de_carte.gd" id="1_l7ljf"]
+[ext_resource type="Texture2D" uid="uid://d3qtdibjlrbvd" path="res://kenney_ui-pack/PNG/Blue/Double/button_rectangle_border.png" id="2_6y6lh"]
+[ext_resource type="Script" path="res://Scene.gd" id="3_7e7n4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q5bhs"]
+font_size = 41
+font_color = Color(0.0823529, 0.321569, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkex7"]
 
 [node name="IndexDeCarte" type="Node2D"]
 
@@ -15,3 +23,30 @@ layout_mode = 2
 
 [node name="Node2D" type="Node2D" parent="ScrollContainer/HFlowContainer"]
 script = ExtResource("1_l7ljf")
+
+[node name="Retour Menu" type="Node2D" parent="."]
+position = Vector2(6, 0)
+scale = Vector2(0.5, 0.5)
+
+[node name="ButtonRectangleBorder" type="Sprite2D" parent="Retour Menu"]
+position = Vector2(76.833, 107.333)
+scale = Vector2(0.453995, 1.44792)
+texture = ExtResource("2_6y6lh")
+
+[node name="text retour menu" type="Label" parent="Retour Menu"]
+offset_top = 40.0
+offset_right = 158.0
+offset_bottom = 176.0
+text = "Retour Menu"
+label_settings = SubResource("LabelSettings_q5bhs")
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Retour Menu"]
+offset_left = -8.0
+offset_top = 16.0
+offset_right = 166.0
+offset_bottom = 202.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tkex7")
+script = ExtResource("3_7e7n4")
+
+[connection signal="draw" from="ScrollContainer/HFlowContainer/Node2D" to="ScrollContainer/HFlowContainer/Node2D" method="sourie"]
