@@ -104,6 +104,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [1.57079]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/ConeDown:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(-0.0666667, 5.76667, 6.06667, 7.16667, 10, 10.0667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(543, 468), Vector2(543, 468), Vector2(579, 515), Vector2(653, 626), Vector2(653, 626), Vector2(653, 626)]
+}
 
 [sub_resource type="Animation" id="Animation_p668m"]
 length = 0.001
@@ -178,6 +190,18 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [1.57079]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/ConeDown:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(676, 393)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3rexs"]
@@ -423,7 +447,7 @@ scale = Vector2(0.439999, 0.440005)
 texture = ExtResource("15_5ty3j")
 
 [node name="ConeDown" type="Sprite2D" parent="AnimationPlayer"]
-position = Vector2(661, 405)
+position = Vector2(676, 393)
 rotation = -0.523598
 texture = ExtResource("16_2f6ak")
 

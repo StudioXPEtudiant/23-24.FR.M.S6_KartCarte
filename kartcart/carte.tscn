@@ -12,6 +12,7 @@
 font_size = 45
 
 [node name="Carte" type="Node2D"]
+z_index = 1
 script = ExtResource("1_kca6b")
 metadata/_edit_horizontal_guides_ = [-56.0]
 
