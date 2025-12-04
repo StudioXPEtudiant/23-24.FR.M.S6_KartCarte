@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://nhj0rkxe5kvw"]
 
-[ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_rnvjv"]
-[ext_resource type="Texture2D" uid="uid://d0vouu233fp00" path="res://kenney_racing-pack/PNG/Objects/barrier_white.png" id="1_sn0uj"]
 [ext_resource type="Texture2D" uid="uid://bvrfs40v3v64" path="res://kenney_racing-pack/PNG/Objects/tribune_empty.png" id="2_soi5y"]
+[ext_resource type="Texture2D" uid="uid://bnw7ivu75v7it" path="res://Deckicon.png" id="3_3w380"]
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="3_chqnl"]
-[ext_resource type="Texture2D" uid="uid://d1xg35wf7s50u" path="res://kenney_racing-pack/PNG/Objects/barrier_red.png" id="5_8hb3n"]
+[ext_resource type="Texture2D" uid="uid://dvfe8eakxpk36" path="res://hand_panel.png" id="5_eb04j"]
 [ext_resource type="Script" path="res://Nbrdecarte.gd" id="5_t7ss2"]
-[ext_resource type="Texture2D" uid="uid://brbwq0f044wl6" path="res://kenney_racing-pack/PNG/Cars/car_black_1.png" id="7_enfd2"]
+[ext_resource type="Texture2D" uid="uid://xsal547gavnp" path="res://bard'essencevide.png" id="6_6gtnb"]
+[ext_resource type="Texture2D" uid="uid://ciiyblfmkagyh" path="res://PVBARVIDE.png" id="7_5qdoe"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,11 +21,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Décoration" type="Node2D" parent="."]
-
-[node name="BarrierWhite" type="Sprite2D" parent="Décoration"]
-position = Vector2(58.9999, 464)
-scale = Vector2(0.428571, 5.87097)
-texture = ExtResource("1_sn0uj")
 
 [node name="TribuneEmpty" type="Sprite2D" parent="Décoration"]
 position = Vector2(-423, 197)
@@ -51,35 +46,42 @@ texture = ExtResource("3_chqnl")
 [node name="deck" type="Node2D" parent="Jeux"]
 
 [node name="TribuneOverhangRed" type="Sprite2D" parent="Jeux/deck"]
-modulate = Color(0.76297, 0.659723, 0.736276, 1)
-position = Vector2(1081.5, 534)
-scale = Vector2(0.323661, 1.56944)
-texture = ExtResource("1_rnvjv")
+position = Vector2(1075, 551)
+scale = Vector2(0.150391, 0.189453)
+texture = ExtResource("3_3w380")
 script = ExtResource("5_t7ss2")
 
 [node name="Label" type="Label" parent="Jeux/deck/TribuneOverhangRed"]
-offset_left = -72.6068
-offset_top = -32.4957
-offset_right = -32.6068
-offset_bottom = -9.49567
-scale = Vector2(7.5991, 2.47649)
+offset_left = -244.0
+offset_top = -363.0
+offset_right = -225.0
+offset_bottom = -336.0
+scale = Vector2(26.1112, 13.5541)
 text = "30"
 
 [node name="Main" type="Node2D" parent="Jeux"]
 
 [node name="BarrierWhite3" type="Sprite2D" parent="Jeux/Main"]
-position = Vector2(628.5, 533.5)
-scale = Vector2(2.50952, 3.62903)
-texture = ExtResource("1_sn0uj")
+position = Vector2(566, 551)
+scale = Vector2(0.685547, 0.757812)
+texture = ExtResource("5_eb04j")
 
 [node name="Essence" type="Node2D" parent="Jeux"]
 
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Jeux/Essence"]
+offset_top = 648.0
+offset_right = 256.0
+offset_bottom = 717.0
+rotation = -1.57079
+scale = Vector2(1.53597, 1.24608)
+texture_under = ExtResource("6_6gtnb")
+
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Jeux"]
-offset_top = 12.0
-offset_right = 210.0
-offset_bottom = 74.0
-texture_under = ExtResource("1_sn0uj")
-texture_progress = ExtResource("5_8hb3n")
+offset_top = -100.0
+offset_right = 1024.0
+offset_bottom = 924.0
+scale = Vector2(0.330741, 0.303394)
+texture_under = ExtResource("7_5qdoe")
 
 [node name="prendre ou jeter" type="Node2D" parent="Jeux"]
 
@@ -96,7 +98,3 @@ offset_top = 320.0
 offset_right = 800.0
 offset_bottom = 370.0
 text = "prendre"
-
-[node name="CarBlack1" type="Sprite2D" parent="."]
-position = Vector2(-192, 476)
-texture = ExtResource("7_enfd2")
