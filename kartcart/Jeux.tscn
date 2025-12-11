@@ -239,6 +239,8 @@ text = "avancer de 4 cases mais vous ne piocher pas au prochain tour"
 [node name="Effet" parent="ListeCarte/carte09/carte/Effet" index="0"]
 text = "+4move +0carte prochain tour"
 
+[node name="ListeDeck" type="Node" parent="."]
+
 [node name="IndexDeCarte" parent="." instance=ExtResource("10_7fcsm")]
 
 [node name="Map 01" parent="." instance=ExtResource("2_v6bc0")]

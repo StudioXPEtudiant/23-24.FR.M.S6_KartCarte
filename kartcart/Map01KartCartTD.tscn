@@ -822,10 +822,10 @@ rotation = -1.5708
 text = "AVENCER DE 1"
 
 [node name="ButtonRetour" type="Button" parent="Bouton"]
-offset_left = 2340.0
-offset_top = 2244.0
-offset_right = 2478.0
-offset_bottom = 2289.0
+offset_left = 2200.0
+offset_top = 2220.0
+offset_right = 2350.0
+offset_bottom = 2270.0
 scale = Vector2(5, 5)
 text = "Retour Menu"
 
