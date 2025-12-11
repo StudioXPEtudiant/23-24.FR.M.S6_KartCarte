@@ -39,6 +39,11 @@ position = Vector2(-423, 197)
 scale = Vector2(0.214286, 1.66144)
 texture = ExtResource("2_soi5y")
 
+[node name="BarrelRedDown" type="Sprite2D" parent="Décoration"]
+position = Vector2(-375, 146)
+scale = Vector2(0.971429, 1.35417)
+texture = ExtResource("17_awt3p")
+
 [node name="affichage" type="Node2D" parent="."]
 
 [node name="PV" type="Node2D" parent="affichage"]
@@ -112,8 +117,3 @@ offset_top = 320.0
 offset_right = 800.0
 offset_bottom = 370.0
 text = "prendre"
-
-[node name="BarrelRedDown" type="Sprite2D" parent="."]
-position = Vector2(-375, 146)
-scale = Vector2(0.971429, 1.35417)
-texture = ExtResource("17_awt3p")
