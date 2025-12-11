@@ -1,12 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://nhj0rkxe5kvw"]
+[gd_scene load_steps=20 format=3 uid="uid://nhj0rkxe5kvw"]
 
 [ext_resource type="Texture2D" uid="uid://bvrfs40v3v64" path="res://kenney_racing-pack/PNG/Objects/tribune_empty.png" id="2_soi5y"]
-[ext_resource type="Texture2D" uid="uid://bnw7ivu75v7it" path="res://Deckicon.png" id="3_3w380"]
+[ext_resource type="Texture2D" uid="uid://bnw7ivu75v7it" path="res://Image/Deckicon.png" id="3_3w380"]
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="3_chqnl"]
-[ext_resource type="Texture2D" uid="uid://dvfe8eakxpk36" path="res://hand_panel.png" id="5_eb04j"]
+[ext_resource type="Texture2D" uid="uid://dvfe8eakxpk36" path="res://Image/hand_panel.png" id="5_eb04j"]
 [ext_resource type="Script" path="res://Nbrdecarte.gd" id="5_t7ss2"]
-[ext_resource type="Texture2D" uid="uid://xsal547gavnp" path="res://bard'essencevide.png" id="6_6gtnb"]
 [ext_resource type="Texture2D" uid="uid://ciiyblfmkagyh" path="res://PVBARVIDE.png" id="7_5qdoe"]
+[ext_resource type="Texture2D" uid="uid://xsal547gavnp" path="res://Image/bard'essencevide.png" id="7_vu6q2"]
+[ext_resource type="Script" path="res://EssenceBar.gd" id="8_rdth3"]
+[ext_resource type="Texture2D" uid="uid://catqttaroajds" path="res://Image/bard'essence1.png" id="9_ijxpi"]
+[ext_resource type="Texture2D" uid="uid://bmiqqmm2lejpj" path="res://Image/bard'essence2.png" id="10_101un"]
+[ext_resource type="Texture2D" uid="uid://bodyg1c0pop40" path="res://Image/bard'essence3.png" id="11_tg73i"]
+[ext_resource type="Texture2D" uid="uid://dlbi7r5qq1fvb" path="res://Image/bard'essence4.png" id="12_e74qm"]
+[ext_resource type="Texture2D" uid="uid://drsugt14qictb" path="res://Image/bard'essence5.png" id="13_l7q13"]
+[ext_resource type="Texture2D" uid="uid://deyx4tvnwfmfx" path="res://Image/bard'essence6.png" id="14_5c1dj"]
+[ext_resource type="Texture2D" uid="uid://tocrclivgqn8" path="res://Image/bard'essence7.png" id="15_2xqqh"]
+[ext_resource type="Texture2D" uid="uid://dapy0ojf2jpih" path="res://Image/bard'essence8.png" id="16_duru1"]
+[ext_resource type="Texture2D" uid="uid://cx3qrw1js2jm5" path="res://kenney_racing-pack/PNG/Objects/barrel_red_down.png" id="17_awt3p"]
+[ext_resource type="Texture2D" uid="uid://do6k5xwwagk5t" path="res://Image/bard'essence9.png" id="17_c5o6u"]
+[ext_resource type="Texture2D" uid="uid://r74pkd74448n" path="res://Image/bard'essencefinis.png" id="18_5asax"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -66,22 +78,24 @@ position = Vector2(566, 551)
 scale = Vector2(0.685547, 0.757812)
 texture = ExtResource("5_eb04j")
 
-[node name="Essence" type="Node2D" parent="Jeux"]
+[node name="Essence et pv" type="Node2D" parent="Jeux"]
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Jeux/Essence"]
-offset_top = 648.0
-offset_right = 256.0
-offset_bottom = 717.0
-rotation = -1.57079
-scale = Vector2(1.53597, 1.24608)
-texture_under = ExtResource("6_6gtnb")
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Jeux"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Jeux/Essence et pv"]
 offset_top = -100.0
 offset_right = 1024.0
 offset_bottom = 924.0
 scale = Vector2(0.330741, 0.303394)
 texture_under = ExtResource("7_5qdoe")
+
+[node name="TextureRect" type="TextureProgressBar" parent="Jeux/Essence et pv"]
+offset_top = 648.0
+offset_right = 256.0
+offset_bottom = 717.0
+rotation = -1.57079
+scale = Vector2(1.53597, 1.24608)
+texture_under = ExtResource("7_vu6q2")
+script = ExtResource("8_rdth3")
+textures = Array[Texture2D]([ExtResource("7_vu6q2"), ExtResource("9_ijxpi"), ExtResource("10_101un"), ExtResource("11_tg73i"), ExtResource("12_e74qm"), ExtResource("13_l7q13"), ExtResource("14_5c1dj"), ExtResource("15_2xqqh"), ExtResource("16_duru1"), ExtResource("17_c5o6u"), ExtResource("18_5asax")])
 
 [node name="prendre ou jeter" type="Node2D" parent="Jeux"]
 
@@ -98,3 +112,8 @@ offset_top = 320.0
 offset_right = 800.0
 offset_bottom = 370.0
 text = "prendre"
+
+[node name="BarrelRedDown" type="Sprite2D" parent="."]
+position = Vector2(-375, 146)
+scale = Vector2(0.971429, 1.35417)
+texture = ExtResource("17_awt3p")

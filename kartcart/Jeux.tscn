@@ -11,7 +11,7 @@
 
 [node name="Jeux" type="Node2D" node_paths=PackedStringArray("listNode", "CurNode")]
 script = ExtResource("1_an442")
-listNode = [NodePath("Menu"), NodePath("Control"), NodePath("Map 01"), NodePath("Choixdesmaps"), NodePath("Choix Difficulter"), NodePath("CréationDeck"), NodePath("IndexDeCarte")]
+listNode = [NodePath("Menu"), NodePath("Control"), NodePath("Map 01"), null, NodePath("Choix Difficulter"), NodePath("CréationDeck"), NodePath("IndexDeCarte")]
 CurNode = NodePath("Menu")
 metadata/VolumeSons = 0.0
 
@@ -259,18 +259,6 @@ current = true
 volume_db = 50.0
 
 [node name="sfx" type="AudioStreamPlayer2D" parent="Sons/AudioListener2D"]
-
-[node name="Choixdesmaps" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-script = null
 
 [node name="Choix Difficulter" parent="." instance=ExtResource("6_ieg5b")]
 
