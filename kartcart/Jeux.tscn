@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfl3qhtnx5pwb"]
+[gd_scene load_steps=10 format=3 uid="uid://cfl3qhtnx5pwb"]
 
 [ext_resource type="Script" path="res://Scene.gd" id="1_an442"]
 [ext_resource type="PackedScene" uid="uid://cbydibtnn6mxk" path="res://Menu.tscn" id="1_nrwbb"]
@@ -7,11 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://5f42gfc6es2y" path="res://carte.tscn" id="4_hnte0"]
 [ext_resource type="PackedScene" uid="uid://pjuy50ekffnd" path="res://Choix_difficulter.tscn" id="6_ieg5b"]
 [ext_resource type="PackedScene" uid="uid://3xsky0nv0uwm" path="res://CreationDeck.tscn" id="8_scjqj"]
+[ext_resource type="PackedScene" uid="uid://bwdemfg3key2v" path="res://ChoixdesMap.tscn" id="9_2kv7t"]
 [ext_resource type="PackedScene" uid="uid://muq2uju536vp" path="res://Index de Carte.tscn" id="10_7fcsm"]
 
 [node name="Jeux" type="Node2D" node_paths=PackedStringArray("listNode", "CurNode")]
 script = ExtResource("1_an442")
-listNode = [NodePath("Menu"), NodePath("Control"), NodePath("Map 01"), null, NodePath("Choix Difficulter"), NodePath("CréationDeck"), NodePath("IndexDeCarte")]
+listNode = [NodePath("Menu"), NodePath("Control"), NodePath("Map 01"), NodePath("Choixdesmaps"), NodePath("Choix Difficulter"), NodePath("CréationDeck"), NodePath("IndexDeCarte")]
 CurNode = NodePath("Menu")
 metadata/VolumeSons = 0.0
 
@@ -274,6 +275,8 @@ offset_bottom = 117.0
 
 [node name="CréationDeck" parent="." instance=ExtResource("8_scjqj")]
 
+[node name="Choixdesmaps" parent="." instance=ExtResource("9_2kv7t")]
+
 [connection signal="pressed" from="IndexDeCarte/Retour Menu/Button" to="." method="switchNode" binds= [0]]
 [connection signal="pressed" from="Map 01/Bouton/ButtonRetour" to="." method="switchNode" binds= [0]]
 [connection signal="value_changed" from="Control/ColorRect/HSlider" to="Sons/AudioListener2D/musique" method="set_volume_db"]
@@ -285,6 +288,8 @@ offset_bottom = 117.0
 [connection signal="pressed" from="Menu/bouton/IndexButton/Button" to="." method="switchNode" binds= [6]]
 [connection signal="pressed" from="CréationDeck/décor/Retour Menu2/Button" to="." method="switchNode" binds= [0]]
 [connection signal="pressed" from="CréationDeck/Suivant/Button" to="." method="switchNode" binds= [3]]
+[connection signal="pressed" from="Choixdesmaps/Les maps/Sprite2D/Button" to="." method="switchNode" binds= [4]]
+[connection signal="pressed" from="Choixdesmaps/Retour Menu/Button" to="." method="switchNode" binds= [0]]
 
 [editable path="ListeCarte/carte01"]
 [editable path="ListeCarte/carte02"]
@@ -301,3 +306,4 @@ offset_bottom = 117.0
 [editable path="Choix Difficulter"]
 [editable path="Menu"]
 [editable path="CréationDeck"]
+[editable path="Choixdesmaps"]
