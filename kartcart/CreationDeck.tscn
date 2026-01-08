@@ -449,6 +449,7 @@ texture = ExtResource("15_5ty3j")
 [node name="ConeDown" type="Sprite2D" parent="AnimationPlayer"]
 position = Vector2(676, 393)
 rotation = -0.523598
+scale = Vector2(1, 1.0331)
 texture = ExtResource("16_2f6ak")
 
 [node name="ConeStraight" type="Sprite2D" parent="AnimationPlayer"]
