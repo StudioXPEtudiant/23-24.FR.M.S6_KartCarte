@@ -832,7 +832,7 @@ texture = ExtResource("22_r7exb")
 position = Vector2(969, 367)
 
 [node name="ArrowWhite" type="Sprite2D" parent="Bouton"]
-position = Vector2(4300, 2000)
+position = Vector2(4297.67, 1983)
 rotation = 1.5708
 scale = Vector2(3, 3)
 texture = ExtResource("21_rttx7")
@@ -854,13 +854,24 @@ text = "AVENCER DE 1"
 metadata/_edit_use_anchors_ = true
 
 [node name="ButtonRetour" type="Button" parent="Bouton"]
-offset_left = 2200.0
-offset_top = 2220.0
-offset_right = 2350.0
-offset_bottom = 2270.0
+offset_left = 2158.78
+offset_top = -278.111
+offset_right = 2308.78
+offset_bottom = -228.111
 scale = Vector2(5, 5)
 text = "Retour Menu"
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Bouton/ButtonRetour"]
+self_modulate = Color(1, 1, 1, 0.286275)
+layout_mode = 0
+offset_left = 9.99986
+offset_top = -3.33333
+offset_right = 97.9999
+offset_bottom = 19.6667
+rotation = 0.241798
+scale = Vector2(1.53116, 1.0497)
+text = "temporaire"
 
 [connection signal="pressed" from="Bouton/ArrowWhite/Button" to="Voitur" method="mouve"]
 
