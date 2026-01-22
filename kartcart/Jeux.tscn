@@ -302,6 +302,7 @@ offset_bottom = 117.0
 [editable path="ListeCarte/carte09"]
 [editable path="IndexDeCarte"]
 [editable path="Map 01"]
+[editable path="Map 01/Control"]
 [editable path="Control"]
 [editable path="Choix Difficulter"]
 [editable path="Menu"]

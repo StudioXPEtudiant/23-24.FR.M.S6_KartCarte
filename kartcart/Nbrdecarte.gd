@@ -15,8 +15,8 @@ func _input(event):
 			if count > 0:
 				count -= 1
 				update_label()
-
 				
+				#get_children(Label/CarteVisible)
 				if my_panel:
 					my_panel.visible = true
 
