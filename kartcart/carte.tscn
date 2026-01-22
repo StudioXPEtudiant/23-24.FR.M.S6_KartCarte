@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://5f42gfc6es2y"]
 
-[ext_resource type="Texture2D" uid="uid://b51k7k2nmd2o8" path="res://kenney_racing-pack/PNG/interface_carte.png" id="1_g7ty2"]
 [ext_resource type="Script" path="res://carte.gd" id="1_kca6b"]
 [ext_resource type="Script" path="res://labelFuel.gd" id="2_33dub"]
 [ext_resource type="Script" path="res://labelNom.gd" id="2_mhvw0"]
 [ext_resource type="Script" path="res://labelRareté.gd" id="3_8w1e5"]
 [ext_resource type="Script" path="res://labelDescription.gd" id="5_5m81a"]
 [ext_resource type="Script" path="res://labelEffet.gd" id="6_usnwb"]
+[ext_resource type="Texture2D" uid="uid://03x8e4iuseje" path="res://icon.svg" id="7_wf1xo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a0jsd"]
 font_size = 45
@@ -83,6 +83,6 @@ carte = NodePath("../../..")
 [node name="Image" type="Node2D" parent="carte"]
 
 [node name="Sprite2D" type="Sprite2D" parent="carte/Image"]
-position = Vector2(280, 240)
-scale = Vector2(0.405679, 0.288336)
-texture = ExtResource("1_g7ty2")
+position = Vector2(293, 233)
+scale = Vector2(2, 2)
+texture = ExtResource("7_wf1xo")
