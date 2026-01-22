@@ -27,6 +27,9 @@ NombreDeFuel = -1
 NomEffet = "-1Fuel + flaque de fuel"
 defEffet = "-1 d'essence pour nous et sa met une flaque d'essence"
 
+[node name="carte" parent="ListeCarte/carte01" index="1"]
+color = Color(0.733238, 0.572766, 0.910088, 1)
+
 [node name="fuel" parent="ListeCarte/carte01/carte/Fuel" index="0"]
 text = "-1 fuel"
 
@@ -48,6 +51,9 @@ Niveau = 1
 NombreDeFuel = 2
 NomEffet = "Player2 -1Fuel"
 defEffet = "enlève 1 d'essence a l'adversaire"
+
+[node name="carte" parent="ListeCarte/carte02" index="1"]
+color = Color(0, 0.792992, 0.248654, 1)
 
 [node name="fuel" parent="ListeCarte/carte02/carte/Fuel" index="0"]
 text = "2 fuel"
@@ -74,6 +80,9 @@ NombreDeFuel = 2
 NomEffet = "+2move"
 defEffet = "te fait avencer directement de 2 case"
 
+[node name="carte" parent="ListeCarte/carte03" index="1"]
+color = Color(0, 0.793046, 0.247027, 1)
+
 [node name="fuel" parent="ListeCarte/carte03/carte/Fuel" index="0"]
 text = "2 fuel"
 
@@ -98,6 +107,9 @@ Niveau = 1
 NombreDeFuel = 2
 NomEffet = "+1Cart"
 defEffet = "Piocher une cart"
+
+[node name="carte" parent="ListeCarte/carte04" index="1"]
+color = Color(0, 0.792157, 0.247059, 1)
 
 [node name="fuel" parent="ListeCarte/carte04/carte/Fuel" index="0"]
 text = "2 fuel"
@@ -124,6 +136,9 @@ NombreDeFuel = 2
 NomEffet = "+2move + 0move au prochain tour"
 defEffet = "permet d'avancer de 2 cases en plus mais vous êtes immobilisé au prochain tour"
 
+[node name="carte" parent="ListeCarte/carte05" index="1"]
+color = Color(0, 0.792157, 0.247059, 1)
+
 [node name="fuel" parent="ListeCarte/carte05/carte/Fuel" index="0"]
 text = "2 fuel"
 
@@ -148,6 +163,9 @@ Niveau = 1
 NombreDeFuel = 3
 NomEffet = "Player2-1Fuel +1Fuel +0move"
 defEffet = "enlève 1 d'essence a l'adversaire et vous en donne 1 mais vous ne pouvez pas avancer ce tour"
+
+[node name="carte" parent="ListeCarte/carte06" index="1"]
+color = Color(0, 0.792157, 0.247059, 1)
 
 [node name="fuel" parent="ListeCarte/carte06/carte/Fuel" index="0"]
 text = "3 fuel"
@@ -174,6 +192,9 @@ NombreDeFuel = 2
 NomEffet = "Player2 0move + -2fuel"
 defEffet = "empèche l'autre de bouger pour un tour mais vous perdez 2 d'essences"
 
+[node name="carte" parent="ListeCarte/carte07" index="1"]
+color = Color(0, 0.792157, 0.247059, 1)
+
 [node name="fuel" parent="ListeCarte/carte07/carte/Fuel" index="0"]
 text = "2 fuel"
 
@@ -199,6 +220,9 @@ NombreDeFuel = 4
 NomEffet = "+1 carte (Niveau: 2;3)"
 defEffet = "vous piochez  une carte rare ou légendaire"
 
+[node name="carte" parent="ListeCarte/carte08" index="1"]
+color = Color(6.35326e-06, 0.718671, 0.943406, 1)
+
 [node name="fuel" parent="ListeCarte/carte08/carte/Fuel" index="0"]
 text = "4 fuel"
 
@@ -223,6 +247,9 @@ Niveau = 2
 NombreDeFuel = 3
 NomEffet = "+4move +0carte prochain tour"
 defEffet = "avancer de 4 cases mais vous ne piocher pas au prochain tour"
+
+[node name="carte" parent="ListeCarte/carte09" index="1"]
+color = Color(0, 0.717647, 0.945098, 1)
 
 [node name="fuel" parent="ListeCarte/carte09/carte/Fuel" index="0"]
 text = "3 fuel"
