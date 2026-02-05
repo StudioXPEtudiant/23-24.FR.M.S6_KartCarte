@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfl3qhtnx5pwb"]
+[gd_scene load_steps=11 format=3 uid="uid://cfl3qhtnx5pwb"]
 
 [ext_resource type="Script" path="res://Scene.gd" id="1_an442"]
 [ext_resource type="PackedScene" uid="uid://cbydibtnn6mxk" path="res://Menu.tscn" id="1_nrwbb"]
@@ -9,10 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://3xsky0nv0uwm" path="res://CreationDeck.tscn" id="8_scjqj"]
 [ext_resource type="PackedScene" uid="uid://bwdemfg3key2v" path="res://ChoixdesMap.tscn" id="9_2kv7t"]
 [ext_resource type="PackedScene" uid="uid://muq2uju536vp" path="res://Index de Carte.tscn" id="10_7fcsm"]
+[ext_resource type="PackedScene" uid="uid://dhvgxba7x3xw" path="res://interface prendre,jeter en essence.tscn" id="10_xg0v8"]
 
 [node name="Jeux" type="Node2D" node_paths=PackedStringArray("listNode", "CurNode")]
 script = ExtResource("1_an442")
-listNode = [NodePath("Menu"), NodePath("Control"), NodePath("Map 01"), NodePath("Choixdesmaps"), NodePath("Choix Difficulter"), NodePath("CréationDeck"), NodePath("IndexDeCarte")]
+listNode = [NodePath("Menu"), NodePath("Control"), NodePath("Map 01"), NodePath("Choixdesmaps"), NodePath("Choix Difficulter"), NodePath("CréationDeck"), NodePath("IndexDeCarte"), NodePath("InterfacePrendre,jeterEnEssence")]
 CurNode = NodePath("Menu")
 metadata/VolumeSons = 0.0
 
@@ -303,6 +304,8 @@ offset_bottom = 117.0
 [node name="CréationDeck" parent="." instance=ExtResource("8_scjqj")]
 
 [node name="Choixdesmaps" parent="." instance=ExtResource("9_2kv7t")]
+
+[node name="InterfacePrendre,jeterEnEssence" parent="." instance=ExtResource("10_xg0v8")]
 
 [connection signal="pressed" from="IndexDeCarte/Retour Menu/Button" to="." method="switchNode" binds= [0]]
 [connection signal="pressed" from="Map 01/Bouton/ButtonRetour" to="." method="switchNode" binds= [0]]
