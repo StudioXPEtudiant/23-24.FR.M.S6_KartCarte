@@ -1,6 +1,5 @@
-[gd_scene load_steps=28 format=3 uid="uid://7eh5w82uvurn"]
+[gd_scene load_steps=26 format=3 uid="uid://7eh5w82uvurn"]
 
-[ext_resource type="Script" path="res://map_scene.gd" id="1_hel68"]
 [ext_resource type="Texture2D" uid="uid://begp2nu0rwvdn" path="res://kenney_racing-pack/PNG/Tiles/Grass/land_grass04.png" id="2_1yfjm"]
 [ext_resource type="Texture2D" uid="uid://3gik375slgcc" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt42.png" id="2_04nto"]
 [ext_resource type="Texture2D" uid="uid://ddkw7a8rscdjn" path="res://kenney_racing-pack/PNG/Tiles/Asphalt road/road_asphalt03.png" id="2_fcymp"]
@@ -26,12 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="21_rttx7"]
 [ext_resource type="Texture2D" uid="uid://bb0numvki8a2n" path="res://kenney_racing-pack/PNG/Cars/car_blue_1.png" id="22_r7exb"]
 [ext_resource type="PackedScene" uid="uid://nhj0rkxe5kvw" path="res://interfacejeux.tscn" id="24_ctj2k"]
-[ext_resource type="PackedScene" uid="uid://dhvgxba7x3xw" path="res://interface prendre,jeter en essence.tscn" id="27_d4wch"]
 
-[node name="Map 01" type="Node2D" node_paths=PackedStringArray("listMapNode")]
+[node name="Map 01" type="Node2D"]
 scale = Vector2(0.18, 0.18)
-script = ExtResource("1_hel68")
-listMapNode = [NodePath("InterfacePrendre,jeterEnEssence")]
 
 [node name="Control" parent="." instance=ExtResource("24_ctj2k")]
 z_index = 10
@@ -42,7 +38,6 @@ offset_left = -500.0
 offset_top = -500.0
 offset_right = 518.0
 offset_bottom = 493.0
-script = ExtResource("1_hel68")
 
 [node name="CarteVisible" type="Node2D" parent="Control/Jeux/deck/TribuneOverhangRed/Label" index="0"]
 visible = false
@@ -878,20 +873,6 @@ rotation = 0.241798
 scale = Vector2(1.53116, 1.0497)
 text = "temporaire"
 
-[node name="InterfacePrendre,jeterEnEssence" parent="." instance=ExtResource("27_d4wch")]
-z_index = 2
-position = Vector2(1000, -120)
-scale = Vector2(7, 7)
-
-[node name="MarginContainer" parent="InterfacePrendre,jeterEnEssence/Polygon2D/TabContainer/_________Jeter_________" index="0"]
-visible = false
-
-[node name="ButtonValider" parent="InterfacePrendre,jeterEnEssence/Polygon2D" index="2"]
-script = ExtResource("1_hel68")
-
-[connection signal="pressed" from="Control/Jeux/deck/TribuneOverhangRed/button pioch deck" to="." method="openScene" binds= [0]]
 [connection signal="pressed" from="Bouton/ArrowWhite/Button" to="Voitur" method="mouve"]
-[connection signal="pressed" from="InterfacePrendre,jeterEnEssence/Polygon2D/ButtonValider" to="." method="quitScene" binds= [0]]
 
 [editable path="Control"]
-[editable path="InterfacePrendre,jeterEnEssence"]
