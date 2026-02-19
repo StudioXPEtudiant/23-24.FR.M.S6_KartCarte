@@ -19,3 +19,7 @@ func switchNode(numNode:int):
 
 func exit():
 	get_tree().quit()
+
+
+func _on_button_pioch_deck_pressed(extra_arg_0: int) -> void:
+	pass # Replace with function body.
