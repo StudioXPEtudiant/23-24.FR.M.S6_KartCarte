@@ -1,15 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://5f42gfc6es2y"]
+[gd_scene load_steps=15 format=3 uid="uid://5f42gfc6es2y"]
 
 [ext_resource type="Script" path="res://carte.gd" id="1_kca6b"]
 [ext_resource type="Script" path="res://labelFuel.gd" id="2_33dub"]
-[ext_resource type="Script" path="res://labelNom.gd" id="2_mhvw0"]
 [ext_resource type="Script" path="res://labelRareté.gd" id="3_8w1e5"]
-[ext_resource type="Script" path="res://labelDescription.gd" id="5_5m81a"]
+[ext_resource type="Script" path="res://nom_1.gd" id="4_tv28e"]
+[ext_resource type="Script" path="res://link_button.gd" id="5_876hm"]
 [ext_resource type="Script" path="res://labelEffet.gd" id="6_usnwb"]
 [ext_resource type="Texture2D" uid="uid://03x8e4iuseje" path="res://icon.svg" id="7_wf1xo"]
+[ext_resource type="Texture2D" uid="uid://dsaht50xx2517" path="res://Image/Carte Vimage.png" id="8_05nku"]
+[ext_resource type="Texture2D" uid="uid://dmv010ttsd7rs" path="res://kenney_racing-pack/PNG/Objects/arrow_white.png" id="9_p1gbq"]
+[ext_resource type="Texture2D" uid="uid://bjn7djiki4tjg" path="res://kenney_racing-pack/PNG/Objects/light_yellow.png" id="10_ky2hv"]
+[ext_resource type="Script" path="res://description.gd" id="10_srprh"]
+[ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="12_c0pgw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a0jsd"]
 font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_fk623"]
 
 [node name="Carte" type="Node2D"]
 z_index = 1
@@ -21,60 +28,74 @@ visible = false
 polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
 
 [node name="carte" type="Polygon2D" parent="."]
+z_index = -2
 color = Color(1, 0.498039, 0, 1)
 polygon = PackedVector2Array(0, 0, 576, 0, 576, 648, 0, 648)
 
 [node name="Fuel" type="Node2D" parent="carte"]
+z_index = 1
 
 [node name="fuel" type="Label" parent="carte/Fuel" node_paths=PackedStringArray("carte")]
-offset_left = 416.0
-offset_right = 574.0
-offset_bottom = 128.0
+offset_left = 369.0
+offset_top = 280.0
+offset_right = 527.0
+offset_bottom = 408.0
 text = "0 fuel"
 label_settings = SubResource("LabelSettings_a0jsd")
 script = ExtResource("2_33dub")
 carte = NodePath("../../..")
 
 [node name="Rareté" type="Node2D" parent="carte"]
+z_index = 1
 
 [node name="rareté" type="Label" parent="carte/Rareté" node_paths=PackedStringArray("carte")]
-offset_right = 224.0
-offset_bottom = 128.0
+offset_left = 339.0
+offset_top = 169.0
+offset_right = 415.0
+offset_bottom = 197.0
+scale = Vector2(2.59076, 2.6922)
 text = "Niveau :0"
-label_settings = SubResource("LabelSettings_a0jsd")
+label_settings = SubResource("LabelSettings_fk623")
 script = ExtResource("3_8w1e5")
 carte = NodePath("../../..")
 
-[node name="Nom" type="Node2D" parent="carte"]
+[node name="Nomdelacarte" type="Node2D" parent="carte"]
+z_index = 1
 
-[node name="nom" type="Label" parent="carte/Nom" node_paths=PackedStringArray("carte")]
-offset_left = 80.0
-offset_top = 56.0
-offset_right = 464.0
-offset_bottom = 120.0
+[node name="nom" type="Label" parent="carte/Nomdelacarte" node_paths=PackedStringArray("carte")]
+offset_left = 98.0
+offset_top = 30.0
+offset_right = 482.0
+offset_bottom = 94.0
 label_settings = SubResource("LabelSettings_a0jsd")
-script = ExtResource("2_mhvw0")
+script = ExtResource("4_tv28e")
 carte = NodePath("../../..")
 
 [node name="DefEffet" type="Node2D" parent="carte"]
+z_index = 1
 
-[node name="description" type="Label" parent="carte/DefEffet" node_paths=PackedStringArray("carte")]
-offset_left = 32.0
-offset_top = 464.0
-offset_right = 544.0
-offset_bottom = 576.0
-label_settings = SubResource("LabelSettings_a0jsd")
-autowrap_mode = 2
-script = ExtResource("5_5m81a")
+[node name="LinkButton" type="LinkButton" parent="carte/DefEffet" node_paths=PackedStringArray("carte")]
+modulate = Color(0, 0, 0, 1)
+offset_left = 98.0
+offset_top = 557.0
+offset_right = 262.0
+offset_bottom = 597.0
+tooltip_text = "Def effet"
+text = "Effet exacte"
+underline = 1
+language = "fr"
+script = ExtResource("5_876hm")
 carte = NodePath("../../..")
 
 [node name="Effet" type="Node2D" parent="carte"]
+z_index = 1
 
 [node name="Effet" type="Label" parent="carte/Effet" node_paths=PackedStringArray("carte")]
-offset_left = 24.0
-offset_top = 350.0
+offset_left = 43.0
+offset_top = 372.0
 offset_right = 536.0
-offset_bottom = 414.0
+offset_bottom = 436.0
+theme_override_font_sizes/font_size = 21
 label_settings = SubResource("LabelSettings_a0jsd")
 autowrap_mode = 2
 script = ExtResource("6_usnwb")
@@ -83,6 +104,52 @@ carte = NodePath("../../..")
 [node name="Image" type="Node2D" parent="carte"]
 
 [node name="Sprite2D" type="Sprite2D" parent="carte/Image"]
-position = Vector2(293, 233)
+z_index = 1
+position = Vector2(189, 244)
 scale = Vector2(2, 2)
 texture = ExtResource("7_wf1xo")
+
+[node name="Décor" type="Node2D" parent="carte"]
+
+[node name="Sprite2D" type="Sprite2D" parent="carte/Décor"]
+position = Vector2(288, 311.5)
+scale = Vector2(0.665896, 0.658513)
+texture = ExtResource("8_05nku")
+
+[node name="ArrowWhite" type="Sprite2D" parent="carte/Décor"]
+position = Vector2(515, 578)
+rotation = -0.785397
+scale = Vector2(0.219063, 0.288682)
+texture = ExtResource("9_p1gbq")
+
+[node name="ArrowYellow" type="Sprite2D" parent="carte/Décor"]
+position = Vector2(72, 51)
+rotation = 2.35619
+scale = Vector2(0.264468, 0.263238)
+texture = ExtResource("12_c0pgw")
+
+[node name="Couleurs" type="Node2D" parent="carte"]
+
+[node name="Sprite2D" type="Sprite2D" parent="carte/Couleurs"]
+position = Vector2(426.5, 127.818)
+scale = Vector2(1.32727, 0.925623)
+texture = ExtResource("9_p1gbq")
+
+[node name="LightYellow" type="Sprite2D" parent="carte"]
+modulate = Color(0.2, 0.666667, 0.34902, 1)
+position = Vector2(490.362, 554.892)
+rotation = -0.785397
+scale = Vector2(0.656001, 0.222156)
+texture = ExtResource("10_ky2hv")
+
+[node name="Description" type="Node2D" parent="carte"]
+
+[node name="Description" type="Label" parent="carte/Description" node_paths=PackedStringArray("carte")]
+offset_left = 61.0
+offset_top = 495.0
+offset_right = 501.0
+offset_bottom = 557.0
+theme_override_font_sizes/font_size = 36
+text = "Test"
+script = ExtResource("10_srprh")
+carte = NodePath("../../..")

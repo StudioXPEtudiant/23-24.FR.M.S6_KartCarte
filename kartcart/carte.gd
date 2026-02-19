@@ -16,6 +16,8 @@ class_name carte
 
 @export var defEffet:String
 
+@export var Description:String
+
 
 
 # Called when the node enters the scene tree for the first time.

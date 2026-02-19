@@ -24,23 +24,37 @@ position = Vector2(10, 1000)
 scale = Vector2(0.5, 0.5)
 nom = "C'est la sauce"
 NombreDeFuel = -1
-NomEffet = "-1Fuel + flaque de fuel"
-defEffet = "-1 d'essence pour nous et sa met une flaque d'essence"
+NomEffet = "Effet : -1 fuel + flaque de fuel"
+defEffet = "Effet éxacte"
+Description = "J'ai glissé chef"
 
 [node name="carte" parent="ListeCarte/carte01" index="1"]
 color = Color(0.733238, 0.572766, 0.910088, 1)
 
 [node name="fuel" parent="ListeCarte/carte01/carte/Fuel" index="0"]
+modulate = Color(1, 0, 1, 1)
 text = "-1 fuel"
 
-[node name="nom" parent="ListeCarte/carte01/carte/Nom" index="0"]
-text = "C'est la sauce"
+[node name="rareté" parent="ListeCarte/carte01/carte/Rareté" index="0"]
+modulate = Color(1, 0, 1, 1)
 
-[node name="description" parent="ListeCarte/carte01/carte/DefEffet" index="0"]
-text = "-1 d'essence pour nous et sa met une flaque d'essence"
+[node name="nom" parent="ListeCarte/carte01/carte/Nomdelacarte" index="0"]
+modulate = Color(1, 0, 1, 1)
+
+[node name="LinkButton" parent="ListeCarte/carte01/carte/DefEffet" index="0"]
+modulate = Color(1, 0, 0, 1)
+tooltip_text = "Tu perds de l'essence et tu crée une flaque de fuel "
+text = "Effet éxacte"
 
 [node name="Effet" parent="ListeCarte/carte01/carte/Effet" index="0"]
-text = "-1Fuel + flaque de fuel"
+modulate = Color(1, 0, 1, 1)
+text = "Effet : -1 fuel + flaque de fuel"
+
+[node name="Sprite2D" parent="ListeCarte/carte01/carte/Couleurs" index="0"]
+modulate = Color(0.566391, 0.000232472, 0.566387, 1)
+
+[node name="Description" parent="ListeCarte/carte01/carte/Description" index="0"]
+text = "J'ai glissé chef"
 
 [node name="carte02" parent="ListeCarte" instance=ExtResource("4_hnte0")]
 visible = false
@@ -50,25 +64,30 @@ nom = "Fuite d'essence"
 Niveau = 1
 NombreDeFuel = 2
 NomEffet = "Player2 -1Fuel"
-defEffet = "enlève 1 d'essence a l'adversaire"
+defEffet = "Enlève 1 de fuel à l'adversaire"
+Description = "Déso "
 
 [node name="carte" parent="ListeCarte/carte02" index="1"]
 color = Color(0, 0.792992, 0.248654, 1)
 
 [node name="fuel" parent="ListeCarte/carte02/carte/Fuel" index="0"]
+offset_right = 518.0
 text = "2 fuel"
 
 [node name="rareté" parent="ListeCarte/carte02/carte/Rareté" index="0"]
 text = "Niveau :1"
 
-[node name="nom" parent="ListeCarte/carte02/carte/Nom" index="0"]
-text = "Fuite d'essence"
-
-[node name="description" parent="ListeCarte/carte02/carte/DefEffet" index="0"]
-text = "enlève 1 d'essence a l'adversaire"
+[node name="LinkButton" parent="ListeCarte/carte02/carte/DefEffet" index="0"]
+text = "Enlève 1 de fuel à l'adversaire"
 
 [node name="Effet" parent="ListeCarte/carte02/carte/Effet" index="0"]
 text = "Player2 -1Fuel"
+
+[node name="Sprite2D" parent="ListeCarte/carte02/carte/Couleurs" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="Description" parent="ListeCarte/carte02/carte/Description" index="0"]
+text = "Déso "
 
 [node name="carte03" parent="ListeCarte" instance=ExtResource("4_hnte0")]
 visible = false
@@ -79,6 +98,7 @@ Niveau = 1
 NombreDeFuel = 2
 NomEffet = "+2move"
 defEffet = "te fait avencer directement de 2 case"
+Description = "Je suis rapide"
 
 [node name="carte" parent="ListeCarte/carte03" index="1"]
 color = Color(0, 0.793046, 0.247027, 1)
@@ -89,14 +109,20 @@ text = "2 fuel"
 [node name="rareté" parent="ListeCarte/carte03/carte/Rareté" index="0"]
 text = "Niveau :1"
 
-[node name="nom" parent="ListeCarte/carte03/carte/Nom" index="0"]
-text = "Turbo"
+[node name="nom" parent="ListeCarte/carte03/carte/Nomdelacarte" index="0"]
+text = "g"
 
-[node name="description" parent="ListeCarte/carte03/carte/DefEffet" index="0"]
+[node name="LinkButton" parent="ListeCarte/carte03/carte/DefEffet" index="0"]
 text = "te fait avencer directement de 2 case"
 
 [node name="Effet" parent="ListeCarte/carte03/carte/Effet" index="0"]
 text = "+2move"
+
+[node name="Sprite2D" parent="ListeCarte/carte03/carte/Couleurs" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="Description" parent="ListeCarte/carte03/carte/Description" index="0"]
+text = "Je suis rapide"
 
 [node name="carte04" parent="ListeCarte" instance=ExtResource("4_hnte0")]
 visible = false
@@ -107,6 +133,7 @@ Niveau = 1
 NombreDeFuel = 2
 NomEffet = "+1Cart"
 defEffet = "Piocher une cart"
+Description = "Que la chance soit avec toi"
 
 [node name="carte" parent="ListeCarte/carte04" index="1"]
 color = Color(0, 0.792157, 0.247059, 1)
@@ -117,14 +144,17 @@ text = "2 fuel"
 [node name="rareté" parent="ListeCarte/carte04/carte/Rareté" index="0"]
 text = "Niveau :1"
 
-[node name="nom" parent="ListeCarte/carte04/carte/Nom" index="0"]
-text = "Repioche"
-
-[node name="description" parent="ListeCarte/carte04/carte/DefEffet" index="0"]
+[node name="LinkButton" parent="ListeCarte/carte04/carte/DefEffet" index="0"]
 text = "Piocher une cart"
 
 [node name="Effet" parent="ListeCarte/carte04/carte/Effet" index="0"]
 text = "+1Cart"
+
+[node name="Sprite2D" parent="ListeCarte/carte04/carte/Couleurs" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="Description" parent="ListeCarte/carte04/carte/Description" index="0"]
+text = "Que la chance soit avec toi"
 
 [node name="carte05" parent="ListeCarte" instance=ExtResource("4_hnte0")]
 visible = false
@@ -135,6 +165,7 @@ Niveau = 1
 NombreDeFuel = 2
 NomEffet = "+2move + 0move au prochain tour"
 defEffet = "permet d'avancer de 2 cases en plus mais vous êtes immobilisé au prochain tour"
+Description = "Trop vite"
 
 [node name="carte" parent="ListeCarte/carte05" index="1"]
 color = Color(0, 0.792157, 0.247059, 1)
@@ -145,14 +176,17 @@ text = "2 fuel"
 [node name="rareté" parent="ListeCarte/carte05/carte/Rareté" index="0"]
 text = "Niveau :1"
 
-[node name="nom" parent="ListeCarte/carte05/carte/Nom" index="0"]
-text = "Turbo Bancale"
-
-[node name="description" parent="ListeCarte/carte05/carte/DefEffet" index="0"]
+[node name="LinkButton" parent="ListeCarte/carte05/carte/DefEffet" index="0"]
 text = "permet d'avancer de 2 cases en plus mais vous êtes immobilisé au prochain tour"
 
 [node name="Effet" parent="ListeCarte/carte05/carte/Effet" index="0"]
 text = "+2move + 0move au prochain tour"
+
+[node name="Sprite2D" parent="ListeCarte/carte05/carte/Couleurs" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="Description" parent="ListeCarte/carte05/carte/Description" index="0"]
+text = "Trop vite"
 
 [node name="carte06" parent="ListeCarte" instance=ExtResource("4_hnte0")]
 visible = false
@@ -163,6 +197,7 @@ Niveau = 1
 NombreDeFuel = 3
 NomEffet = "Player2-1Fuel +1Fuel +0move"
 defEffet = "enlève 1 d'essence a l'adversaire et vous en donne 1 mais vous ne pouvez pas avancer ce tour"
+Description = "Es ist ein SABOTAGE"
 
 [node name="carte" parent="ListeCarte/carte06" index="1"]
 color = Color(0, 0.792157, 0.247059, 1)
@@ -173,14 +208,17 @@ text = "3 fuel"
 [node name="rareté" parent="ListeCarte/carte06/carte/Rareté" index="0"]
 text = "Niveau :1"
 
-[node name="nom" parent="ListeCarte/carte06/carte/Nom" index="0"]
-text = "sabotage"
-
-[node name="description" parent="ListeCarte/carte06/carte/DefEffet" index="0"]
+[node name="LinkButton" parent="ListeCarte/carte06/carte/DefEffet" index="0"]
 text = "enlève 1 d'essence a l'adversaire et vous en donne 1 mais vous ne pouvez pas avancer ce tour"
 
 [node name="Effet" parent="ListeCarte/carte06/carte/Effet" index="0"]
 text = "Player2-1Fuel +1Fuel +0move"
+
+[node name="Sprite2D" parent="ListeCarte/carte06/carte/Couleurs" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="Description" parent="ListeCarte/carte06/carte/Description" index="0"]
+text = "Es ist ein SABOTAGE"
 
 [node name="carte07" parent="ListeCarte" instance=ExtResource("4_hnte0")]
 visible = false
@@ -191,6 +229,7 @@ Niveau = 1
 NombreDeFuel = 2
 NomEffet = "Player2 0move + -2fuel"
 defEffet = "empèche l'autre de bouger pour un tour mais vous perdez 2 d'essences"
+Description = "Stop"
 
 [node name="carte" parent="ListeCarte/carte07" index="1"]
 color = Color(0, 0.792157, 0.247059, 1)
@@ -201,14 +240,17 @@ text = "2 fuel"
 [node name="rareté" parent="ListeCarte/carte07/carte/Rareté" index="0"]
 text = "Niveau :1"
 
-[node name="nom" parent="ListeCarte/carte07/carte/Nom" index="0"]
-text = "stop"
-
-[node name="description" parent="ListeCarte/carte07/carte/DefEffet" index="0"]
+[node name="LinkButton" parent="ListeCarte/carte07/carte/DefEffet" index="0"]
 text = "empèche l'autre de bouger pour un tour mais vous perdez 2 d'essences"
 
 [node name="Effet" parent="ListeCarte/carte07/carte/Effet" index="0"]
 text = "Player2 0move + -2fuel"
+
+[node name="Sprite2D" parent="ListeCarte/carte07/carte/Couleurs" index="0"]
+modulate = Color(0, 1, 1, 1)
+
+[node name="Description" parent="ListeCarte/carte07/carte/Description" index="0"]
+text = "Stop"
 
 [node name="carte08" parent="ListeCarte" instance=ExtResource("4_hnte0")]
 visible = false
@@ -219,6 +261,7 @@ Niveau = 2
 NombreDeFuel = 4
 NomEffet = "+1 carte (Niveau: 2;3)"
 defEffet = "vous piochez  une carte rare ou légendaire"
+Description = "C'est pas de la chance"
 
 [node name="carte" parent="ListeCarte/carte08" index="1"]
 color = Color(6.35326e-06, 0.718671, 0.943406, 1)
@@ -229,14 +272,14 @@ text = "4 fuel"
 [node name="rareté" parent="ListeCarte/carte08/carte/Rareté" index="0"]
 text = "Niveau :2"
 
-[node name="nom" parent="ListeCarte/carte08/carte/Nom" index="0"]
-text = "chance du débutant"
-
-[node name="description" parent="ListeCarte/carte08/carte/DefEffet" index="0"]
+[node name="LinkButton" parent="ListeCarte/carte08/carte/DefEffet" index="0"]
 text = "vous piochez  une carte rare ou légendaire"
 
 [node name="Effet" parent="ListeCarte/carte08/carte/Effet" index="0"]
 text = "+1 carte (Niveau: 2;3)"
+
+[node name="Description" parent="ListeCarte/carte08/carte/Description" index="0"]
+text = "C'est pas de la chance"
 
 [node name="carte09" parent="ListeCarte" instance=ExtResource("4_hnte0")]
 visible = false
@@ -247,6 +290,7 @@ Niveau = 2
 NombreDeFuel = 3
 NomEffet = "+4move +0carte prochain tour"
 defEffet = "avancer de 4 cases mais vous ne piocher pas au prochain tour"
+Description = "La on est bien"
 
 [node name="carte" parent="ListeCarte/carte09" index="1"]
 color = Color(0, 0.717647, 0.945098, 1)
@@ -257,14 +301,14 @@ text = "3 fuel"
 [node name="rareté" parent="ListeCarte/carte09/carte/Rareté" index="0"]
 text = "Niveau :2"
 
-[node name="nom" parent="ListeCarte/carte09/carte/Nom" index="0"]
-text = "Nitro"
-
-[node name="description" parent="ListeCarte/carte09/carte/DefEffet" index="0"]
+[node name="LinkButton" parent="ListeCarte/carte09/carte/DefEffet" index="0"]
 text = "avancer de 4 cases mais vous ne piocher pas au prochain tour"
 
 [node name="Effet" parent="ListeCarte/carte09/carte/Effet" index="0"]
 text = "+4move +0carte prochain tour"
+
+[node name="Description" parent="ListeCarte/carte09/carte/Description" index="0"]
+text = "La on est bien"
 
 [node name="ListeDeck" type="Node" parent="."]
 
