@@ -879,7 +879,7 @@ scale = Vector2(1.53116, 1.0497)
 text = "temporaire"
 
 [node name="InterfacePrendre,jeterEnEssence" parent="." instance=ExtResource("27_d4wch")]
-z_index = 2
+z_index = 4
 position = Vector2(1000, -120)
 scale = Vector2(7, 7)
 
