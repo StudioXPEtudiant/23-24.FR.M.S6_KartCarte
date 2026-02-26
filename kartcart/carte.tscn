@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://carte.gd" id="1_kca6b"]
 [ext_resource type="Script" path="res://labelFuel.gd" id="2_33dub"]
 [ext_resource type="Script" path="res://labelRareté.gd" id="3_8w1e5"]
-[ext_resource type="Script" path="res://nom_1.gd" id="4_tv28e"]
 [ext_resource type="Script" path="res://link_button.gd" id="5_876hm"]
 [ext_resource type="Script" path="res://labelEffet.gd" id="6_usnwb"]
 [ext_resource type="Texture2D" uid="uid://03x8e4iuseje" path="res://icon.svg" id="7_wf1xo"]
@@ -17,6 +16,26 @@
 font_size = 45
 
 [sub_resource type="LabelSettings" id="LabelSettings_fk623"]
+
+[sub_resource type="GDScript" id="GDScript_o25i2"]
+script/source = "
+extends Label
+
+
+@export var carte:carte
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	text = carte.nom
+	
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if text != carte.nom:
+		text = carte.nom
+		
+"
 
 [node name="Carte" type="Node2D"]
 z_index = 1
@@ -68,7 +87,7 @@ offset_top = 30.0
 offset_right = 482.0
 offset_bottom = 94.0
 label_settings = SubResource("LabelSettings_a0jsd")
-script = ExtResource("4_tv28e")
+script = SubResource("GDScript_o25i2")
 carte = NodePath("../../..")
 
 [node name="DefEffet" type="Node2D" parent="carte"]
