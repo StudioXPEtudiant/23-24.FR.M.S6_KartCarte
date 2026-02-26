@@ -1,10 +1,16 @@
-[gd_scene format=3 uid="uid://dhvgxba7x3xw"]
+[gd_scene load_steps=2 format=3 uid="uid://dhvgxba7x3xw"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_d6bqt"]
 
 [node name="InterfacePrendre,jeterEnEssence" type="Node2D"]
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.0108, 0.22032, 0.36, 0.482353)
+color = Color(0.0108, 0.22032, 0.36, 0.443137)
+texture = SubResource("CanvasTexture_d6bqt")
 polygon = PackedVector2Array(0, 0, 600, 0, 600, 400, 0, 400)
+
+[node name="CurentCarte" type="Node2D" parent="Polygon2D"]
+position = Vector2(250, 0)
 
 [node name="Label" type="Label" parent="Polygon2D"]
 offset_left = 9.0
@@ -76,6 +82,3 @@ offset_right = 332.0
 offset_bottom = 377.0
 scale = Vector2(1.5, 1.5)
 text = "Valider"
-
-[node name="CurentCarte" type="Node2D" parent="."]
-position = Vector2(250, 0)
