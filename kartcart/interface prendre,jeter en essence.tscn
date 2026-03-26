@@ -1,18 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhvgxba7x3xw"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_d6bqt"]
+[gd_scene format=3 uid="uid://dhvgxba7x3xw"]
 
 [node name="InterfacePrendre,jeterEnEssence" type="Node2D"]
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.0108, 0.22032, 0.36, 0.443137)
-texture = SubResource("CanvasTexture_d6bqt")
-polygon = PackedVector2Array(0, 0, 600, 0, 600, 400, 0, 400)
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 10
+offset_left = -9.0
+offset_top = -1.0
+offset_right = 1991.0
+offset_bottom = 1499.0
+color = Color(0.223529, 0.223529, 0.223529, 0)
 
-[node name="CurentCarte" type="Node2D" parent="Polygon2D"]
+[node name="Polygon2D" type="ColorRect" parent="ColorRect"]
+clip_contents = true
+layout_mode = 0
+offset_left = -3.0
+offset_right = 600.0
+offset_bottom = 459.0
+color = Color(0, 0, 0.111864, 0.647059)
+
+[node name="CurentCarte" type="Node2D" parent="ColorRect/Polygon2D"]
 position = Vector2(250, 0)
 
-[node name="Label" type="Label" parent="Polygon2D"]
+[node name="Label" type="Label" parent="ColorRect/Polygon2D"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 83.0
 offset_right = 483.0
@@ -20,19 +30,27 @@ offset_bottom = 133.0
 rotation = -0.68762
 text = "couleur a changer"
 
-[node name="TabContainer" type="TabContainer" parent="Polygon2D"]
-offset_left = 83.0
-offset_top = 180.0
-offset_right = 516.0
-offset_bottom = 338.0
+[node name="Control" type="Control" parent="ColorRect/Polygon2D"]
+anchors_preset = 0
+offset_left = 95.0
+offset_top = 238.0
+offset_right = 95.0
+offset_bottom = 238.0
+
+[node name="TabContainer" type="TabContainer" parent="ColorRect/Polygon2D/Control"]
+clip_contents = true
+layout_direction = 1
+layout_mode = 1
+offset_right = 433.0
+offset_bottom = 158.0
 tab_alignment = 1
 current_tab = 0
 
-[node name="_________Jeter_________" type="Control" parent="Polygon2D/TabContainer"]
+[node name="_________Jeter_________" type="Control" parent="ColorRect/Polygon2D/Control/TabContainer"]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Polygon2D/TabContainer/_________Jeter_________"]
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/Polygon2D/Control/TabContainer/_________Jeter_________"]
 layout_mode = 0
 offset_right = 432.0
 offset_bottom = 128.0
@@ -41,11 +59,12 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Polygon2D/TabContainer/_________Jeter_________/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Polygon2D/Control/TabContainer/_________Jeter_________/MarginContainer"]
 layout_mode = 2
-text = "blabla 1"
+text = "jeter la carte dans la jauge d'essence
+elle augmente du nombre de point d'essence de la carte "
 
-[node name="MarginContainer3" type="MarginContainer" parent="Polygon2D/TabContainer/_________Jeter_________"]
+[node name="MarginContainer3" type="MarginContainer" parent="ColorRect/Polygon2D/Control/TabContainer/_________Jeter_________"]
 layout_mode = 0
 offset_right = 432.0
 offset_bottom = 128.0
@@ -54,15 +73,15 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Polygon2D/TabContainer/_________Jeter_________/MarginContainer3"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Polygon2D/Control/TabContainer/_________Jeter_________/MarginContainer3"]
 layout_mode = 2
 
-[node name="________Prendre________" type="Control" parent="Polygon2D/TabContainer"]
+[node name="________Prendre________" type="Control" parent="ColorRect/Polygon2D/Control/TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="Polygon2D/TabContainer/________Prendre________"]
+[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/Polygon2D/Control/TabContainer/________Prendre________"]
 layout_mode = 0
 offset_right = 432.0
 offset_bottom = 139.0
@@ -71,14 +90,20 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Polygon2D/TabContainer/________Prendre________/MarginContainer2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Polygon2D/Control/TabContainer/________Prendre________/MarginContainer2"]
 layout_mode = 2
-text = "bla222222"
+text = "Prend la carte dans sa main ,l'effet de la carte pourra etre utiliser des le prochain tour"
 
-[node name="ButtonValider" type="Button" parent="Polygon2D"]
-offset_left = 169.0
-offset_top = 346.0
-offset_right = 332.0
-offset_bottom = 377.0
+[node name="Control2" type="Control" parent="ColorRect/Polygon2D"]
+anchors_preset = 0
+offset_left = 253.0
+offset_top = 409.0
+offset_right = 253.0
+offset_bottom = 409.0
+
+[node name="ButtonValider" type="Button" parent="ColorRect/Polygon2D/Control2"]
+layout_mode = 1
+offset_right = 63.0
+offset_bottom = 31.0
 scale = Vector2(1.5, 1.5)
 text = "Valider"

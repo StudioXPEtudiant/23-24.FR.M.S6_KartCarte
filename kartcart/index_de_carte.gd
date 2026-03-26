@@ -18,7 +18,6 @@ func _ready() -> void:
 		var btn:Button = Button.new()
 		
 		
-		
 		var carte:Node2D = ListeCarte[i].duplicate()
 		carte.visible = true
 		

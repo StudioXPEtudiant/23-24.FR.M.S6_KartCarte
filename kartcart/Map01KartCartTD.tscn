@@ -34,7 +34,7 @@ script = ExtResource("1_hel68")
 listMapNode = [NodePath("InterfacePrendre,jeterEnEssence")]
 
 [node name="Control" parent="." instance=ExtResource("24_ctj2k")]
-z_index = 10
+z_index = 5
 scale = Vector2(5.55, 5.55)
 
 [node name="button pioch deck" type="Button" parent="Control/Jeux/deck/TribuneOverhangRed" index="0"]
@@ -51,6 +51,9 @@ scale = Vector2(2.5, 2.5)
 
 [node name="Carte" parent="Control/Jeux/deck/TribuneOverhangRed/Label/CarteVisible" instance=ExtResource("2_h2tbh")]
 scale = Vector2(0.0382977, 0.0737784)
+
+[node name="Main" parent="Control/Jeux" index="1"]
+position = Vector2(7.82783, 7.82783)
 
 [node name="TextureProgressBar" parent="Control/Jeux/Essence et pv" index="0"]
 offset_left = -0.18018
@@ -880,18 +883,21 @@ text = "temporaire"
 
 [node name="InterfacePrendre,jeterEnEssence" parent="." instance=ExtResource("27_d4wch")]
 z_index = 4
-position = Vector2(1000, -120)
+position = Vector2(1200, 0)
 scale = Vector2(7, 7)
 
-[node name="MarginContainer" parent="InterfacePrendre,jeterEnEssence/Polygon2D/TabContainer/_________Jeter_________" index="0"]
-visible = false
+[node name="Polygon2D" parent="InterfacePrendre,jeterEnEssence/ColorRect" index="0"]
+offset_left = 0.0
+offset_right = 603.0
 
-[node name="ButtonValider" parent="InterfacePrendre,jeterEnEssence/Polygon2D" index="3"]
-script = ExtResource("1_hel68")
+[node name="Label" parent="InterfacePrendre,jeterEnEssence/ColorRect/Polygon2D" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 474.0
+offset_bottom = 50.0
 
 [connection signal="pressed" from="Control/Jeux/deck/TribuneOverhangRed/button pioch deck" to="." method="openScene" binds= [0]]
 [connection signal="pressed" from="Bouton/ArrowWhite/Button" to="Voitur" method="mouve"]
-[connection signal="pressed" from="InterfacePrendre,jeterEnEssence/Polygon2D/ButtonValider" to="." method="quitScene" binds= [0]]
 
 [editable path="Control"]
 [editable path="InterfacePrendre,jeterEnEssence"]

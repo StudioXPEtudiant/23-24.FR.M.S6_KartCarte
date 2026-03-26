@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cbydibtnn6mxk"]
+[gd_scene load_steps=38 format=3 uid="uid://cbydibtnn6mxk"]
 
 [ext_resource type="Texture2D" uid="uid://bhp6ubwklu43w" path="res://kenney_racing-pack/PNG/Objects/tribune_overhang_red.png" id="1_1eno2"]
 [ext_resource type="Texture2D" uid="uid://c50kpparhkg24" path="res://kenney_racing-pack/PNG/Objects/arrow_yellow.png" id="2_t5gkq"]
@@ -52,6 +52,11 @@ modulate_color = Color(0.694118, 0.529412, 0, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ao1e4"]
 texture = SubResource("CanvasTexture_qcyjk")
 modulate_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oewes"]
+bg_color = Color(0, 0, 0, 0.552941)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2g278"]
 
 [node name="Menu" type="Node2D"]
 scale = Vector2(0.55, 0.55)
@@ -406,12 +411,12 @@ scale = Vector2(1.32386, 1.38068)
 texture = ExtResource("16_5kyxd")
 
 [node name="Button" type="Button" parent="bouton/quit/CheckSquareGreyCross"]
-z_index = -1
-offset_left = -32.7273
-offset_top = -32.7273
-offset_right = -0.727272
-offset_bottom = -1.72728
+z_index = 1
+offset_left = -33.0
+offset_top = -31.0
 scale = Vector2(2, 2)
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_oewes")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2g278")
 script = ExtResource("15_f4ydv")
 
 [node name="anim moto" type="Node2D" parent="."]
